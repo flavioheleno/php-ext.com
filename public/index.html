@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>php-ext.com</title>
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/brand.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/free.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+      body {
+        font-family: 'Roboto'
+      }
+
+      #tbl-header > th {
+        position: sticky;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1>php-ext.com</h1>
+      <table class="table table-hover table-sm">
+        <thead class="thead-dark">
+          <tr id="tbl-header">
+            <th scope="col">Extension</th>
+          </tr>
+        </thead>
+        <tbody id="tbl-body">
+        </tbody>
+      </table>
+      <div class="text-center">
+         <ul class="list-inline">
+          <li class="list-inline-item"><span id="ext-count" class="badge badge-dark">0</span> extensions</li>
+          <li class="list-inline-item"><span id="build-count" class="badge badge-info">0</span> builds running</li>
+          <li class="list-inline-item"><span id="skip-count" class="badge badge-secondary">0</span> builds skipped</li>
+          <li class="list-inline-item"><span id="pass-count" class="badge badge-success">0</span> builds passed</li>
+          <li class="list-inline-item"><span id="fail-count" class="badge badge-danger">0</span> builds failed</li>
+          <li class="list-inline-item"><span id="pending-count" class="badge badge-warning">0</span> builds pending</li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      (function () {
+        let extensionList = [];
+        let phpList = [];
+        const iconMap = {
+          'pecl': 'cil-tag',
+          'dev': 'cil-fork'
+        };
+        const statusMap = {
+          'BUILD': 'badge-info',
+          'FAIL': 'badge-danger',
+          'SKIP': 'badge-secondary',
+          'PASS': 'badge-success',
+          'PENDING': 'badge-warning'
+        };
+        const $space = document.createElement('span');
+        $space.innerHTML = '&nbsp;';
+
+        fetch('build-matrix.php')
+          .then(response => response.json())
+          .then(function (data) {
+            extensionList = data['ext'];
+            phpList = data['php'];
+            const $tblHeader = document.getElementById('tbl-header');
+            const $tblBody = document.getElementById('tbl-body');
+            // add table header
+            data['php'].forEach(function (php) {
+              const $col = document.createElement('th');
+              $col.scope = 'col';
+              $col.className = 'text-center';
+              $col.innerText = php;
+
+              $tblHeader.appendChild($col);
+            });
+
+            // update extension counter
+            const $extCount = document.getElementById('ext-count');
+            $extCount.innerText = Object.keys(data['ext']).length;
+
+            // add table body
+            data['ext'].forEach(function (extension) {
+              const $row = document.createElement('tr');
+              const $col = document.createElement('th');
+              const $anchor = document.createElement('a');
+              const $i = document.createElement('i');
+
+              $anchor.href = data['url'][extension];
+              $anchor.target = '_blank';
+              $anchor.rel = 'noreferrer noopener';
+              $i.className = 'cil-external-link';
+
+              $anchor.appendChild($i);
+
+              $col.scope = 'row'
+              $col.innerText = extension + ' ';
+
+              $col.appendChild($anchor);
+
+              $row.appendChild($col);
+              data['php'].forEach(function (php) {
+                const $col = document.createElement('td');
+                $col.id = extension + '@' + php;
+                $col.className = 'text-center';
+
+                data['ver'].forEach(function (version) {
+                  const $anchor = document.createElement('a');
+                  const $span = document.createElement('span');
+                  const $i = document.createElement('i');
+
+                  $anchor.href = 'details.php?' + extension + ':' + version + '@' + php;
+                  $anchor.target = '_blank';
+                  $anchor.rel = 'noreferrer noopener';
+
+                  $span.id = extension + ':' + version + '@' + php;
+                  $span.classList.add('badge', 'badge-light', 'ml-1', 'mr-1');
+
+                  $i.classList.add(iconMap[version], 'align-middle');
+
+                  $span.appendChild($i);
+                  $anchor.appendChild($span);
+
+                  $col.appendChild($anchor);
+                  $col.appendChild($space);
+                });
+
+                $row.appendChild($col);
+              });
+
+              $tblBody.appendChild($row);
+            });
+          });
+
+          // footer counter badges
+          const $buildCount = document.getElementById('build-count');
+          const $skipCount = document.getElementById('skip-count');
+          const $passCount = document.getElementById('pass-count');
+          const $failCount = document.getElementById('fail-count');
+          const $pendingCount = document.getElementById('pending-count');
+          const updateTimer = setInterval(
+            function () {
+              fetch('build-status.php')
+                .then(response => response.json())
+                .then(function (data) {
+                  // stop retrieving data updates
+                  if (data['status']) {
+                    clearInterval(updateTimer);
+                  }
+
+                  // update footer counters
+                  if ($buildCount.dataset.count != data['metrics']['BUILD']) {
+                    $buildCount.innerText = data['metrics']['BUILD'];
+                    $buildCount.dataset.count = data['metrics']['BUILD'];
+                  }
+
+                  if ($skipCount.dataset.count != data['metrics']['SKIP']) {
+                    $skipCount.innerText = data['metrics']['SKIP'];
+                    $skipCount.dataset.count = data['metrics']['SKIP'];
+                  }
+
+                  if ($passCount.dataset.count != data['metrics']['PASS']) {
+                    $passCount.innerText = data['metrics']['PASS'];
+                    $passCount.dataset.count = data['metrics']['PASS'];
+                  }
+
+                  if ($failCount.dataset.count != data['metrics']['FAIL']) {
+                    $failCount.innerText = data['metrics']['FAIL'];
+                    $failCount.dataset.count = data['metrics']['FAIL'];
+                  }
+
+                  if ($pendingCount.dataset.count != data['metrics']['PENDING']) {
+                    $pendingCount.innerText = data['metrics']['PENDING'];
+                    $pendingCount.dataset.count = data['metrics']['PENDING'];
+                  }
+
+                  // update matrix
+                  for (const [id, status] of Object.entries(data['list'])) {
+                    const $el = document.getElementById(id);
+                    if ($el.dataset.status === status) {
+                      continue;
+                    }
+
+                    $el.title = id + ': ' + status;
+                    $el.classList.remove('badge-info', 'badge-danger', 'badge-secondary', 'badge-success', 'badge-warning', 'badge-light');
+                    $el.classList.add(statusMap[status]);
+                    $el.dataset.status = status;
+                  }
+                })
+                .catch(function (error) {
+                  clearInterval(updateTimer);
+                  console.log(error);
+                });
+            },
+            2500
+          );
+      }());
+    </script>
+  </body>
+</html>

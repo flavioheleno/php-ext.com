@@ -1,0 +1,4015 @@
+{
+  "ahocorasick": {
+    "build": {
+      "flag": "--enable-ahocorasick",
+      "type": "git",
+      "url": "https://github.com/ph4r05/php_aho_corasick"
+    },
+    "require": {
+      "min": "7.3.99"
+    },
+    "summary": "Effective Aho-Corasick string pattern matching algorithm"
+  },
+  "amqp": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "rabbitmq-c-dev"
+        ],
+        "buster": [
+          "librabbitmq-dev"
+        ]
+      },
+      "flag": "--with-amqp",
+      "type": "git",
+      "url": "https://github.com/php-amqp/php-amqp"
+    },
+    "require": {
+      "min": "5.6.0"
+    },
+    "summary": "Communicate with any AMQP compliant server"
+  },
+  "aop": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "pcre-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libpcre3-dev"
+        ]
+      },
+      "flag": "--enable-AOP",
+      "type": "git",
+      "url": "https://github.com/AOP-PHP/AOP"
+    },
+    "require": {
+      "min": "5.3.0"
+    },
+    "summary": "Aspect Oriented Programming On PHP"
+  },
+  "apacheaccessor": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "apcu": {
+    "build": {
+      "flag": "--enable-apcu",
+      "type": "git",
+      "url": "https://github.com/krakjoe/apcu"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "APCu - APC User Cache"
+  },
+  "apcu_bc": {
+    "build": {
+      "flag": "--enable-apc",
+      "type": "git",
+      "url": "https://github.com/krakjoe/apcu-bc"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "APCu Backwards Compatibility Module"
+  },
+  "apfd": {
+    "build": {
+      "flag": "--enable-apfd",
+      "type": "git",
+      "url": "https://github.com/m6w6/ext-apfd"
+    },
+    "require": {
+      "min": "5.3.0"
+    },
+    "summary": "Always Populate Form Data"
+  },
+  "apm": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "zlib-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "zlib1g-dev"
+        ]
+      },
+      "flag": "--enable-apm",
+      "type": "git",
+      "url": "https://github.com/patrickallaert/php-apm"
+    },
+    "require": {
+      "min": "5.2.0"
+    },
+    "summary": "Alternative PHP Monitor"
+  },
+  "ast": {
+    "build": {
+      "flag": "--enable-ast",
+      "type": "git",
+      "url": "https://github.com/nikic/php-ast"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "Extension exposing PHP 7 abstract syntax tree"
+  },
+  "augeas": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "augeas-dev  --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/",
+          "libxml2-dev"
+        ],
+        "buster": [
+          "libaugeas-dev",
+          "libxml2-dev"
+        ]
+      },
+      "flag": "--with-augeas",
+      "type": "git",
+      "url": "https://github.com/ppadron/php-augeas"
+    },
+    "require": {
+      "min": "5.2.0"
+    },
+    "summary": "PHP bindings to the Augeas API"
+  },
+  "base58": {
+    "build": {
+      "deps": {
+        "buster": [
+          "libbase58-dev"
+        ]
+      },
+      "flag": "--with-base58",
+      "type": "git",
+      "url": "https://github.com/improved-php-library/base58-php-ext"
+    },
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": "Encode and decode data with base58"
+  },
+  "bbcode": {
+    "build": {
+      "flag": "--enable-bbcode",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/bbcode"
+    },
+    "require": {
+      "min": "5.2.0"
+    },
+    "summary": "BBCode parsing Extension"
+  },
+  "binpack": {
+    "build": {
+      "flag": "--enable-binpack",
+      "type": "git",
+      "url": "https://github.com/binpack/binpack-php"
+    },
+    "require": {
+      "min": "5.2.0"
+    },
+    "summary": "binpack for PHP"
+  },
+  "bitset": {
+    "build": {
+      "flag": "--enable-bitset",
+      "type": "git",
+      "url": "https://git.php.net/repository/pecl/numbers/bitset"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "BITSET library"
+  },
+  "bloomy": {
+    "build": {
+      "flag": "--enable-bloomy",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/bloomy/"
+    },
+    "require": {
+      "min": "5.2.0"
+    },
+    "summary": "Extension implementing a Bloom filter"
+  },
+  "brotli": {
+    "build": {
+      "deps": {
+        "buster": [
+          "libbrotli-dev"
+        ]
+      },
+      "flag": "--enable-brotli",
+      "type": "git",
+      "url": "https://github.com/kjdev/php-ext-brotli"
+    },
+    "pecl": false,
+    "require": {
+      "min": "5.0.0"
+    },
+    "summary": "Brotli Extension for PHP"
+  },
+  "cld": {
+    "build": {
+      "flag": "--enable-cld",
+      "type": "git",
+      "url": "https://github.com/lstrojny/php-cld"
+    },
+    "require": {
+      "min": "5.3.0"
+    },
+    "summary": "Summary PHP Bindings for Chromium Compact Language Detector"
+  },
+  "cmark": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "cmark-dev"
+        ],
+        "buster": [
+          "libcmark-dev"
+        ]
+      },
+      "flag": "--with-cmark",
+      "type": "git",
+      "url": "https://github.com/krakjoe/cmark"
+    },
+    "require": {
+      "min": "7.2.0"
+    },
+    "summary": "CommonMark extension"
+  },
+  "componere": {
+    "build": {
+      "flag": "--enable-componere",
+      "type": "git",
+      "url": "https://github.com/krakjoe/componere"
+    },
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": "Composing PHP classes at runtime"
+  },
+  "couchbase": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "libcouchbase-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community/"
+        ]
+      },
+      "flag": "--with-couchbase",
+      "type": "git",
+      "url": "https://github.com/couchbase/php-couchbase"
+    },
+    "require": {
+      "min": "7.2.0"
+    },
+    "summary": "Couchbase Server PHP extension"
+  },
+  "courierauth": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "crypto": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "csv": {
+    "build": {
+      "flag": "--enable-csv",
+      "type": "git",
+      "url": "https://gitlab.com/Girgias/csv-php-extension"
+    },
+    "require": {
+      "min": "7.3.0"
+    },
+    "summary": "CSV PHP extension"
+  },
+  "cubrid": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "cvsclient": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "cybermut": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "datadog_trace": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "curl-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libcurl4-openssl-dev"
+        ]
+      },
+      "flag": "--enable-ddtrace",
+      "type": "git",
+      "url": "https://github.com/DataDog/dd-trace-php"
+    },
+    "require": {
+      "min": "5.4.0"
+    },
+    "summary": "APM and distributed tracing for PHP"
+  },
+  "dazuko": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "dbase": {
+    "build": {
+      "flag": "--enable-dbase",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/dbase"
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": ""
+  },
+  "dbus": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "dbus-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/",
+          "libxml2-dev"
+        ],
+        "buster": [
+          "libdbus-1-dev",
+          "libxml2-dev"
+        ]
+      },
+      "flag": "--enable-dbus",
+      "type": "git",
+      "url": "https://github.com/derickr/pecl-dbus"
+    },
+    "require": {
+      "min": "5.2.0"
+    },
+    "summary": "Extension for interaction with DBUS busses"
+  },
+  "dbx": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "decimal": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "mpdecimal --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/"
+        ],
+        "buster": [
+          "libmpdec-dev"
+        ]
+      },
+      "flag": "--enable-decimal",
+      "type": "git",
+      "url": "https://github.com/php-decimal/ext-decimal"
+    },
+    "require": {
+      "min": "7.2.0"
+    },
+    "summary": "Arbitrary precision floating-point decimal"
+  },
+  "dio": {
+    "build": {
+      "flag": "--enable-dio",
+      "type": "git",
+      "url": "https://github.com/php/pecl-system-dio"
+    },
+    "require": {
+      "min": "5.3.3"
+    },
+    "summary": "Direct I/O functions"
+  },
+  "docblock": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "dom_varimport": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "doublemetaphone": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "druid": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ds": {
+    "build": {
+      "flag": "--enable-ds",
+      "type": "git",
+      "url": "https://github.com/php-ds/ext-ds"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "Data Structures"
+  },
+  "dtrace": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ecasound": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "eio": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "enchant": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "env": {
+    "build": {
+      "flag": "--enable-env",
+      "type": "git",
+      "url": "https://github.com/beberlei/env"
+    },
+    "require": {
+      "min": "5.5.0"
+    },
+    "summary": "Load environment variables into PHP from a global configuration file"
+  },
+  "esmtp": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ev": {
+    "build": {
+      "flag": "--enable-ev",
+      "type": "git",
+      "url": "https://bitbucket.org/osmanov/pecl-ev"
+    },
+    "require": {
+      "min": "5.4.0"
+    },
+    "summary": "Provides interface to libev library"
+  },
+  "event": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "libevent-dev"
+        ],
+        "buster": [
+          "libevent-dev"
+        ]
+      },
+      "flag": "--with-event-core",
+      "type": "git",
+      "url": "https://bitbucket.org/osmanov/pecl-event"
+    },
+    "require": {
+      "min": "5.4.0"
+    },
+    "summary": "Provides interface to libevent library"
+  },
+  "expect": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ext-fiber": {
+    "build": {
+      "flag": "--enable-fiber",
+      "type": "git",
+      "url": "https://github.com/amphp/ext-fiber"
+    },
+    "require": {
+      "min": "7.3.0",
+      "zts": true
+    },
+    "summary": "PHP Fiber extension"
+  },
+  "fam": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "fann": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ffi": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "framegrab": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "freeimage": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "fribidi": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "funcall": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "fuse": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "gdchart": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "gearman": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "gearman-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/"
+        ],
+        "buster": [
+          "libgearman-dev"
+        ]
+      },
+      "flag": "--with-gearman",
+      "type": "git",
+      "url": "https://github.com/php/pecl-networking-gearman"
+    },
+    "pecl": false,
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "PHP wrapper to libgearman"
+  },
+  "gender": {
+    "build": {
+      "flag": "--enable-gender",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/gender"
+    },
+    "require": {
+      "min": "5.3.0"
+    },
+    "summary": "Gender Extension"
+  },
+  "geoip": {
+    "build": {
+      "flag": "--with-geoip",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/geoip"
+    },
+    "disabled": true,
+    "require": {
+      "min": "4.3.0"
+    },
+    "summary": "Map IP address to geographic places"
+  },
+  "geos": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "geospatial": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "gmagick": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "gnupg": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "gpgme-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community/"
+        ],
+        "buster": [
+          "libgpgme-dev"
+        ]
+      },
+      "flag": "--with-gnupg",
+      "type": "git",
+      "url": "https://github.com/php-gnupg/php-gnupg"
+    },
+    "require": {
+      "min": "5.2.0"
+    },
+    "summary": "wrapper around the gpgme library"
+  },
+  "graphdat": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "grpc": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "zlib-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "zlib1g-dev"
+        ]
+      },
+      "flag": "--enable-grpc",
+      "type": "git",
+      "url": "https://github.com/grpc/grpc"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "A high performance, open source, general RPC framework that puts mobile and HTTP/2 first"
+  },
+  "gupnp": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "handlebars": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "handlebars",
+          "handlebars-dev",
+          "handlebars-utils"
+        ],
+        "buster": []
+      },
+      "flag": "--enable-handlebars",
+      "type": "git",
+      "url": "https://github.com/jbboehr/php-handlebars"
+    },
+    "require": {
+      "min": "7.2.0"
+    },
+    "summary": "Handlebars templating language"
+  },
+  "haru": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "hdr_histogram": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "hidef": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "hprose": {
+    "build": {
+      "flag": "--enable-hprose",
+      "type": "git",
+      "url": "https://github.com/hprose/hprose-pecl"
+    },
+    "require": {
+      "min": "5.2.0"
+    },
+    "summary": "Hprose for PHP"
+  },
+  "hrtime": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "html_parse": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "http": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "http_message": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "huffman": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ibm_db2": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ice": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "id3": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "idn": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "igbinary": {
+    "build": {
+      "flag": "--enable-igbinary",
+      "type": "git",
+      "url": "https://github.com/igbinary/igbinary"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "igbinary extension"
+  },
+  "imagick": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "imagemagick-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community/",
+          "graphicsmagick-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community/"
+        ],
+        "buster": [
+          "libmagickcore-dev",
+          "libgraphicsmagick1-dev"
+        ]
+      },
+      "flag": "--with-imagick",
+      "type": "git",
+      "url": "https://github.com/Imagick/imagick"
+    },
+    "require": {
+      "min": "5.4.0"
+    },
+    "summary": "Provides a wrapper to the ImageMagick library"
+  },
+  "imlib2": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ims": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "inclued": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ingres": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "inotify": {
+    "build": {
+      "flag": "--enable-inotify",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/inotify"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "Inotify"
+  },
+  "intercept": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ip2location": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ip2proxy": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": "https://github.com/ip2location/ip2proxy-pecl"
+    },
+    "disabled": true,
+    "require": {
+      "min": "5.0.0"
+    },
+    "summary": "Get proxy information of an IP address"
+  },
+  "ircclient": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "isis": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "jsmin": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "json": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "json_post": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "jsonc": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "jsond": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "jsonnet": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "judy": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "kadm5": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "krb5": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ktaglib": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "lapack": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "lchash": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "leveldb": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "libevent": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "libsodium": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "libsodium-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libsodium-dev"
+        ]
+      },
+      "flag": "--with-sodium",
+      "type": "git",
+      "url": "https://github.com/jedisct1/libsodium-php"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "Wrapper for the Sodium cryptographic library"
+  },
+  "lua": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "lua-dev"
+        ],
+        "buster": [
+          "liblua5.2-dev"
+        ]
+      },
+      "flag": "--with-lua",
+      "type": "git",
+      "url": "https://github.com/laruence/php-lua"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "Embedded lua interpreter"
+  },
+  "luasandbox": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "lz4": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "lz4-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "liblz4-dev"
+        ]
+      },
+      "flag": "--enable-lz4",
+      "type": "git",
+      "url": "https://github.com/kjdev/php-ext-lz4"
+    },
+    "pecl": false,
+    "require": {
+      "min": "5.0.0"
+    },
+    "summary": "LZ4 Extension for PHP"
+  },
+  "lzf": {
+    "build": {
+      "flag": "--enable-lzf",
+      "type": "git",
+      "url": "https://github.com/php/pecl-file_formats-lzf"
+    },
+    "require": {
+      "min": "4.0.0"
+    },
+    "summary": "LZF compression"
+  },
+  "mailparse": {
+    "build": {
+      "flag": "--enable-mailparse",
+      "type": "git",
+      "url": "https://git.php.net/repository/pecl/mail/mailparse"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "Email message manipulation"
+  },
+  "markdown": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "maxdb": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "maxminddb": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "libmaxminddb-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libmaxminddb-dev"
+        ]
+      },
+      "flag": "--with-maxminddb",
+      "path": "ext",
+      "type": "git",
+      "url": "https://github.com/maxmind/MaxMind-DB-Reader-php"
+    },
+    "pecl": false,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": "PHP Reader for the MaxMind DB Database Format"
+  },
+  "mcrypt": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "libmcrypt-dev"
+        ],
+        "buster": [
+          "libmcrypt-dev"
+        ]
+      },
+      "flag": "--with-mcrypt",
+      "type": "git",
+      "url": "https://git.php.net/repository/pecl/encryption/mcrypt"
+    },
+    "require": {
+      "min": "7.2.0"
+    },
+    "summary": "Bindings for the libmcrypt library"
+  },
+  "mcrypt_filter": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "mcve": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "mdbtools": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "memcache": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "zlib-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "zlib1g-dev"
+        ]
+      },
+      "flag": "--enable-memcache",
+      "type": "git",
+      "url": "https://github.com/websupport-sk/pecl-memcache"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "memcached extension"
+  },
+  "memcached": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "libmemcached-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/",
+          "zlib-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libmemcached-dev",
+          "zlib1g-dev"
+        ]
+      },
+      "flag": "--enable-memcached",
+      "type": "git",
+      "url": "https://github.com/php-memcached-dev/php-memcached"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "PHP extension for interfacing with memcached via libmemcached library"
+  },
+  "memoize": {
+    "build": {
+      "flag": "--enable-memoize",
+      "type": "git",
+      "url": "https://github.com/arraypad/php-memoize"
+    },
+    "require": {
+      "min": "5.2.0"
+    },
+    "summary": "Transparently cache PHP functions"
+  },
+  "memprof": {
+    "build": {
+      "deps": {
+        "buster": [
+          "libjudy-dev"
+        ]
+      },
+      "flag": "--enable-memprof",
+      "type": "git",
+      "url": "https://github.com/arnaud-lb/php-memory-profiler"
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": "Memory profiler"
+  },
+  "memsession": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "memtrack": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "meta": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "mnogosearch": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "molten": {
+    "build": {
+      "deps": {
+        "buster": [
+          "libcurl4-openssl-dev"
+        ]
+      },
+      "flag": "--enable-molten",
+      "type": "git",
+      "url": "https://github.com/chuan-yun/Molten"
+    },
+    "require": {
+      "min": "7.2.0"
+    },
+    "summary": "molten is transparency tool for application tracing it self module call"
+  },
+  "mongodb": {
+    "build": {
+      "flag": "--enable-mongodb",
+      "type": "git",
+      "url": "https://github.com/mongodb/mongo-php-driver"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "MongoDB driver for PHP"
+  },
+  "mosquitto": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "mqseries": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "msgpack": {
+    "build": {
+      "flag": "--with-msgpack",
+      "type": "git",
+      "url": "https://github.com/msgpack/msgpack-php"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "PHP extension for interfacing with MessagePack"
+  },
+  "mustache": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "libmustache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/"
+        ],
+        "buster": [
+          "libmustache-d-dev"
+        ]
+      },
+      "flag": "--enable-mustache",
+      "type": "git",
+      "url": "https://github.com/jbboehr/php-mustache"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "Mustache templating language"
+  },
+  "mysql": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "mysql_xdevapi": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "mysqlnd_azure": {
+    "build": {
+      "flag": "--enable-mysqlnd_azure",
+      "type": "git",
+      "url": "https://github.com/microsoft/mysqlnd_azure"
+    },
+    "require": {
+      "min": "7.2.15"
+    },
+    "summary": "mysqlnd_azure - a redirection plugin for mysqlnd"
+  },
+  "mysqlnd_memcache": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "mysqlnd_qc": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "mysqlnd_uh": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "namazu": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ncurses": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "net_gopher": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "netools": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "newt": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "nsq": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "oauth": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "pcre-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libpcre3-dev"
+        ]
+      },
+      "flag": "--enable-oauth",
+      "type": "git",
+      "url": "https://git.php.net/repository/pecl/web_services/oauth"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "oauth consumer extension"
+  },
+  "ocal": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "odbtp": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "oggvorbis": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "openal": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "opencensus": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "opendirectory": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "opengl": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "operator": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "panda": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "paradox": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "parallel": {
+    "build": {
+      "flag": "--enable-parallel",
+      "type": "git",
+      "url": "https://github.com/krakjoe/parallel"
+    },
+    "require": {
+      "min": "7.2.0",
+      "zts": true
+    }
+  },
+  "params": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "parle": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "parse_tree": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "parsekit": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pcov": {
+    "build": {
+      "flag": "--enable-pcov",
+      "type": "git",
+      "url": "https://github.com/krakjoe/pcov"
+    },
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": "Code coverage driver"
+  },
+  "pcs": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pcsc": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pdlib": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pdo_4d": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pdo_firebird": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pdo_ibm": {
+    "build": {
+      "deps": {
+        "buster": [
+          "libdb2-dev"
+        ]
+      },
+      "flag": "--with-pdo-ibm",
+      "type": "git",
+      "url": "https://git.php.net/repository/pecl/database/pdo_ibm"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "PDO driver for IBM databases"
+  },
+  "pdo_odbc": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pdo_pgsql": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pdo_sqlanywhere": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pdo_sqlsrv": {
+    "build": {
+      "deps": {
+        "buster": [
+          "msodbcsql17",
+          "mssql-tools"
+        ]
+      },
+      "flag": "",
+      "type": "git",
+      "url": "https://github.com/Microsoft/msphpsql"
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.2.0"
+    },
+    "summary": "Microsoft Drivers for PHP for SQL Server (PDO_SQLSRV)"
+  },
+  "pdo_user": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pecl_gen": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pecl_http": {
+    "build": {
+      "flag": "--with-http",
+      "type": "git",
+      "url": "https://github.com/m6w6/ext-http"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "Extended HTTP Support"
+  },
+  "perforce": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "phalcon": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "phdfs": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "phk": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "php_trie": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "phpiredis": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pledge": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pop3": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "pq": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "postgresql-dev"
+        ],
+        "buster": [
+          "libpq-dev"
+        ]
+      },
+      "flag": "--with-pq",
+      "type": "git",
+      "url": "https://github.com/m6w6/ext-pq"
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": ""
+  },
+  "proctitle": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "propro": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "protobuf": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": "https://github.com/protocolbuffers/protobuf"
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": ""
+  },
+  "protocolbuffers": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ps": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "psr": {
+    "build": {
+      "flag": "--enable-psr",
+      "type": "git",
+      "url": "https://github.com/jbboehr/php-psr"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "PSR interfaces"
+  },
+  "qb": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "qqwry": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "quickhash": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "radius": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "raphf": {
+    "build": {
+      "flag": "--enable-raphf",
+      "type": "git",
+      "url": "https://github.com/m6w6/ext-raphf"
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": ""
+  },
+  "rar": {
+    "build": {
+      "flag": "--enable-rar",
+      "type": "git",
+      "url": "https://github.com/cataphract/php-rar"
+    },
+    "require": {
+      "min": "5.3.0"
+    },
+    "summary": "rar extension"
+  },
+  "rdkafka": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "librdkafka-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community/"
+        ],
+        "buster": [
+          "librdkafka-dev"
+        ]
+      },
+      "flag": "--with-rdkafka",
+      "type": "git",
+      "url": "https://github.com/arnaud-lb/php-rdkafka"
+    },
+    "require": {
+      "min": "5.6.0"
+    },
+    "summary": "Kafka client based on librdkafka"
+  },
+  "re2": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "realpath_turbo": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "redis": {
+    "build": {
+      "flag": "--enable-redis",
+      "type": "git",
+      "url": "https://github.com/phpredis/phpredis"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "PHP extension for interfacing with Redis"
+  },
+  "ref": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "request": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "riak": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "rpminfo": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "rpmreader": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "rrd": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "rrdtool-dev  --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "librrd-dev"
+        ]
+      },
+      "flag": "--with-rrd",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/rrd/"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "PHP bindings to rrd tool system"
+  },
+  "rsvg": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "rsync": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "runkit7": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "sam": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "sandbox": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "sasl": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "scoutapm": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "curl-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libcurl4-openssl-dev"
+        ]
+      },
+      "flag": "--enable-scoutapm",
+      "type": "git",
+      "url": "https://github.com/scoutapp/scout-apm-php-ext"
+    },
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": "Native Extension Component for ScoutAPM's PHP Agent"
+  },
+  "scrypt": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "sdl": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "sdl2-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community/"
+        ],
+        "buster": [
+          "libsdl2-dev"
+        ]
+      },
+      "flag": "--enable--sdl",
+      "type": "git",
+      "url": "https://github.com/Ponup/php-sdl"
+    },
+    "require": {
+      "min": "7.3.0"
+    },
+    "summary": "SDL for PHP"
+  },
+  "seasclick": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "seaslog": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "selinux": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "shape": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "skywalking": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "grpc-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community/",
+          "protobuf-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/",
+          "protobuf --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libgrpc-dev",
+          "libprotobuf-dev",
+          "protobuf"
+        ]
+      },
+      "flag": "--enable-skywalking",
+      "type": "git",
+      "url": "https://github.com/SkyAPM/SkyAPM-php-sdk"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "The PHP instrument agent for Apache SkyWalking"
+  },
+  "smbclient": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "samba-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libsmbclient-dev"
+        ]
+      },
+      "flag": "--enable-smbclient",
+      "type": "git",
+      "url": "https://github.com/eduardok/libsmbclient-php"
+    },
+    "require": {
+      "min": "5.3.0"
+    },
+    "summary": "A PHP wrapper for libsmbclient"
+  },
+  "solr": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "sphinx": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "spidermonkey": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "spplus": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "spread": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "sqlsrv": {
+    "build": {
+      "deps": {
+        "buster": [
+          "msodbcsql17",
+          "mssql-tools"
+        ]
+      },
+      "flag": "",
+      "type": "git",
+      "url": "https://github.com/Microsoft/msphpsql"
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.2.0"
+    },
+    "summary": "Microsoft Drivers for PHP for SQL Server (SQLSRV)"
+  },
+  "ssdeep": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ssh2": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "libssh2-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libssh2-1-dev"
+        ]
+      },
+      "flag": "--with-ssh2",
+      "type": "git",
+      "url": "https://git.php.net/repository/pecl/networking/ssh2"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "Bindings for the libssh2 library"
+  },
+  "stackdriver_debugger": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "statgrab": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "stem": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "stomp": {
+    "build": {
+      "flag": "--enable-stomp",
+      "type": "git",
+      "url": "https://github.com/php/pecl-tools-stomp"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "Stomp client extension"
+  },
+  "svm": {
+    "build": {
+      "deps": {
+        "buster": [
+          "libsvm-dev"
+        ]
+      },
+      "flag": "--with-svm",
+      "type": "git",
+      "url": "https://github.com/ianbarber/php-svm"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "Support Vector Machine Library"
+  },
+  "svn": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "subversion-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/",
+          "git-svn --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libsvn-dev",
+          "git-svn"
+        ]
+      },
+      "flag": "--with-svn",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/svn"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "PHP Bindings for the Subversion Revision control system"
+  },
+  "swoole": {
+    "build": {
+      "flag": "--enable-swoole",
+      "type": "git",
+      "url": "https://github.com/swoole/swoole-src"
+    },
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": "Event-driven asynchronous and concurrent networking engine with high performance for PHP"
+  },
+  "swoole_serialize": {
+    "build": {
+      "flag": "--enable-swoole_serialize",
+      "type": "git",
+      "url": "https://github.com/swoole/ext-serialize"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "the fastest and smallest serialize fucntion bound for php7"
+  },
+  "syck": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "sync": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "taint": {
+    "build": {
+      "flag": "--enable-taint",
+      "type": "git",
+      "url": "https://github.com/laruence/taint"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "XSS code sniffer"
+  },
+  "tcc": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "tclink": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "tcpwrap": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "tdb": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "termbox": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "textcat": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "tidy": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "timecop": {
+    "build": {
+      "flag": "--enable-timecop",
+      "type": "git",
+      "url": "https://github.com/hnw/php-timecop"
+    },
+    "require": {
+      "min": "5.3.1"
+    },
+    "summary": "A PHP extension providing 'time travel' capabilities"
+  },
+  "timezonedb": {
+    "build": {
+      "flag": "--enable-timezonedb",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/timezonedb"
+    },
+    "require": {
+      "min": "5.2.0"
+    },
+    "summary": "Timezone Database to be used with PHP's date and time functions"
+  },
+  "tk": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "tokyo_tyrant": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "trace": {
+    "build": {
+      "flag": "--enable-trace",
+      "path": "extension",
+      "type": "git",
+      "url": "https://github.com/Qihoo360/phptrace"
+    },
+    "require": {
+      "min": "5.2.0"
+    },
+    "summary": "Trace is a low-overhead tracing tool for PHP"
+  },
+  "trader": {
+    "build": {
+      "flag": "--enable-trader",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/trader"
+    },
+    "require": {
+      "min": "5.3.0"
+    },
+    "summary": "Technical Analysis for traders"
+  },
+  "translit": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "txforward": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "udis86": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "ui": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "uopz": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "uploadprogress": {
+    "build": {
+      "flag": "--enable-uploadprogress",
+      "type": "git",
+      "url": "https://git.php.net/repository/pecl/php/uploadprogress"
+    },
+    "require": {
+      "min": "5.2.0"
+    },
+    "summary": "An extension to track progress of a file upload"
+  },
+  "uuid": {
+    "build": {
+      "deps": {
+        "buster": [
+          "uuid-dev"
+        ]
+      },
+      "flag": "--with-uuid",
+      "type": "git",
+      "url": "https://git.php.net/repository/pecl/networking/uuid"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "UUID extension"
+  },
+  "uv": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "libuv-dev  --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libuv1-dev"
+        ]
+      },
+      "flag": "--with-uv",
+      "type": "git",
+      "url": "https://github.com/bwoebi/php-uv"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "libuv wrapper"
+  },
+  "v8": {
+    "build": {
+      "deps": {
+        "buster": [
+          "libv8-dev",
+          "libv8"
+        ]
+      },
+      "flag": "--with-v8",
+      "type": "git",
+      "url": "https://github.com/phpv8/php-v8"
+    },
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": "V8 JavaScript engine API for PHP"
+  },
+  "v8js": {
+    "build": {
+      "deps": {
+        "buster": [
+          "libv8-dev",
+          "libv8"
+        ]
+      },
+      "flag": "--with-v8js",
+      "type": "git",
+      "url": "https://github.com/phpv8/v8js"
+    },
+    "require": {
+      "min": "7.0.0",
+      "zts": true
+    },
+    "summary": "V8 Javascript Engine for PHP"
+  },
+  "valkyrie": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "varnish": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "vips": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "vld": {
+    "build": {
+      "flag": "--enable-vld",
+      "type": "git",
+      "url": "https://github.com/derickr/vld"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "Provides functionality to dump the internal representation of PHP scripts"
+  },
+  "vpopmail": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "wasm": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "wbxml": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "win32ps": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "win32ps_dll": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "win32service": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "win32std": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "winbinder": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "wincache": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "wxwidgets": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "xattr": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "xcommerce": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "xdebug": {
+    "build": {
+      "flag": "--enable-xdebug",
+      "type": "git",
+      "url": "https://github.com/xdebug/xdebug"
+    },
+    "require": {
+      "min": "7.2.0"
+    },
+    "summary": "Provides functions for function traces and profiling"
+  },
+  "xdiff": {
+    "build": {
+      "flag": "--with-xdiff",
+      "type": "git",
+      "url": "https://git.php.net/repository/pecl/text/xdiff"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "File differences/patches"
+  },
+  "xhprof": {
+    "build": {
+      "flag": "--enable-xhprof",
+      "path": "extension",
+      "type": "git",
+      "url": "https://github.com/longxinH/xhprof"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "XHProf: A Hierarchical Profiler for PHP"
+  },
+  "xlswriter": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "xmldiff": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "xmlreader": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "xmlrpc": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "xmlrpci": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "xmlwriter": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "xmms": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "xmp": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "xrange": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "xslcache": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "xxtea": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "yac": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "yaconf": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "yaf": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "yami": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "yaml": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "yaml-dev"
+        ],
+        "buster": [
+          "libyaml-dev"
+        ]
+      },
+      "flag": "--with-yaml",
+      "type": "git",
+      "url": "https://github.com/php/pecl-file_formats-yaml"
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": "YAML-1.1 parser and emitter"
+  },
+  "yar": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "yaz": {
+    "build": {
+      "deps": {
+        "buster": [
+          "libyaz-dev"
+        ]
+      },
+      "flag": "--with-yaz",
+      "type": "git",
+      "url": "https://github.com/indexdata/phpyaz"
+    },
+    "require": {
+      "min": "4.3.0"
+    },
+    "summary": "Z39.50/SRU client"
+  },
+  "yp": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "zendoptimizerplus": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "zephir_parser": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "zeroconf": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "zip": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "libzip-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community/"
+        ],
+        "buster": [
+          "libzip-dev"
+        ]
+      },
+      "flag": "--enable-zip",
+      "type": "git",
+      "url": "https://github.com/pierrejoye/php_zip"
+    },
+    "require": {
+      "min": "5.4.0"
+    },
+    "summary": "A zip management extension"
+  },
+  "zlib_filter": {
+    "build": {
+      "flag": "",
+      "type": "git",
+      "url": ""
+    },
+    "disabled": true,
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": ""
+  },
+  "zmq": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "zeromq-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libzmq3-dev"
+        ]
+      },
+      "flag": "--with-zmq",
+      "type": "git",
+      "url": "https://github.com/zeromq/php-zmq"
+    },
+    "require": {
+      "min": "5.3.0"
+    },
+    "summary": "ZeroMQ messaging"
+  },
+  "zookeeper": {
+    "build": {
+      "deps": {
+        "buster": [
+          "libzookeeper-st-dev"
+        ]
+      },
+      "flag": "--enable-zookeeper",
+      "type": "git",
+      "url": "https://github.com/php-zookeeper/php-zookeeper"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "PHP extension for interfacing with Apache ZooKeeper"
+  },
+  "zstd": {
+    "build": {
+      "flag": "--enable-zstd",
+      "type": "git",
+      "url": "https://github.com/kjdev/php-ext-zstd"
+    },
+    "require": {
+      "min": "5.2.0"
+    },
+    "summary": "Zstandard extension"
+  }
+}
