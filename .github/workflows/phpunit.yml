@@ -23,8 +23,6 @@ jobs:
         php-version: ${{ matrix.php_version }}
         tools: composer:v2
         coverage: pcov
-      env:
-        fail-fast: true
 
     - name: Validate composer.json and composer.lock
       run: composer validate
