@@ -53,9 +53,13 @@ $buildLog = preg_replace('/\x1b\[[0-9;]*[a-zA-Z]/', '', $buildLog);
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>php-ext.com / <?php echo $matches['ext']; ?></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Compatibility Report for <?php echo $matches['ext']; ?> (PHP <?php echo $matches['php']; ?>)">
+    <meta name="robots" content="index, follow">
+    <title>php-ext.com / <?php echo $matches['ext']; ?> (PHP <?php echo $matches['php']; ?>)</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/icons@1.0.1/css/brand.min.css" integrity="sha256-rhKRwO3dmDMXxlfkd1nmCUpdrJlmptpWINKNe8+sTx4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/icons@1.0.1/css/free.min.css" integrity="sha256-QmAUWghG3rIhqMHI8F7vC+93NOR4N8b8MJtSjZpZwko=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
@@ -68,7 +72,7 @@ $buildLog = preg_replace('/\x1b\[[0-9;]*[a-zA-Z]/', '', $buildLog);
   </head>
   <body>
     <div class="container-fluid">
-      <h1>php-ext.com / <strong><?php echo $matches['ext']; ?></strong></h1>
+      <h1>php-ext.com / <strong><?php echo $matches['ext']; ?></strong> <small class="text-muted">(PHP <?php echo $matches['php']; ?>)</small></h1>
       <!-- <div class="p-1 bg-dark text-white">
         <strong>Details</strong>
       </div>
