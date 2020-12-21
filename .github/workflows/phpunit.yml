@@ -1,4 +1,4 @@
-name: PHP Composer
+name: PHPUnit
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: PHP Composer ${{ matrix.php_version }}
+    name: PHP ${{ matrix.php_version }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
