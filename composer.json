@@ -25,7 +25,7 @@
   "require": {
     "php": ">=7.4",
     "beluga-php/docker-php": "dev-master",
-    "hoa/math": "1.17.05.16",
+    "bentools/cartesian-product": "^1.3",
     "illuminate/database": "^8.18",
     "robmorgan/phinx": "^0.12.4"
   },

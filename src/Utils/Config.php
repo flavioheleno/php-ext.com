@@ -3,7 +3,8 @@ declare(strict_types = 1);
 
 namespace App\Utils;
 
-use Hoa\Math\Combinatorics\Combination\CartesianProduct;
+use BenTools\CartesianProduct\CartesianProduct;
+
 use InvalidArgumentException;
 
 final class Config {
@@ -103,8 +104,10 @@ final class Config {
       },
       iterator_to_array(
         new CartesianProduct(
-          $this->loadedContent['php-versions.json'],
-          ['', 'zts']
+          [
+            $this->loadedContent['php-versions.json'],
+            ['', 'zts']
+          ]
         )
       )
     );
@@ -124,8 +127,10 @@ final class Config {
       },
       iterator_to_array(
         new CartesianProduct(
-          $this->getExtensionList(),
-          $this->getVersionList()
+          [
+            $this->getExtensionList(),
+            $this->getVersionList()
+          ]
         )
       )
     );
@@ -141,8 +146,10 @@ final class Config {
       },
       iterator_to_array(
         new CartesianProduct(
-          $this->getPHPList(),
-          $this->getOSList()
+          [
+            $this->getPHPList(),
+            $this->getOSList()
+          ]
         )
       )
     );
@@ -159,8 +166,10 @@ final class Config {
       },
       iterator_to_array(
         new CartesianProduct(
-          $this->getExtensionMatrix(),
-          $this->getPHPMatrix()
+          [
+            $this->getExtensionMatrix(),
+            $this->getPHPMatrix()
+          ]
         )
       )
     );
