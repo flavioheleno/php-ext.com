@@ -5,6 +5,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use App\Models\Job;
 use App\Utils\Config;
+use App\Utils\Tag;
 use Illuminate\Database\Capsule\Manager;
 
 // ensure correct absolute path
@@ -27,19 +28,17 @@ $manager->setAsGlobal();
 $config = new Config(__DIR__ . '/../config');
 
 foreach ($config->getBuildMatrix() as $build) {
-  $matches = [];
-  if (preg_match('/^(?<ext>[a-z0-9_]+):(?<ver>pecl|dev)@(?<php>[0-9]+\.[0-9]+\.[0-9]+(\-zts)?)-(?<os>[a-z]+)$/', $build, $matches)) {
-    $job = Job::create(
-      [
-        'function' => 'build',
-        'payload'  => [
-          'tag' => $build,
-          'ext' => $matches['ext'],
-          'ver' => $matches['ver'],
-          'php' => $matches['php'],
-          'os'  => $matches['os']
-        ]
+  $tag = Tag::fromString($build);
+  $job = Job::create(
+    [
+      'function' => 'build',
+      'payload'  => [
+        'tag' => $build,
+        'ext' => $tag->getExtName(),
+        'ver' => $tag->getVersion(),
+        'php' => $tag->getPhpVersion(),
+        'os'  => $tag->getOsName()
       ]
-    );
-  }
+    ]
+  );
 }

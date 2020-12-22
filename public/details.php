@@ -5,51 +5,58 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use App\Models\Status;
 use App\Utils\Config;
+use App\Utils\Tag;
 use Illuminate\Database\Capsule\Manager;
 
-$manager = new Manager();
-// Same as database configuration file of Laravel.
-$manager->addConnection(
-  [
-    'driver'   => 'sqlite',
-    'database' => '../data/php-ext.sqlite3',
-    'prefix'   => '',
-  ],
-  'default'
-);
+try {
+  $manager = new Manager();
+  // Same as database configuration file of Laravel.
+  $manager->addConnection(
+    [
+      'driver'   => 'sqlite',
+      'database' => '../data/php-ext.sqlite3',
+      'prefix'   => '',
+    ],
+    'default'
+  );
 
-$manager->bootEloquent();
-$manager->setAsGlobal();
+  $manager->bootEloquent();
+  $manager->setAsGlobal();
 
-$id = $_SERVER['QUERY_STRING'] ?? exit;
-$matches = [];
-if (preg_match('/^(?<ext>[a-z0-9_]+):(?<ver>pecl|dev)@(?<php>[0-9]+\.[0-9]+\.[0-9]+(\-zts)?)-(?<os>[a-z]+)$/', $id, $matches) !== 1) {
+  $id = $_SERVER['QUERY_STRING'] ?? exit;
+  $tag = Tag::fromString($id);
+
+  $config = new Config(__DIR__ . '/../config');
+  if (in_array($tag->getExtName(), $config->getExtensionList()) === false) {
+    http_response_code(400);
+
+    exit;
+  }
+
+  $status = Status::where('id', $id)->first();
+  if ($status === null) {
+    http_response_code(404);
+
+    exit;
+  }
+
+  $dockerFile = $status->file ?? '';
+  $dockerFile = str_replace(' && ', " && \\\n    ", $dockerFile);
+  $dockerFile = trim($dockerFile);
+
+  // https://superuser.com/questions/380772/removing-ansi-color-codes-from-text-stream
+  $buildLog = $status->log ?? '';
+  $buildLog = preg_replace('/\x1b\[[0-9;]*[a-zA-Z]/', '', $buildLog);
+  $buildLog = trim($buildLog);
+} catch (InvalidArgumentException $exception) {
   http_response_code(400);
 
   exit;
-}
-
-$config = new Config(__DIR__ . '/../config');
-if (in_array($matches['ext'], $config->getExtensionList()) === false) {
-  http_response_code(400);
+} catch (Exception $exception) {
+  http_response_code(500);
 
   exit;
 }
-
-$status = Status::where('id', $id)->first();
-if ($status === null) {
-  http_response_code(404);
-
-  exit;
-}
-
-$dockerFile = $status->file ?? '';
-$dockerFile = str_replace(' && ', " && \\\n    ", $dockerFile);
-
-// https://superuser.com/questions/380772/removing-ansi-color-codes-from-text-stream
-$buildLog = $status->log ?? '';
-$buildLog = preg_replace('/\x1b\[[0-9;]*[a-zA-Z]/', '', $buildLog);
-
 
 ?>
 <!DOCTYPE html>
@@ -57,9 +64,9 @@ $buildLog = preg_replace('/\x1b\[[0-9;]*[a-zA-Z]/', '', $buildLog);
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Compatibility Report for <?php echo $matches['ext']; ?> (PHP <?php echo $matches['php']; ?>)">
+    <meta name="description" content="Compatibility Report for <?php echo $tag->getExtName(); ?> (PHP <?php echo $tag->getPhpVersion(); ?>)">
     <meta name="robots" content="index, follow">
-    <title>php-ext.com / <?php echo $matches['ext']; ?> (PHP <?php echo $matches['php']; ?>)</title>
+    <title>php-ext.com / <?php echo $tag->getExtName(); ?> (PHP <?php echo $tag->getPhpVersion(); ?>)</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/icons@1.0.1/css/brand.min.css" integrity="sha256-rhKRwO3dmDMXxlfkd1nmCUpdrJlmptpWINKNe8+sTx4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/icons@1.0.1/css/free.min.css" integrity="sha256-QmAUWghG3rIhqMHI8F7vC+93NOR4N8b8MJtSjZpZwko=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
@@ -72,7 +79,7 @@ $buildLog = preg_replace('/\x1b\[[0-9;]*[a-zA-Z]/', '', $buildLog);
   </head>
   <body>
     <div class="container-fluid">
-      <h1>php-ext.com / <strong><?php echo $matches['ext']; ?></strong> <small class="text-muted">(PHP <?php echo $matches['php']; ?>)</small></h1>
+      <h1>php-ext.com / <strong><?php echo $tag->getExtName(); ?></strong> <small class="text-muted">(PHP <?php echo $tag->getPhpVersion(); ?>)</small></h1>
       <!-- <div class="p-1 bg-dark text-white">
         <strong>Details</strong>
       </div>
@@ -80,7 +87,7 @@ $buildLog = preg_replace('/\x1b\[[0-9;]*[a-zA-Z]/', '', $buildLog);
         <dt class="col-sm-3">Status</dt>
         <dd class="col-sm-9"><?php echo $status->label; ?></dd>
         <dt class="col-sm-3">Source</dt>
-        <dd class="col-sm-9"><?php echo $matches['ver']; ?></dd>
+        <dd class="col-sm-9"><?php echo $tag->getVersion(); ?></dd>
         <dt class="col-sm-3">Build Time</dt>
         <dd class="col-sm-9"><?php echo $status->build_time; ?></dd>
       </dl> -->

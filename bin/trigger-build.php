@@ -5,6 +5,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use App\Models\Job;
 use App\Utils\Config;
+use App\Utils\Tag;
 use Illuminate\Database\Capsule\Manager;
 
 // ensure correct absolute path
@@ -42,17 +43,16 @@ if (in_array($extName, $config->getExtensionList()) === false) {
 echo date('[H:i:s]'), ' Creating jobs for ', $extName, '...', PHP_EOL;
 foreach ($config->getVersionList() as $version) {
   foreach ($config->getPHPMatrix() as $php) {
-    $tag = "{$extName}:{$version}@{$php}";
-    $os = substr($php, strrpos($php, '-') + 1);
+    $tag = Tag::fromString("{$extName}:{$version}@{$php}");
     $job = Job::create(
       [
         'function' => 'build',
         'payload'  => [
-          'tag' => $tag,
-          'ext' => $extName,
-          'ver' => $version,
-          'php' => substr($php, 0, strrpos($php, '-')),
-          'os'  => $os
+          'tag' => (string)$tag,
+          'ext' => $tag->getExtName(),
+          'ver' => $tag->getVersion(),
+          'php' => $tag->getPhpVersion(),
+          'os'  => $tag->getOsName()
         ]
       ]
     );
