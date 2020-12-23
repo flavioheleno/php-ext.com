@@ -28,7 +28,8 @@
     "bentools/cartesian-product": "^1.3",
     "illuminate/database": "^8.18",
     "mustache/mustache": "^2.13",
-    "robmorgan/phinx": "^0.12.4"
+    "robmorgan/phinx": "^0.12.4",
+    "symfony/console": "^5.2"
   },
   "require-dev": {
     "php-parallel-lint/php-parallel-lint": "^1.2",

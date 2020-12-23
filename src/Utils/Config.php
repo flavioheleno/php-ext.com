@@ -8,8 +8,8 @@ use BenTools\CartesianProduct\CartesianProduct;
 use InvalidArgumentException;
 
 final class Config {
-  private $basePath;
-  private $loadedContent = [];
+  private string $basePath;
+  private array $loadedContent = [];
 
   private function loadJson(string $fileName): void {
     if (isset($this->loadedContent[$fileName]) === true) {

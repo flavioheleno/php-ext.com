@@ -1,0 +1,32 @@
+{
+  "ahocorasick": {
+    "build": {
+      "flag": "--enable-ahocorasick",
+      "type": "git",
+      "url": "https://github.com/ph4r05/php_aho_corasick"
+    },
+    "require": {
+      "min": "7.3.99"
+    },
+    "summary": "Effective Aho-Corasick string pattern matching algorithm"
+  },
+  "amqp": {
+    "build": {
+      "deps": {
+        "alpine": [
+          "rabbitmq-c-dev"
+        ],
+        "buster": [
+          "librabbitmq-dev"
+        ]
+      },
+      "flag": "--with-amqp",
+      "type": "git",
+      "url": "https://github.com/php-amqp/php-amqp"
+    },
+    "require": {
+      "min": "5.6.0"
+    },
+    "summary": "Communicate with any AMQP compliant server"
+  }
+}
