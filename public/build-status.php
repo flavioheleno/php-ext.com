@@ -52,4 +52,7 @@ $response['status'] = in_array(
 ) === false;
 
 header('Content-Type: application/json');
-echo json_encode($response);
+echo json_encode(
+  $response,
+  JSON_PRESERVE_ZERO_FRACTION | JSON_THROW_ON_ERROR
+);

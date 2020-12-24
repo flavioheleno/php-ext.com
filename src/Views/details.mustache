@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <h1>php-ext.com / <strong>{{ extension.name }}</strong> <small class="text-muted">(from <strong>{{ extension.version }}</strong> using PHP <strong>{{ extension.php }}-{{ extension.os }}</strong>)</small></h1>
+  <div class="p-1 bg-dark text-white">
+    <strong>Dockerfile</strong>
+  </div>
+  <pre class="pre-scrollable"><code>{{ dockerfile }}</code></pre>
+  <div class="p-1 bg-dark text-white">
+    <strong>Build output <span id="badge-status" class="badge">{{ status }}</span></strong>
+    <span class="float-right"><small><i class="cil-clock"></i> {{ build.time }}s</small></span>
+  </div>
+  <pre class="pre-scrollable"><code>{{ build.log }}</code></pre>
+</div>
+<script type="text/javascript">
+  (function () {
+    const statusMap = {
+      'BUILD': 'badge-info',
+      'FAIL': 'badge-danger',
+      'SKIP': 'badge-secondary',
+      'PASS': 'badge-success',
+      'PENDING': 'badge-warning'
+    };
+
+    const $badge = document.getElementById('badge-status');
+    const status = $badge.innerText;
+    if (statusMap[status] !== undefined) {
+      $badge.classList.add(statusMap[status]);
+    }
+  }());
+</script>

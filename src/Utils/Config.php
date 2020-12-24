@@ -74,7 +74,7 @@ final class Config {
     );
   }
 
-  public function getOSSpecs(string $osName = null): array {
+  public function getOsSpecs(string $osName = null): array {
     $this->loadJson('operating-systems.json');
     if ($osName !== null) {
       return $this->loadedContent['operating-systems.json'][$osName] ?? [];
@@ -92,11 +92,11 @@ final class Config {
     return $os;
   }
 
-  public function getOSList(): array {
+  public function getOsList(): array {
     return array_keys($this->getOSSpecs());
   }
 
-  public function getPHPList(): array {
+  public function getPhpList(): array {
     $this->loadJson('php-versions.json');
     $php = array_map(
       function (array $items): string {
@@ -139,7 +139,7 @@ final class Config {
     return $ext;
   }
 
-  public function getPHPMatrix(): array {
+  public function getPhpMatrix(): array {
     $php = array_map(
       function (array $items): string {
         return implode('-', $items);
@@ -147,7 +147,7 @@ final class Config {
       iterator_to_array(
         new CartesianProduct(
           [
-            $this->getPHPList(),
+            $this->getPhpList(),
             $this->getOSList()
           ]
         )
@@ -168,7 +168,7 @@ final class Config {
         new CartesianProduct(
           [
             $this->getExtensionMatrix(),
-            $this->getPHPMatrix()
+            $this->getPhpMatrix()
           ]
         )
       )
