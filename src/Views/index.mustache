@@ -1,0 +1,185 @@
+<div class="container-fluid">
+  <h1>php-ext.com</h1>
+  <div class="table-responsive-xl">
+    <table class="table table-hover table-sm">
+      <thead class="thead-dark">
+        <tr id="tbl-header-php">
+          <th scope="col" rowspan="2" class="align-middle">Extension</th>
+          <th scope="col" rowspan="2" class="align-middle text-center">Distribution</th>
+          {{# php-versions }}
+          <th scope="col" colspan="{{ os-count }}" class="text-center">{{ . }}</th>
+          {{/ php-versions }}
+        </tr>
+        <tr id="tbl-header-os">
+          {{# os-versions }}
+          <th scope="col" class="text-center">{{ . }}</th>
+          {{/ os-versions }}
+        </tr>
+      </thead>
+      <tbody id="tbl-body">
+        {{# extension }}
+        <tr>
+          <th scope="row" rowspan="2" class="align-middle">
+            {{ name }} <a href="{{ url }}" target="_blank" rel="noreferrer noopener"><i class="cil-external-link"></i></a>
+          </th>
+          <th class="text-center">
+            <i class="cil-tag align-middle"></i> pecl
+          </th>
+            {{# pecl }}
+            <td class="text-center">
+              <a href="details.php?{{ . }}" target="_blank" rel="noreferrer noopener">
+                <span id="{{ . }}" class="badge ml-1 mr-1 badge-secondary">
+                  <i class="cil-tag align-middle"></i>
+                </span>
+              </a>
+            </td>
+            {{/ pecl }}
+          </tr>
+          <tr>
+            <th class="text-center">
+              <i class="cil-fork align-middle"></i> dev
+            </th>
+            {{# dev }}
+            <td class="text-center">
+              <a href="details.php?{{ . }}" target="_blank" rel="noreferrer noopener">
+                <span id="{{ . }}" class="badge ml-1 mr-1 badge-secondary">
+                  <i class="cil-fork align-middle"></i>
+                </span>
+              </a>
+            </td>
+            {{/ dev }}
+          </tr>
+        {{/ extension }}
+      </tbody>
+    </table>
+  </div>
+  <div class="text-center">
+     <ul class="list-inline">
+      <li class="list-inline-item">
+        <span id="ext-count" class="badge badge-dark">0</span> extensions
+      </li>
+      <li class="list-inline-item">
+        <span id="build-count" class="badge badge-info">0</span> builds running
+      </li>
+      <li class="list-inline-item">
+        <span id="skip-count" class="badge badge-secondary">0</span> builds skipped
+      </li>
+      <li class="list-inline-item">
+        <span id="pass-count" class="badge badge-success">0</span> builds passed
+      </li>
+      <li class="list-inline-item">
+        <span id="fail-count" class="badge badge-danger">0</span> builds failed
+      </li>
+      <li class="list-inline-item">
+        <span id="pending-count" class="badge badge-warning">0</span> builds pending
+      </li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+  (function () {
+    let extensionList = [];
+    let phpList = [];
+    const iconMap = {
+      'BUILD':   'cil-sync',
+      'FAIL':    'cil-x',
+      'SKIP':    'cil-speech',
+      'PASS':    'cil-check-alt',
+      'PENDING': 'cil-clock'
+    };
+    const statusMap = {
+      'BUILD': 'badge-info',
+      'FAIL': 'badge-danger',
+      'SKIP': 'badge-secondary',
+      'PASS': 'badge-success',
+      'PENDING': 'badge-warning'
+    };
+    const $space = document.createElement('span');
+    $space.innerHTML = '&nbsp;';
+
+    fetch('build-matrix.php')
+      .then(response => response.json())
+      .then(function (data) {
+
+        extensionList = data['ext'];
+        phpList = data['php'];
+
+        // update extension counter
+        const $extCount = document.getElementById('ext-count');
+        $extCount.innerText = Object.keys(data['ext']).length;
+      });
+
+      // footer counter badges
+      const $buildCount = document.getElementById('build-count');
+      const $skipCount = document.getElementById('skip-count');
+      const $passCount = document.getElementById('pass-count');
+      const $failCount = document.getElementById('fail-count');
+      const $pendingCount = document.getElementById('pending-count');
+      const updateTimer = setInterval(
+        function () {
+          fetch('build-status.php')
+            .then(response => response.json())
+            .then(function (data) {
+              // stop retrieving data updates
+              if (data['status']) {
+                clearInterval(updateTimer);
+              }
+
+              // update footer counters
+              if ($buildCount.dataset.count != data['metrics']['BUILD']) {
+                $buildCount.innerText = data['metrics']['BUILD'];
+                $buildCount.dataset.count = data['metrics']['BUILD'];
+              }
+
+              if ($skipCount.dataset.count != data['metrics']['SKIP']) {
+                $skipCount.innerText = data['metrics']['SKIP'];
+                $skipCount.dataset.count = data['metrics']['SKIP'];
+              }
+
+              if ($passCount.dataset.count != data['metrics']['PASS']) {
+                $passCount.innerText = data['metrics']['PASS'];
+                $passCount.dataset.count = data['metrics']['PASS'];
+              }
+
+              if ($failCount.dataset.count != data['metrics']['FAIL']) {
+                $failCount.innerText = data['metrics']['FAIL'];
+                $failCount.dataset.count = data['metrics']['FAIL'];
+              }
+
+              if ($pendingCount.dataset.count != data['metrics']['PENDING']) {
+                $pendingCount.innerText = data['metrics']['PENDING'];
+                $pendingCount.dataset.count = data['metrics']['PENDING'];
+              }
+
+              // update matrix
+              for (const [id, status] of Object.entries(data['list'])) {
+                const $el = document.getElementById(id);
+                if ($el.dataset.status === status) {
+                  continue;
+                }
+
+                $el.title = id + ': ' + status;
+                $el.dataset.status = status;
+                if (statusMap[status] !== undefined) {
+                  $el.classList.remove(Object.values(statusMap));
+                  $el.classList.remove('badge-light');
+                  $el.classList.add(statusMap[status]);
+                }
+
+                if (iconMap[status] !== undefined) {
+                  const $i = $el.firstElementChild;
+                  $i.classList.remove(Object.values(iconMap));
+                  $i.classList.remove('cil-tag', 'cil-fork');
+                  $i.classList.add(iconMap[status]);
+                }
+              }
+            })
+            .catch(function (error) {
+              clearInterval(updateTimer);
+              console.log(error);
+            });
+        },
+        2500
+      );
+  }());
+</script>

@@ -13,7 +13,9 @@ echo json_encode(
   [
     'ext' => $config->getExtensionList(),
     'ver' => $config->getVersionList(),
-    'php' => $config->getPHPMatrix(),
+    'php' => $config->getPhpList(),
+    'os'  => $config->getOsList(),
     'url' => $config->getExtensionUrls()
-  ]
+  ],
+  JSON_PRESERVE_ZERO_FRACTION | JSON_THROW_ON_ERROR
 );
