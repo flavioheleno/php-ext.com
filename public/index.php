@@ -32,10 +32,11 @@ foreach ($config->getPhpList() as $php) {
   );
 }
 
+$urlList = $config->getExtensionUrls();
 foreach ($config->getExtensionList() as $extension) {
   $data = [
     'name' => $extension,
-    'url'  => '',
+    'url'  => $urlList[$extension] ?? '#',
     'pecl' => [],
     'dev'  => []
   ];
