@@ -18,7 +18,7 @@ The combination is composed by:
 - PHP Version: **8.0.0**
 - OS: Debian (**buster**)
 
-Once a combination is selected to be tested, a pipeline is start and the first step is to load the Extension Specifications, which provides details such as required OS packages (`librabbitmq-dev` on Debian) and any other possible dependencies to be installed prior to building the extension.
+Once a combination is selected to be tested, a pipeline is started and the first step is to load the Extension Specifications, which provides details such as required OS packages (`librabbitmq-dev` on Debian) and any other possible dependencies to be installed prior to building the extension.
 
 **Extension Specification for `amqp`:**
 
