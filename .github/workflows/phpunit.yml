@@ -13,7 +13,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php_version: ['7.4', '8.0']
+        php_version: ['7.4', '8.0', '8.1']
+        composer_flags: ['--ignore-platform-reqs', '']
 
     steps:
     - uses: actions/checkout@v2
@@ -41,7 +42,7 @@ jobs:
 
     - name: Install dependencies
       if: steps.composer-cache.outputs.cache-hit != 'true'
-      run: composer install --prefer-dist --no-progress
+      run: composer install ${{ matrix.composer_flags }} --prefer-dist --no-progress --optimize-autoloader --no-interaction
 
     - name: Run test suite
       run: composer run-script test
