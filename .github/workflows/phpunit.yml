@@ -10,11 +10,16 @@ jobs:
   test:
     name: PHP ${{ matrix.php_version }}
     runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.experimental }}
     strategy:
       fail-fast: false
       matrix:
         php_version: ['7.4', '8.0', '8.1']
         composer_flags: ['--ignore-platform-reqs', '']
+        experimental: [false]
+        include:
+          - php_version: '8.1'
+            experimental: true
 
     steps:
     - uses: actions/checkout@v2
