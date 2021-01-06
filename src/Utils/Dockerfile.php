@@ -44,7 +44,7 @@ final class Dockerfile {
       case 'git':
         return sprintf('git clone --recursive --depth=1 %s %s', $extension->getSourceUrl(), self::BASE_DIR);
       case 'svn':
-        return sprintf('git svn clone --stdlayout %s %s', $extension->getSourceUrl(), self::BASE_DIR);
+        return sprintf('svn checkout --revision HEAD %s %s', $extension->getSourceUrl(), self::BASE_DIR);
       default:
         throw new RuntimeException(sprintf('Cannot handle "%s" source type.', $extension->getSourceType()));
     }
