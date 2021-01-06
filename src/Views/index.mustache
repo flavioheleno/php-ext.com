@@ -161,14 +161,14 @@
                 $el.title = id + ': ' + status;
                 $el.dataset.status = status;
                 if (statusMap[status] !== undefined) {
-                  $el.classList.remove(Object.values(statusMap));
+                  $el.classList.remove(...Object.values(statusMap));
                   $el.classList.remove('badge-light');
                   $el.classList.add(statusMap[status]);
                 }
 
                 if (iconMap[status] !== undefined) {
                   const $i = $el.firstElementChild;
-                  $i.classList.remove(Object.values(iconMap));
+                  $i.classList.remove(...Object.values(iconMap));
                   $i.classList.remove('cil-tag', 'cil-fork');
                   $i.classList.add(iconMap[status]);
                 }
