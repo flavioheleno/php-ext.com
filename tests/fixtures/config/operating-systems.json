@@ -1,0 +1,34 @@
+{
+  "alpine": {
+    "deps": {
+      "cmd": "apk add --no-cache",
+      "list": [
+        "git",
+        "autoconf",
+        "build-base"
+      ]
+    },
+    "disabled": true,
+    "pre": [
+      "apk update",
+      "apk upgrade"
+    ]
+  },
+  "buster": {
+    "deps": {
+      "cmd": "apt install -y --no-install-recommends",
+      "list": [
+        "git",
+        "autoconf",
+        "build-essential"
+      ]
+    },
+    "pre": [
+      "apt update",
+      "apt full-upgrade -y"
+    ],
+    "post": [
+      "rm -rf /var/lib/apt/lists/*"
+    ]
+  }
+}
