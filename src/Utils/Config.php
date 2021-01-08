@@ -3,175 +3,41 @@ declare(strict_types = 1);
 
 namespace App\Utils;
 
-use BenTools\CartesianProduct\CartesianProduct;
+use App\Utils\Config\AdapterInterface;
 
-use InvalidArgumentException;
+use \ReflectionClass;
+use \ReflectionMethod;
 
 final class Config {
-  private $basePath;
-  private $loadedContent = [];
+  private $adapter;
 
-  private function loadJson(string $fileName): void {
-    if (isset($this->loadedContent[$fileName]) === true) {
-      return;
+  public function __construct(AdapterInterface $adapter) {
+    $this->adapter = $adapter;
+    $this->methods = $this->getAdapterPublicMethods();
+  }
+
+  public function __call(string $method, array $arguments): array {
+    $argument = $this->getArgument($arguments);
+
+    if (in_array($method, $this->methods)) {
+      return $this->adapter->$method($argument);
+    }
+  }
+  
+  private function getAdapterPublicMethods(): array {
+    $interface = new ReflectionClass('App\Utils\Config\AdapterInterface');
+    $reflection = $interface->getMethods(ReflectionMethod::IS_PUBLIC);
+
+    return array_map(function ($item) {
+      return $item->name;
+    }, $reflection);
+  }
+
+  private function getArgument($arguments): ?string {
+    if (empty($arguments)) {
+      return null;
     }
 
-    $filePath = $this->basePath . DIRECTORY_SEPARATOR . $fileName;
-    if (! is_file($filePath)) {
-      throw new InvalidArgumentException('$fileName must be a valid file');
-    }
-
-    $raw = file_get_contents($filePath);
-    if ($raw === false) {
-      throw new InvalidArgumentException('Could not read from file');
-    }
-
-    $json = json_decode($raw, true);
-    if ($json === false) {
-      throw new InvalidArgumentException('Could not decode json data');
-    }
-
-    $this->loadedContent[$fileName] = $json;
-  }
-
-  public function __construct(string $basePath) {
-    $basePath = rtrim($basePath, DIRECTORY_SEPARATOR);
-    if (! is_dir($basePath)) {
-      throw new InvalidArgumentException('$basePath must be a valid directory');
-    }
-
-    $this->basePath = $basePath;
-  }
-
-  public function getExtensionSpecs(string $extName = null): array {
-    $this->loadJson('extensions.json');
-    if ($extName !== null) {
-      return $this->loadedContent['extensions.json'][$extName] ?? [];
-    }
-
-    $extensions = array_filter(
-      $this->loadedContent['extensions.json'],
-      function (array $specs): bool {
-        return (isset($specs['disabled']) === false || $specs['disabled'] === false);
-      },
-      ARRAY_FILTER_USE_BOTH
-    );
-    ksort($extensions);
-
-    return $extensions;
-  }
-
-  public function getExtensionList(): array {
-    return array_keys($this->getExtensionSpecs());
-  }
-
-  public function getExtensionUrls(): array {
-    return array_map(
-      function (array $items): string {
-        return $items['build']['url'] ?? '';
-      },
-      $this->getExtensionSpecs()
-    );
-  }
-
-  public function getOsSpecs(string $osName = null): array {
-    $this->loadJson('operating-systems.json');
-    if ($osName !== null) {
-      return $this->loadedContent['operating-systems.json'][$osName] ?? [];
-    }
-
-    $os = array_filter(
-      $this->loadedContent['operating-systems.json'],
-      function (array $specs): bool {
-        return (isset($specs['disabled']) === false || $specs['disabled'] === false);
-      },
-      ARRAY_FILTER_USE_BOTH
-    );
-    ksort($os);
-
-    return $os;
-  }
-
-  public function getOsList(): array {
-    return array_keys($this->getOSSpecs());
-  }
-
-  public function getPhpList(): array {
-    $this->loadJson('php-versions.json');
-    $php = array_map(
-      function (array $items): string {
-        return implode('-', array_filter($items));
-      },
-      iterator_to_array(
-        new CartesianProduct(
-          [
-            $this->loadedContent['php-versions.json'],
-            ['', 'zts']
-          ]
-        )
-      )
-    );
-    sort($php);
-
-    return $php;
-  }
-
-  public function getVersionList(): array {
-    return ['pecl', 'dev'];
-  }
-
-  public function getExtensionMatrix(): array {
-    $ext = array_map(
-      function (array $items): string {
-        return implode(':', $items);
-      },
-      iterator_to_array(
-        new CartesianProduct(
-          [
-            $this->getExtensionList(),
-            $this->getVersionList()
-          ]
-        )
-      )
-    );
-    sort($ext);
-
-    return $ext;
-  }
-
-  public function getPhpMatrix(): array {
-    $php = array_map(
-      function (array $items): string {
-        return implode('-', $items);
-      },
-      iterator_to_array(
-        new CartesianProduct(
-          [
-            $this->getPhpList(),
-            $this->getOSList()
-          ]
-        )
-      )
-    );
-
-    sort($php);
-
-    return $php;
-  }
-
-  public function getBuildMatrix(): array {
-    return array_map(
-      function (array $items): string {
-        return implode('@', $items);
-      },
-      iterator_to_array(
-        new CartesianProduct(
-          [
-            $this->getExtensionMatrix(),
-            $this->getPhpMatrix()
-          ]
-        )
-      )
-    );
+    return array_shift($arguments);
   }
 }
