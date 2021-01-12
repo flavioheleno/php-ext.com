@@ -172,7 +172,7 @@ final class DockerfileTest extends TestCase {
           'rm -rf /var/lib/apt/lists/*'
         ],
         [
-          'git svn clone --stdlayout http://svn.php.net/repository/pecl/svn /tmp/ext-src',
+          'svn checkout --revision HEAD http://svn.php.net/repository/pecl/svn /tmp/ext-src',
           'cd /tmp/ext-src',
           'phpize',
           './configure --with-svn',
@@ -200,7 +200,7 @@ final class DockerfileTest extends TestCase {
           'rm -rf /var/lib/apt/lists/*'
         ],
         [
-          'git svn clone --stdlayout http://svn.php.net/repository/pecl/svn /tmp/ext-src',
+          'svn checkout --revision HEAD http://svn.php.net/repository/pecl/svn /tmp/ext-src',
           'cd /tmp/ext-src/my/custom/path',
           'phpize',
           './configure --with-svn',
