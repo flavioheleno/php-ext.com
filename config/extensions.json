@@ -6,7 +6,8 @@
       "url": "https://github.com/ph4r05/php_aho_corasick"
     },
     "require": {
-      "min": "7.3.99"
+      "max": "7.3.99",
+      "min": "5.2.0"
     },
     "summary": "Effective Aho-Corasick string pattern matching algorithm"
   },
@@ -55,7 +56,7 @@
       "url": "https://github.com/krakjoe/apcu"
     },
     "require": {
-      "min": "7.0.0"
+      "min": "7.0.0-dev"
     },
     "summary": "APCu - APC User Cache"
   },
@@ -128,7 +129,7 @@
       "url": "https://github.com/ppadron/php-augeas"
     },
     "require": {
-      "min": "5.2.0"
+      "min": "5.2"
     },
     "summary": "PHP bindings to the Augeas API"
   },
@@ -144,7 +145,7 @@
       "url": "https://github.com/improved-php-library/base58-php-ext"
     },
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "Encode and decode data with base58"
   },
@@ -190,6 +191,7 @@
       "url": "http://svn.php.net/repository/pecl/bloomy/"
     },
     "require": {
+      "max": "6.0.0",
       "min": "5.2.0"
     },
     "summary": "Extension implementing a Bloom filter"
@@ -218,7 +220,7 @@
       "url": "https://github.com/lstrojny/php-cld"
     },
     "require": {
-      "min": "5.3.0"
+      "min": "5.3"
     },
     "summary": "PHP Bindings for Chromium Compact Language Detector"
   },
@@ -316,7 +318,8 @@
       "url": "https://github.com/DataDog/dd-trace-php"
     },
     "require": {
-      "min": "5.4.0"
+      "max": "8.0.99",
+      "min": "5.4"
     },
     "summary": "APM and distributed tracing for PHP"
   },
@@ -499,6 +502,7 @@
       "url": "https://github.com/sibaz/pecl-expect"
     },
     "require": {
+      "max": "7.99.99",
       "min": "4.0.0"
     },
     "summary": "PHP extension for expect library"
@@ -548,6 +552,7 @@
     },
     "pecl": false,
     "require": {
+      "max": "8.1.99",
       "min": "7.0.0"
     },
     "summary": "PHP wrapper to libgearman"
@@ -583,7 +588,7 @@
       "url": "https://github.com/php-geospatial/geospatial"
     },
     "require": {
-      "min": "5.4.0"
+      "min": "7.0.0"
     },
     "summary": "PHP Extension to handle common geospatial functions"
   },
@@ -679,7 +684,7 @@
       "url": "https://github.com/hprose/hprose-pecl"
     },
     "require": {
-      "min": "5.2.0"
+      "min": "5.2"
     },
     "summary": "Hprose for PHP."
   },
@@ -690,7 +695,7 @@
       "url": "http://svn.php.net/repository/pecl/hrtime/"
     },
     "require": {
-      "min": "5.3.0"
+      "min": "5.3"
     },
     "summary": "High resolution timing"
   },
@@ -713,7 +718,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "Extension for IBM DB2 Universal Database, IBM Cloudscape, and Apache Derby"
   },
@@ -725,6 +730,7 @@
     },
     "disabled": true,
     "require": {
+      "max": "8.0.0",
       "min": "7.1.0"
     },
     "summary": "Simple and fast PHP framework"
@@ -749,7 +755,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4"
     },
     "summary": "GNU Libidn"
   },
@@ -805,7 +811,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.3.0"
     },
     "summary": "Extension for the Ingres/Vectorwise Database Systems."
   },
@@ -829,7 +835,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "6.0.0",
+      "min": "4.3.10"
     },
     "summary": "Intercept function/method calls"
   },
@@ -841,7 +848,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5"
     },
     "summary": "Get geo location information of an IP address"
   },
@@ -852,7 +859,7 @@
       "url": "https://github.com/ip2location/ip2proxy-pecl"
     },
     "require": {
-      "min": "5.0.0"
+      "min": "5"
     },
     "summary": "Get proxy information of an IP address"
   },
@@ -864,7 +871,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3"
     },
     "summary": "IRC Client"
   },
@@ -888,21 +895,9 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "PHP extension for minifying JavaScript"
-  },
-  "json": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": "JavaScript Object Notation"
   },
   "json_post": {
     "build": {
@@ -912,7 +907,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
     "summary": "JSON POST handler"
   },
@@ -924,7 +919,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "6.0.0",
+      "min": "5.4.0"
     },
     "summary": "JavaScript Object Notation"
   },
@@ -936,7 +932,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.3"
     },
     "summary": "JavaScript Object Notation"
   },
@@ -948,9 +944,9 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
-    "summary": "The Google Jsonnet for PHP."
+    "summary": "The Google JsonNet for PHP."
   },
   "judy": {
     "build": {
@@ -960,7 +956,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
     "summary": "PHP Judy implements sparse dynamic arrays (aka Judy Arrays)"
   },
@@ -984,7 +980,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "Features:"
   },
@@ -996,7 +992,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "Library to edit audio properties and tags on MPEG and OGG files"
   },
@@ -1008,9 +1004,9 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
-    "summary": "LAPACK Library"
+    "summary": "Wrapper for the LAPACK linear algebra library."
   },
   "lchash": {
     "build": {
@@ -1048,7 +1044,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "6.0.0",
+      "min": "5.3.0"
     },
     "summary": "Libevent - event notification"
   },
@@ -1067,6 +1064,7 @@
       "url": "https://github.com/jedisct1/libsodium-php"
     },
     "require": {
+      "max": "8.0.99",
       "min": "7.0.0"
     },
     "summary": "Wrapper for the Sodium cryptographic library"
@@ -1098,7 +1096,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "Lua interpreter with limits and safe environment"
   },
@@ -1152,7 +1150,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "Processes the Markdown language with the bundled discount library."
   },
@@ -1185,7 +1183,7 @@
     },
     "pecl": false,
     "require": {
-      "min": "7.1.0"
+      "min": "7.2.0"
     },
     "summary": "Reader for the MaxMind DB file format"
   },
@@ -1204,6 +1202,7 @@
       "url": "https://git.php.net/repository/pecl/encryption/mcrypt"
     },
     "require": {
+      "max": "8.1.0",
       "min": "7.2.0"
     },
     "summary": "Bindings for the libmcrypt library"
@@ -1216,7 +1215,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "6.0.0",
+      "min": "5.0.0"
     },
     "summary": "Applies mcrypt symmetric encryption using stream filters"
   },
@@ -1228,7 +1228,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.2.0"
     },
     "summary": "libmonetra/libmcve interface"
   },
@@ -1240,7 +1240,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.0.0"
     },
     "summary": "MDB data file access library"
   },
@@ -1259,7 +1259,7 @@
       "url": "https://github.com/websupport-sk/pecl-memcache"
     },
     "require": {
-      "min": "7.0.0"
+      "min": "8.0.0"
     },
     "summary": "memcached extension"
   },
@@ -1319,7 +1319,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "In-memory session extension"
   },
@@ -1331,7 +1331,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "6.0.0",
+      "min": "5.1.3"
     },
     "summary": "PHP extension to watch (unusually high) memory consumption in PHP scripts"
   },
@@ -1343,7 +1344,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
     "summary": "Build ASTs and CSTs from PHP source code"
   },
@@ -1355,7 +1356,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.3.0"
     },
     "summary": "mnoGoSearch extension module for PHP"
   },
@@ -1371,7 +1372,8 @@
       "url": "https://github.com/chuan-yun/Molten"
     },
     "require": {
-      "min": "7.2.0"
+      "max": "7.2.0",
+      "min": "5.4.0"
     },
     "summary": "molten is transparency tool for application tracing it self module call"
   },
@@ -1382,6 +1384,7 @@
       "url": "https://github.com/mongodb/mongo-php-driver"
     },
     "require": {
+      "max": "8.99.99",
       "min": "7.0.0"
     },
     "summary": "MongoDB driver for PHP"
@@ -1394,7 +1397,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
     "summary": "Extension for libmosquitto"
   },
@@ -1406,7 +1409,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.0.0"
     },
     "summary": "mqseries client library"
   },
@@ -1471,7 +1474,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.4.0"
     },
     "summary": "A PHP extension for transparently translating SQL into requests for the MySQL InnoDB Memcached Daemon Plugin"
   },
@@ -1483,7 +1486,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.4-dev"
     },
     "summary": "A query cache plugin for mysqlnd"
   },
@@ -1495,7 +1498,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
     "summary": "MySQLnd Userland Handler"
   },
@@ -1507,7 +1510,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5"
     },
     "summary": "Terminal screen handling and optimization package"
   },
@@ -1519,7 +1522,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "6.0.0",
+      "min": "4.3.0"
     },
     "summary": "fopen wrapper for the gopher protocol"
   },
@@ -1543,7 +1547,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "5.99.99",
+      "min": "4.3.0"
     },
     "summary": "Extension for Red Hat Newt window library"
   },
@@ -1555,7 +1560,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "PHP extension for NSQ client"
   },
@@ -1610,7 +1615,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.3.0"
     },
     "summary": "OpenAL Bindings"
   },
@@ -1622,7 +1627,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "A stats collection and distributed tracing framework"
   },
@@ -1634,9 +1639,9 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.2.0"
     },
-    "summary": "OpenGL (3D graphics library) for PHP"
+    "summary": "OpenGL (3D graphics library) bindings for the PHP language"
   },
   "operator": {
     "build": {
@@ -1646,7 +1651,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.0.0"
     },
     "summary": "Operator overloading for Objects"
   },
@@ -1694,7 +1699,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.0.0"
     },
     "summary": "Parameter Parsing Utility"
   },
@@ -1706,7 +1711,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0"
     },
     "summary": "Parsing and lexing"
   },
@@ -1718,7 +1723,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.0.0"
     },
     "summary": "Generates a parse tree for a PHP source file in XML format."
   },
@@ -1730,7 +1735,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.0.0"
     },
     "summary": "PHP Opcode Analyser"
   },
@@ -1753,7 +1758,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
     "summary": "PHP Code Service"
   },
@@ -1765,7 +1770,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3"
     },
     "summary": "An extension for PHP using the winscard PC/SC API"
   },
@@ -1796,7 +1801,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "PDO driver for 4D-SQL database"
   },
@@ -1836,7 +1841,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.0.3"
     },
     "summary": "ODBC v3 Interface driver for PDO"
   },
@@ -1848,7 +1853,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.0.3"
     },
     "summary": "PostgreSQL driver for PDO"
   },
@@ -1860,7 +1865,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.3"
     },
     "summary": "SAP SQL Anywhere driver for PDO"
   },
@@ -1878,7 +1883,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.2.0"
+      "min": "7.3.0"
     },
     "summary": "Microsoft Drivers for PHP for SQL Server (PDO_SQLSRV)"
   },
@@ -1890,7 +1895,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.0.3"
     },
     "summary": "Userspace driver for PDO"
   },
@@ -1913,7 +1918,7 @@
       "url": "https://github.com/m6w6/ext-http"
     },
     "require": {
-      "min": "7.0.0"
+      "min": "8.0.0"
     },
     "summary": "Extended HTTP Support"
   },
@@ -1925,7 +1930,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "Perforce API Extension"
   },
@@ -1937,7 +1942,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "8.0.0",
+      "min": "7.2.0"
     },
     "summary": "Phalcon is a full stack PHP framework offering low resource consumption and high performance."
   },
@@ -1949,7 +1955,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
     "summary": "PHP client library to communicate with the hadoop hdfs"
   },
@@ -1961,7 +1967,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
     "summary": "An optional accelerator for Automap and PHK"
   },
@@ -1985,9 +1991,10 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "7.4.99",
+      "min": "7.3.0"
     },
-    "summary": "PHP Trie extension"
+    "summary": "Trie and HAT trie data structures for PHP."
   },
   "phpiredis": {
     "build": {
@@ -2017,7 +2024,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "OpenBSD's pledge / unveil support"
   },
@@ -2060,7 +2067,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "Allows setting the current process name on Linux and BSD"
   },
@@ -2072,7 +2079,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "Property proxy"
   },
@@ -2096,7 +2103,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "Protocol Buffers are a way of encoding structured data in an efficient yet extensible format. Google uses Protocol Buffers for almost all of its internal RPC protocols and file formats."
   },
@@ -2108,7 +2115,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "An extension to create PostScript files"
   },
@@ -2131,7 +2138,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "Accelerator designed mainly for graphic work"
   },
@@ -2143,7 +2150,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5"
     },
     "summary": "Get IP location from QQWry file"
   },
@@ -2155,7 +2162,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "Provides a set of specific strongly-typed classes for sets and hashing"
   },
@@ -2167,7 +2174,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
     "summary": "Radius client library"
   },
@@ -2208,7 +2215,8 @@
       "url": "https://github.com/arnaud-lb/php-rdkafka"
     },
     "require": {
-      "min": "5.6.0"
+      "max": "8.99.99",
+      "min": "7.0.0"
     },
     "summary": "Kafka client based on librdkafka"
   },
@@ -2220,7 +2228,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "Extension for RE2"
   },
@@ -2255,7 +2263,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.2.0"
     },
     "summary": "Soft and Weak references support in PHP"
   },
@@ -2267,7 +2275,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.3.0"
     },
     "summary": "Provides server-side request and response objects."
   },
@@ -2279,7 +2287,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "6.0.0",
+      "min": "5.3.0"
     },
     "summary": "Riak database PHP extension"
   },
@@ -2291,7 +2300,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "RPM information"
   },
@@ -2303,7 +2312,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.4.1"
     },
     "summary": "RPM file meta information reader"
   },
@@ -2335,7 +2344,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "RSVG Extension"
   },
@@ -2347,7 +2356,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.6"
     },
     "summary": "Wrapper for librsync library"
   },
@@ -2359,7 +2368,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.2.0"
     },
     "summary": "Runkit7 : For all those things you.... probably shouldn't have been doing anyway.... but surely do!"
   },
@@ -2414,6 +2423,7 @@
       "url": "https://github.com/scoutapp/scout-apm-php-ext"
     },
     "require": {
+      "max": "8.0.99",
       "min": "7.1.0"
     },
     "summary": "Native Extension Component for ScoutAPM's PHP Agent"
@@ -2426,7 +2436,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3"
     },
     "summary": "Scrypt hashing function"
   },
@@ -2445,7 +2455,7 @@
       "url": "https://github.com/Ponup/php-sdl"
     },
     "require": {
-      "min": "7.3.0"
+      "min": "7.4.0"
     },
     "summary": "SDL for PHP"
   },
@@ -2457,7 +2467,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.4.0"
     },
     "summary": "An Yandex ClickHouse client driven extension for PHP."
   },
@@ -2469,7 +2479,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "An effective,fast,stable log extension for PHP."
   },
@@ -2481,7 +2491,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "SELinux binding for PHP script language"
   },
@@ -2493,7 +2503,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.3.0"
     },
     "summary": "libshape wrapper"
   },
@@ -2559,7 +2569,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0"
     },
     "summary": "The Apache Solr PHP extension is an extremely fast, light-weight, feature-rich library that allows PHP applications to communicate easily and efficiently with Apache Solr server instances using an object-oriented API."
   },
@@ -2571,7 +2581,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "6.0.0",
+      "min": "5.2.2"
     },
     "summary": "Client extension for Sphinx - opensource SQL full-text search engine"
   },
@@ -2583,7 +2594,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
     "summary": "JavaScript engine for PHP"
   },
@@ -2607,7 +2618,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.0.0"
     },
     "summary": "A php interface to the Spread toolkit API"
   },
@@ -2624,7 +2635,7 @@
       "url": "https://github.com/Microsoft/msphpsql"
     },
     "require": {
-      "min": "7.2.0"
+      "min": "7.3.0"
     },
     "summary": "Microsoft Drivers for PHP for SQL Server (SQLSRV)"
   },
@@ -2636,7 +2647,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "Fuzzy hashing makes it easy to identify similar or almost identical text by simply comparing two hashes against each other."
   },
@@ -2655,6 +2666,7 @@
       "url": "https://git.php.net/repository/pecl/networking/ssh2"
     },
     "require": {
+      "max": "8.0.0",
       "min": "7.0.0"
     },
     "summary": "Bindings for the libssh2 library"
@@ -2667,7 +2679,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "Investigate your code's behavior in production"
   },
@@ -2691,7 +2703,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.3.0"
     },
     "summary": "a PHP extension that provides word stemming"
   },
@@ -2740,6 +2752,7 @@
       "url": "http://svn.php.net/repository/pecl/svn"
     },
     "require": {
+      "max": "8.0.0",
       "min": "7.0.0"
     },
     "summary": "PHP Bindings for the Subversion Revision control system."
@@ -2751,7 +2764,7 @@
       "url": "https://github.com/swoole/swoole-src"
     },
     "require": {
-      "min": "7.1.0"
+      "min": "7.2.0"
     },
     "summary": "Event-driven asynchronous and concurrent networking engine with high performance for PHP."
   },
@@ -2762,7 +2775,7 @@
       "url": "https://github.com/swoole/ext-serialize"
     },
     "require": {
-      "min": "7.0.0"
+      "min": "7"
     },
     "summary": "the fastest and smallest serialize fucntion bound for php7"
   },
@@ -2774,7 +2787,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.1"
     },
     "summary": "YAML-1.0 parser and emitter"
   },
@@ -2786,7 +2799,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
     "summary": "Named and unnamed synchronization objects"
   },
@@ -2809,7 +2822,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "TCC Extension"
   },
@@ -2833,7 +2846,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
     "summary": "tcpwrappers binding."
   },
@@ -2845,7 +2858,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "6.0.0",
+      "min": "5.0.0"
     },
     "summary": "Trivial DB bindings"
   },
@@ -2857,7 +2871,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5"
     },
     "summary": "a termbox wrapper for PHP"
   },
@@ -2869,7 +2883,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "6.0.0",
+      "min": "5.2.0"
     },
     "summary": "Simple class to extract language of texts"
   },
@@ -2928,7 +2943,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
     "summary": "Provides a wrapper to the Tokyo Tyrant client library."
   },
@@ -2940,7 +2955,7 @@
       "url": "https://github.com/Qihoo360/phptrace"
     },
     "require": {
-      "min": "5.2.0"
+      "min": "5.2"
     },
     "summary": "Trace is a low-overhead tracing tool for PHP"
   },
@@ -2952,7 +2967,7 @@
       "url": "http://svn.php.net/repository/pecl/trader"
     },
     "require": {
-      "min": "5.3.0"
+      "min": "5.3"
     },
     "summary": "Technical Analysis for traders."
   },
@@ -2964,7 +2979,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "Transliterates non-latin character sets to latin"
   },
@@ -2976,7 +2991,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.3.0"
     },
     "summary": "Reverse Proxy (web accelerator) PHP compatibility layer"
   },
@@ -2988,7 +3003,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "6.0.0",
+      "min": "5.3.0"
     },
     "summary": "PHP bindings for udis86 library"
   },
@@ -3000,7 +3016,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0RC5"
     },
     "summary": "UI API"
   },
@@ -3075,7 +3091,7 @@
       "url": "https://github.com/phpv8/php-v8"
     },
     "require": {
-      "min": "7.1.0"
+      "min": "7.1"
     },
     "summary": "V8 JavaScript engine API for PHP"
   },
@@ -3092,7 +3108,7 @@
       "url": "https://github.com/phpv8/v8js"
     },
     "require": {
-      "min": "7.0.0",
+      "min": "7.0",
       "zts": true
     },
     "summary": "V8 Javascript Engine for PHP"
@@ -3117,7 +3133,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3"
     },
     "summary": "Varnish Cache bindings"
   },
@@ -3129,7 +3145,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "PHP extension for interfacing with libvips"
   },
@@ -3164,7 +3180,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.2.0"
     },
     "summary": "Run WebAssembly binaries in PHP"
   },
@@ -3188,7 +3204,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "6.0.0",
+      "min": "4.3"
     },
     "summary": "Win32 process and memory stats"
   },
@@ -3200,7 +3217,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "6.0.0",
+      "min": "4.3"
     },
     "summary": "Win32 process and memory stats"
   },
@@ -3212,7 +3230,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "8.0.0"
     },
     "summary": "A Windows specific extension to allow PHP to interact with Windows Services."
   },
@@ -3226,7 +3244,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": "Access to some Win32 usefull API."
+    "summary": "Set of standard Windows API functions."
   },
   "winbinder": {
     "build": {
@@ -3236,7 +3254,8 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "max": "5.1.4",
+      "min": "4.3.10"
     },
     "summary": "A Native Windows Binding for PHP"
   },
@@ -3248,7 +3267,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "Windows Cache Extension for PHP"
   },
@@ -3260,7 +3279,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
     "summary": "Cross-platform widget toolkit."
   },
@@ -3272,7 +3291,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.2.0"
     },
     "summary": "Extended attributes."
   },
@@ -3284,7 +3303,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.1.0"
     },
     "summary": "X.commerce bindings and helper methods"
   },
@@ -3295,6 +3314,7 @@
       "url": "https://github.com/xdebug/xdebug"
     },
     "require": {
+      "max": "8.0.99",
       "min": "7.2.0"
     },
     "summary": "Provides functions for function traces and profiling"
@@ -3330,7 +3350,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
     "summary": "Efficient and fast xlsx file extension."
   },
@@ -3342,21 +3362,9 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3"
     },
     "summary": "XML diff and merge"
-  },
-  "xmlreader": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": "Provides fast, non-cached, forward-only access to XML data under PHP 5."
   },
   "xmlrpc": {
     "build": {
@@ -3366,7 +3374,7 @@
     },
     "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "8.0.0"
     },
     "summary": "Functions to write XML-RPC servers and clients"
   },
@@ -3382,18 +3390,6 @@
     },
     "summary": "Improved XML-RPC"
   },
-  "xmlwriter": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": "Provides fast, non-cached, forward-only means to write XML data."
-  },
   "xxtea": {
     "build": {
       "flag": "--enable-xxtea",
@@ -3401,7 +3397,7 @@
       "url": "https://github.com/xxtea/xxtea-pecl"
     },
     "require": {
-      "min": "5.0.0"
+      "min": "5.0"
     },
     "summary": "XXTEA encryption algorithm extension for PHP."
   },
@@ -3480,7 +3476,7 @@
       "url": "https://github.com/indexdata/phpyaz"
     },
     "require": {
-      "min": "4.3.0"
+      "min": "4.3"
     },
     "summary": "Z39.50/SRU client"
   },
@@ -3546,6 +3542,7 @@
       "url": "https://github.com/php-zookeeper/php-zookeeper"
     },
     "require": {
+      "max": "7.4.99",
       "min": "7.0.0"
     },
     "summary": "PHP extension for interfacing with Apache ZooKeeper"
@@ -3557,7 +3554,7 @@
       "url": "https://github.com/kjdev/php-ext-zstd"
     },
     "require": {
-      "min": "5.2.0"
+      "min": "5.2"
     },
     "summary": "Zstandard extension"
   }
