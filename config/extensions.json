@@ -176,7 +176,7 @@
     "build": {
       "flag": "--enable-bitset",
       "type": "git",
-      "url": "https://git.php.net/repository/pecl/numbers/bitset"
+      "url": "https://github.com/php/pecl-numbers-bitset"
     },
     "require": {
       "min": "7.0.0"
@@ -188,7 +188,7 @@
       "flag": "--enable-bloomy",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/bloomy/"
+      "url": "http://svn.php.net/repository/pecl/bloomy"
     },
     "require": {
       "max": "6.0.0",
@@ -602,7 +602,7 @@
       },
       "flag": "--with-gmagick",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/gmagick/"
+      "url": "http://svn.php.net/repository/pecl/gmagick"
     },
     "require": {
       "min": "7.0.1"
@@ -714,7 +714,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-database-ibm_db2"
     },
     "disabled": true,
     "require": {
@@ -726,7 +726,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/ice/framework"
     },
     "disabled": true,
     "require": {
@@ -738,8 +738,9 @@
   "id3": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/id3/"
     },
     "disabled": true,
     "require": {
@@ -750,8 +751,9 @@
   "idn": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/idn"
     },
     "disabled": true,
     "require": {
@@ -794,8 +796,9 @@
   "ims": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/ims"
     },
     "disabled": true,
     "require": {
@@ -806,8 +809,9 @@
   "ingres": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/ingres"
     },
     "disabled": true,
     "require": {
@@ -818,9 +822,8 @@
   "inotify": {
     "build": {
       "flag": "--enable-inotify",
-      "path": "trunk",
-      "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/inotify"
+      "type": "git",
+      "url": "https://github.com/arnaud-lb/php-inotify"
     },
     "require": {
       "min": "7.0.0"
@@ -830,8 +833,9 @@
   "intercept": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/intercept"
     },
     "disabled": true,
     "require": {
@@ -844,7 +848,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/chrislim2888/IP2Location-PECL-Extension"
     },
     "disabled": true,
     "require": {
@@ -867,7 +871,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/m6w6/ext-ircclient"
     },
     "disabled": true,
     "require": {
@@ -891,7 +895,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/sqmk/pecl-jsmin"
     },
     "disabled": true,
     "require": {
@@ -903,7 +907,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/m6w6/ext-json_post"
     },
     "disabled": true,
     "require": {
@@ -915,7 +919,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/remicollet/pecl-json-c"
     },
     "disabled": true,
     "require": {
@@ -928,7 +932,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/bukka/php-jsond"
     },
     "disabled": true,
     "require": {
@@ -940,7 +944,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/Neeke/Jsonnet-PHP"
     },
     "disabled": true,
     "require": {
@@ -951,8 +955,9 @@
   "judy": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/judy/"
     },
     "disabled": true,
     "require": {
@@ -975,8 +980,9 @@
   "krb5": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "https://svn.php.net/viewvc/pecl/krb5"
     },
     "disabled": true,
     "require": {
@@ -987,8 +993,9 @@
   "ktaglib": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/ktaglib"
     },
     "disabled": true,
     "require": {
@@ -1000,7 +1007,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/ianbarber/php-lapack"
     },
     "disabled": true,
     "require": {
@@ -1011,8 +1018,9 @@
   "lchash": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/lchash"
     },
     "disabled": true,
     "require": {
@@ -1040,7 +1048,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-event-libevent"
     },
     "disabled": true,
     "require": {
@@ -1092,7 +1100,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://phabricator.wikimedia.org/diffusion/MLUS/php-luasandbox"
     },
     "disabled": true,
     "require": {
@@ -1135,7 +1143,7 @@
     "build": {
       "flag": "--enable-mailparse",
       "type": "git",
-      "url": "https://git.php.net/repository/pecl/mail/mailparse"
+      "url": "https://github.com/php/pecl-mail-mailparse"
     },
     "require": {
       "min": "7.0.0"
@@ -1146,7 +1154,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/cataphract/php-discount"
     },
     "disabled": true,
     "require": {
@@ -1157,8 +1165,9 @@
   "maxdb": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/maxdb"
     },
     "disabled": true,
     "require": {
@@ -1199,7 +1208,7 @@
       },
       "flag": "--with-mcrypt",
       "type": "git",
-      "url": "https://git.php.net/repository/pecl/encryption/mcrypt"
+      "url": "https://github.com/php/pecl-encryption-mcrypt"
     },
     "require": {
       "max": "8.1.0",
@@ -1210,8 +1219,9 @@
   "mcrypt_filter": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/mcrypt_filter"
     },
     "disabled": true,
     "require": {
@@ -1223,8 +1233,9 @@
   "mcve": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/mcve"
     },
     "disabled": true,
     "require": {
@@ -1235,8 +1246,9 @@
   "mdbtools": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/mdbtools"
     },
     "disabled": true,
     "require": {
@@ -1314,8 +1326,9 @@
   "memsession": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/memsession/trunk"
     },
     "disabled": true,
     "require": {
@@ -1327,7 +1340,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-php-memtrack"
     },
     "disabled": true,
     "require": {
@@ -1340,7 +1353,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/flavius/phpmeta"
     },
     "disabled": true,
     "require": {
@@ -1351,8 +1364,9 @@
   "mnogosearch": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/mnogosearch"
     },
     "disabled": true,
     "require": {
@@ -1393,7 +1407,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/mgdm/Mosquitto-PHP"
     },
     "disabled": true,
     "require": {
@@ -1405,7 +1419,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-networking-mqseries"
     },
     "disabled": true,
     "require": {
@@ -1447,7 +1461,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-database-mysql_xdevapi"
     },
     "disabled": true,
     "require": {
@@ -1470,7 +1484,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-database-mysqlnd_memcache"
     },
     "disabled": true,
     "require": {
@@ -1481,8 +1495,9 @@
   "mysqlnd_qc": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/mysqlnd_qc"
     },
     "disabled": true,
     "require": {
@@ -1490,23 +1505,12 @@
     },
     "summary": "A query cache plugin for mysqlnd"
   },
-  "mysqlnd_uh": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "5.3.0"
-    },
-    "summary": "MySQLnd Userland Handler"
-  },
   "ncurses": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/ncurses"
     },
     "disabled": true,
     "require": {
@@ -1517,8 +1521,9 @@
   "net_gopher": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/Net_Gopher"
     },
     "disabled": true,
     "require": {
@@ -1542,8 +1547,9 @@
   "newt": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/newt"
     },
     "disabled": true,
     "require": {
@@ -1556,7 +1562,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/yunnian/php-nsq"
     },
     "disabled": true,
     "require": {
@@ -1576,7 +1582,7 @@
       },
       "flag": "--enable-oauth",
       "type": "git",
-      "url": "https://git.php.net/repository/pecl/web_services/oauth"
+      "url": "https://github.com/php/pecl-web_services-oauth"
     },
     "require": {
       "min": "7.0.0"
@@ -1586,8 +1592,9 @@
   "ocal": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/ocal"
     },
     "disabled": true,
     "require": {
@@ -1595,23 +1602,11 @@
     },
     "summary": "Oracle Calendar connectivity"
   },
-  "odbtp": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": "ODBTP client functions"
-  },
   "openal": {
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/Ponup/php-openal"
     },
     "disabled": true,
     "require": {
@@ -1623,7 +1618,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/census-instrumentation/opencensus-php"
     },
     "disabled": true,
     "require": {
@@ -1635,7 +1630,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/Ponup/php-opengl"
     },
     "disabled": true,
     "require": {
@@ -1647,7 +1642,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-php-operator"
     },
     "disabled": true,
     "require": {
@@ -1670,8 +1665,9 @@
   "paradox": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/paradox"
     },
     "disabled": true,
     "require": {
@@ -1694,8 +1690,9 @@
   "params": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/params"
     },
     "disabled": true,
     "require": {
@@ -1707,7 +1704,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/weltling/parle"
     },
     "disabled": true,
     "require": {
@@ -1718,8 +1715,9 @@
   "parse_tree": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/parse_tree"
     },
     "disabled": true,
     "require": {
@@ -1731,7 +1729,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-php-parsekit"
     },
     "disabled": true,
     "require": {
@@ -1754,7 +1752,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/flaupretre/pecl-pcs"
     },
     "disabled": true,
     "require": {
@@ -1765,8 +1763,9 @@
   "pcsc": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/pcsc"
     },
     "disabled": true,
     "require": {
@@ -1796,8 +1795,9 @@
   "pdo_4d": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/pdo_4d"
     },
     "disabled": true,
     "require": {
@@ -1808,8 +1808,9 @@
   "pdo_firebird": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/pdo_firebird"
     },
     "disabled": true,
     "require": {
@@ -1826,7 +1827,7 @@
       },
       "flag": "--with-pdo-ibm",
       "type": "git",
-      "url": "https://git.php.net/repository/pecl/database/pdo_ibm"
+      "url": "https://github.com/php/pecl-database-pdo_ibm"
     },
     "require": {
       "min": "7.0.0"
@@ -1836,8 +1837,9 @@
   "pdo_odbc": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/pdo_odbc"
     },
     "disabled": true,
     "require": {
@@ -1848,8 +1850,9 @@
   "pdo_pgsql": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/pdo_pgsql"
     },
     "disabled": true,
     "require": {
@@ -1891,7 +1894,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-database-pdo_user"
     },
     "disabled": true,
     "require": {
@@ -1902,8 +1905,9 @@
   "pecl_gen": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/pear/PECL_Gen"
     },
     "disabled": true,
     "require": {
@@ -1922,23 +1926,11 @@
     },
     "summary": "Extended HTTP Support"
   },
-  "perforce": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "5.2.0"
-    },
-    "summary": "Perforce API Extension"
-  },
   "phalcon": {
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/phalcon/cphalcon"
     },
     "disabled": true,
     "require": {
@@ -1951,7 +1943,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-file_system-phdfs"
     },
     "disabled": true,
     "require": {
@@ -1963,7 +1955,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/flaupretre/pecl-phk"
     },
     "disabled": true,
     "require": {
@@ -2020,7 +2012,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/tvlooy/php-pledge"
     },
     "disabled": true,
     "require": {
@@ -2031,8 +2023,9 @@
   "pop3": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/pop3"
     },
     "disabled": true,
     "require": {
@@ -2063,7 +2056,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/MagicalTux/proctitle"
     },
     "disabled": true,
     "require": {
@@ -2075,7 +2068,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/m6w6/ext-propro"
     },
     "disabled": true,
     "require": {
@@ -2099,7 +2092,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/chobie/php-protocolbuffers"
     },
     "disabled": true,
     "require": {
@@ -2110,8 +2103,9 @@
   "ps": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/ps"
     },
     "disabled": true,
     "require": {
@@ -2134,7 +2128,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/chung-leong/qb"
     },
     "disabled": true,
     "require": {
@@ -2146,7 +2140,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/chenze/qqwry"
     },
     "disabled": true,
     "require": {
@@ -2158,7 +2152,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/derickr/quickhash"
     },
     "disabled": true,
     "require": {
@@ -2170,7 +2164,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/LawnGnome/php-radius"
     },
     "disabled": true,
     "require": {
@@ -2224,7 +2218,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/arraypad/php-re2"
     },
     "disabled": true,
     "require": {
@@ -2259,7 +2253,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/pinepain/php-ref"
     },
     "disabled": true,
     "require": {
@@ -2271,7 +2265,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/pmjones/ext-request"
     },
     "disabled": true,
     "require": {
@@ -2283,7 +2277,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/TriKaspar/php_riak"
     },
     "disabled": true,
     "require": {
@@ -2296,7 +2290,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://git.remirepo.net/cgit/tools/php-rpminfo"
     },
     "disabled": true,
     "require": {
@@ -2308,7 +2302,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-file_formats-rpmreader"
     },
     "disabled": true,
     "require": {
@@ -2329,7 +2323,7 @@
       "flag": "--with-rrd",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/rrd/"
+      "url": "http://svn.php.net/repository/pecl/rrd"
     },
     "require": {
       "min": "7.0.0"
@@ -2339,8 +2333,9 @@
   "rsvg": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/rsvg"
     },
     "disabled": true,
     "require": {
@@ -2351,8 +2346,9 @@
   "rsync": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/rsync"
     },
     "disabled": true,
     "require": {
@@ -2364,7 +2360,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/runkit7/runkit7"
     },
     "disabled": true,
     "require": {
@@ -2375,8 +2371,9 @@
   "sam": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/sam"
     },
     "disabled": true,
     "require": {
@@ -2388,7 +2385,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/krakjoe/sandbox"
     },
     "disabled": true,
     "require": {
@@ -2399,8 +2396,9 @@
   "sasl": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/sasl"
     },
     "disabled": true,
     "require": {
@@ -2432,7 +2430,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/DomBlack/php-scrypt"
     },
     "disabled": true,
     "require": {
@@ -2463,7 +2461,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/SeasX/SeasClick"
     },
     "disabled": true,
     "require": {
@@ -2475,7 +2473,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/SeasX/SeasLog"
     },
     "disabled": true,
     "require": {
@@ -2487,7 +2485,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-security-selinux"
     },
     "disabled": true,
     "require": {
@@ -2498,8 +2496,9 @@
   "shape": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/shp"
     },
     "disabled": true,
     "require": {
@@ -2565,7 +2564,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-search_engine-solr"
     },
     "disabled": true,
     "require": {
@@ -2577,7 +2576,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-search_engine-sphinx"
     },
     "disabled": true,
     "require": {
@@ -2590,7 +2589,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/christopherobin/php-spidermonkey"
     },
     "disabled": true,
     "require": {
@@ -2613,8 +2612,9 @@
   "spread": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/spread"
     },
     "disabled": true,
     "require": {
@@ -2643,7 +2643,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-text-ssdeep"
     },
     "disabled": true,
     "require": {
@@ -2663,7 +2663,7 @@
       },
       "flag": "--with-ssh2",
       "type": "git",
-      "url": "https://git.php.net/repository/pecl/networking/ssh2"
+      "url": "https://github.com/php/pecl-networking-ssh2"
     },
     "require": {
       "max": "8.0.0",
@@ -2675,7 +2675,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/GoogleCloudPlatform/stackdriver-debugger-php-extension"
     },
     "disabled": true,
     "require": {
@@ -2686,8 +2686,9 @@
   "statgrab": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/statgrab"
     },
     "disabled": true,
     "require": {
@@ -2698,8 +2699,9 @@
   "stem": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/stem"
     },
     "disabled": true,
     "require": {
@@ -2782,8 +2784,9 @@
   "syck": {
     "build": {
       "flag": "",
+      "path": "ext/php",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/indeyets/syck"
     },
     "disabled": true,
     "require": {
@@ -2795,7 +2798,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-system-sync"
     },
     "disabled": true,
     "require": {
@@ -2817,8 +2820,9 @@
   "tcc": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/tcc"
     },
     "disabled": true,
     "require": {
@@ -2842,7 +2846,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-networking-tcpwrap"
     },
     "disabled": true,
     "require": {
@@ -2854,7 +2858,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-database-tdb"
     },
     "disabled": true,
     "require": {
@@ -2867,7 +2871,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/adsr/termbox-php"
     },
     "disabled": true,
     "require": {
@@ -2878,8 +2882,9 @@
   "textcat": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/textcat"
     },
     "disabled": true,
     "require": {
@@ -2891,8 +2896,9 @@
   "tidy": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/tidy"
     },
     "disabled": true,
     "require": {
@@ -2939,7 +2945,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/mkoppanen/php-tokyo_tyrant"
     },
     "disabled": true,
     "require": {
@@ -2975,7 +2981,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/derickr/pecl-translit"
     },
     "disabled": true,
     "require": {
@@ -2986,8 +2992,9 @@
   "txforward": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/txforward"
     },
     "disabled": true,
     "require": {
@@ -2999,7 +3006,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/felipensp/php-udis86"
     },
     "disabled": true,
     "require": {
@@ -3012,7 +3019,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/krakjoe/ui"
     },
     "disabled": true,
     "require": {
@@ -3024,7 +3031,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/krakjoe/uopz"
     },
     "disabled": true,
     "require": {
@@ -3036,7 +3043,7 @@
     "build": {
       "flag": "--enable-uploadprogress",
       "type": "git",
-      "url": "https://git.php.net/repository/pecl/php/uploadprogress"
+      "url": "https://github.com/php/pecl-php-uploadprogress"
     },
     "require": {
       "min": "5.2.0"
@@ -3052,7 +3059,7 @@
       },
       "flag": "--with-uuid",
       "type": "git",
-      "url": "https://git.php.net/repository/pecl/networking/uuid"
+      "url": "https://github.com/php/pecl-networking-uuid"
     },
     "require": {
       "min": "7.0.0"
@@ -3071,7 +3078,7 @@
       },
       "flag": "--with-uv",
       "type": "git",
-      "url": "https://github.com/bwoebi/php-uv"
+      "url": "https://github.com/amphp/ext-uv"
     },
     "require": {
       "min": "7.0.0"
@@ -3116,8 +3123,9 @@
   "valkyrie": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/valkyrie"
     },
     "disabled": true,
     "require": {
@@ -3128,8 +3136,9 @@
   "varnish": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/varnish"
     },
     "disabled": true,
     "require": {
@@ -3141,7 +3150,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/libvips/php-vips-ext"
     },
     "disabled": true,
     "require": {
@@ -3176,7 +3185,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/wasmerio/php-ext-wasm"
     },
     "disabled": true,
     "require": {
@@ -3187,8 +3196,9 @@
   "wbxml": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/wbxml"
     },
     "disabled": true,
     "require": {
@@ -3199,8 +3209,9 @@
   "win32ps": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/win32ps"
     },
     "disabled": true,
     "require": {
@@ -3212,8 +3223,9 @@
   "win32ps_dll": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/win32ps"
     },
     "disabled": true,
     "require": {
@@ -3226,7 +3238,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/InExtenso/win32service"
     },
     "disabled": true,
     "require": {
@@ -3237,8 +3249,9 @@
   "win32std": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/win32std"
     },
     "disabled": true,
     "require": {
@@ -3263,7 +3276,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-caching-wincache"
     },
     "disabled": true,
     "require": {
@@ -3275,7 +3288,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/wxphp/wxphp"
     },
     "disabled": true,
     "require": {
@@ -3287,7 +3300,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-file_system-xattr"
     },
     "disabled": true,
     "require": {
@@ -3299,7 +3312,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/johnj/php5-xcom"
     },
     "disabled": true,
     "require": {
@@ -3323,7 +3336,7 @@
     "build": {
       "flag": "--with-xdiff",
       "type": "git",
-      "url": "https://git.php.net/repository/pecl/text/xdiff"
+      "url": "https://github.com/php/pecl-text-xdiff"
     },
     "require": {
       "min": "7.0.0"
@@ -3346,7 +3359,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/viest/php-ext-xlswriter"
     },
     "disabled": true,
     "require": {
@@ -3357,8 +3370,9 @@
   "xmldiff": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/xmldiff"
     },
     "disabled": true,
     "require": {
@@ -3370,7 +3384,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php/pecl-networking-xmlrpc"
     },
     "disabled": true,
     "require": {
@@ -3381,8 +3395,9 @@
   "xmlrpci": {
     "build": {
       "flag": "",
-      "type": "git",
-      "url": ""
+      "path": "trunk",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/xmlrpci"
     },
     "disabled": true,
     "require": {
