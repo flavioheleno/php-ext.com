@@ -48,18 +48,6 @@
     },
     "summary": "Aspect Oriented Programming On PHP"
   },
-  "apacheaccessor": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
   "apcu": {
     "build": {
       "flag": "--enable-apcu",
@@ -163,6 +151,7 @@
   "bbcode": {
     "build": {
       "flag": "--enable-bbcode",
+      "path": "trunk",
       "type": "svn",
       "url": "http://svn.php.net/repository/pecl/bbcode"
     },
@@ -196,6 +185,7 @@
   "bloomy": {
     "build": {
       "flag": "--enable-bloomy",
+      "path": "trunk",
       "type": "svn",
       "url": "http://svn.php.net/repository/pecl/bloomy/"
     },
@@ -278,29 +268,16 @@
     },
     "summary": "Couchbase Server PHP extension"
   },
-  "courierauth": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
   "crypto": {
     "build": {
-      "flag": "",
+      "flag": "--with-crypto",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/bukka/php-crypto"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.2"
     },
-    "summary": ""
+    "summary": "Wrapper for OpenSSL Crypto Library"
   },
   "csv": {
     "build": {
@@ -315,39 +292,14 @@
   },
   "cubrid": {
     "build": {
-      "flag": "",
+      "flag": "--with-cubrid",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/CUBRID/cubrid-php"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
-    "summary": ""
-  },
-  "cvsclient": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "cybermut": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
+    "summary": "This is the official PHP Extension to connect to CUBRID Database"
   },
   "datadog_trace": {
     "build": {
@@ -368,29 +320,17 @@
     },
     "summary": "APM and distributed tracing for PHP"
   },
-  "dazuko": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
   "dbase": {
     "build": {
       "flag": "--enable-dbase",
+      "path": "trunk",
       "type": "svn",
       "url": "http://svn.php.net/repository/pecl/dbase"
     },
-    "disabled": true,
     "require": {
       "min": "7.0.0"
     },
-    "summary": ""
+    "summary": "dBase database file access functions"
   },
   "dbus": {
     "build": {
@@ -412,18 +352,6 @@
       "min": "5.2.0"
     },
     "summary": "Extension for interaction with DBUS busses"
-  },
-  "dbx": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
   },
   "decimal": {
     "build": {
@@ -455,53 +383,32 @@
     },
     "summary": "Direct I/O functions"
   },
-  "docblock": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "dom_varimport": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
   "doublemetaphone": {
     "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
+      "flag": "--enable-doublemetaphone",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/doublemetaphone/"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.3.0"
     },
-    "summary": ""
+    "summary": "Provide Double Metaphone functionality"
   },
   "druid": {
     "build": {
-      "flag": "",
+      "deps": {
+        "buster": [
+          "libcurl4-openssl-dev"
+        ]
+      },
+      "flag": "--with-druid",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/SeasX/PHP-Druid"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
-    "summary": ""
+    "summary": "A Druid driver for PHP with PECL extension"
   },
   "ds": {
     "build": {
@@ -514,53 +421,21 @@
     },
     "summary": "Data Structures"
   },
-  "dtrace": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "ecasound": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
   "eio": {
     "build": {
-      "flag": "",
+      "deps": {
+        "buster": [
+          "libeio-dev"
+        ]
+      },
+      "flag": "--with-eio",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/rosmanov/pecl-eio"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
-    "summary": ""
-  },
-  "enchant": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
+    "summary": "Provides interface to the libeio library"
   },
   "env": {
     "build": {
@@ -600,10 +475,12 @@
     "build": {
       "deps": {
         "alpine": [
-          "libevent-dev"
+          "libevent-dev",
+          "openssl-dev"
         ],
         "buster": [
-          "libevent-dev"
+          "libevent-dev",
+          "libssl-dev"
         ]
       },
       "flag": "--with-event-core",
@@ -617,15 +494,14 @@
   },
   "expect": {
     "build": {
-      "flag": "",
+      "flag": "--with-expect",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/sibaz/pecl-expect"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "4.0.0"
     },
-    "summary": ""
+    "summary": "PHP extension for expect library"
   },
   "ext-fiber": {
     "build": {
@@ -639,113 +515,21 @@
     },
     "summary": "PHP Fiber extension"
   },
-  "fam": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
   "fann": {
     "build": {
-      "flag": "",
+      "deps": {
+        "buster": [
+          "libfann-dev"
+        ]
+      },
+      "flag": "--with-fann",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/bukka/php-fann"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.2.0"
     },
-    "summary": ""
-  },
-  "ffi": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "framegrab": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "freeimage": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "fribidi": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "funcall": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "fuse": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "gdchart": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
+    "summary": "Wrapper for FANN (Fast Artificial Neural Network) Library"
   },
   "gearman": {
     "build": {
@@ -770,6 +554,7 @@
   "gender": {
     "build": {
       "flag": "--enable-gender",
+      "path": "trunk",
       "type": "svn",
       "url": "http://svn.php.net/repository/pecl/gender"
     },
@@ -781,50 +566,42 @@
   "geoip": {
     "build": {
       "flag": "--with-geoip",
+      "path": "trunk",
       "type": "svn",
       "url": "http://svn.php.net/repository/pecl/geoip"
     },
-    "disabled": true,
     "require": {
       "min": "4.3.0"
     },
     "summary": "Map IP address to geographic places"
   },
-  "geos": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
   "geospatial": {
     "build": {
-      "flag": "",
+      "flag": "--enable-geospatial",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/php-geospatial/geospatial"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.4.0"
     },
-    "summary": ""
+    "summary": "PHP Extension to handle common geospatial functions"
   },
   "gmagick": {
     "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
+      "deps": {
+        "buster": [
+          "graphicsmagick",
+          "libgraphicsmagick1-dev"
+        ]
+      },
+      "flag": "--with-gmagick",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/gmagick/"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.1"
     },
-    "summary": ""
+    "summary": "Provides a wrapper to the GraphicsMagick library"
   },
   "gnupg": {
     "build": {
@@ -845,18 +622,6 @@
     },
     "summary": "wrapper around the gpgme library"
   },
-  "graphdat": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
   "grpc": {
     "build": {
       "deps": {
@@ -875,18 +640,6 @@
       "min": "7.0.0"
     },
     "summary": "A high performance, open source, general RPC framework that puts mobile and HTTP/2 first"
-  },
-  "gupnp": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
   },
   "handlebars": {
     "build": {
@@ -907,41 +660,16 @@
     },
     "summary": "Handlebars templating language"
   },
-  "haru": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
   "hdr_histogram": {
     "build": {
-      "flag": "",
+      "flag": "--with-hdrhistogram",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/beberlei/hdrhistogram-php"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.4.0"
     },
-    "summary": ""
-  },
-  "hidef": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
+    "summary": "Summary A PHP extension wrapper for the C hdrhistogram API"
   },
   "hprose": {
     "build": {
@@ -956,63 +684,25 @@
   },
   "hrtime": {
     "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
+      "flag": "--enable-hrtime",
+      "type": "svn",
+      "url": "http://svn.php.net/repository/pecl/hrtime/"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.3.0"
     },
-    "summary": ""
-  },
-  "html_parse": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "http": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
+    "summary": "High resolution timing"
   },
   "http_message": {
     "build": {
-      "flag": "",
+      "flag": "--enable-http-message",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/improved-php-library/http-message"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.2.0"
     },
-    "summary": ""
-  },
-  "huffman": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
+    "summary": "PSR-7 HTTP Message implementation"
   },
   "ibm_db2": {
     "build": {
@@ -1145,6 +835,7 @@
   "inotify": {
     "build": {
       "flag": "--enable-inotify",
+      "path": "trunk",
       "type": "svn",
       "url": "http://svn.php.net/repository/pecl/inotify"
     },
@@ -1179,11 +870,10 @@
   },
   "ip2proxy": {
     "build": {
-      "flag": "",
+      "flag": "--with-ip2proxy",
       "type": "git",
       "url": "https://github.com/ip2location/ip2proxy-pecl"
     },
-    "disabled": true,
     "require": {
       "min": "5.0.0"
     },
@@ -1635,7 +1325,6 @@
       "type": "git",
       "url": "https://github.com/arnaud-lb/php-memory-profiler"
     },
-    "disabled": true,
     "require": {
       "min": "7.1.0"
     },
@@ -2335,6 +2024,17 @@
     },
     "summary": ""
   },
+  "php-signal-handler": {
+    "build": {
+      "flag": "--with-signal-handler",
+      "type": "git",
+      "url": "https://github.com/rstgroup/php-signal-handler"
+    },
+    "require": {
+      "min": "5.3.0"
+    },
+    "summary": "Signal handling based on C signal for blocking/nonblocking php scripts"
+  },
   "php_trie": {
     "build": {
       "flag": "",
@@ -2397,11 +2097,10 @@
       "type": "git",
       "url": "https://github.com/m6w6/ext-pq"
     },
-    "disabled": true,
     "require": {
       "min": "7.0.0"
     },
-    "summary": ""
+    "summary": "PostgreSQL client library (libpq) binding"
   },
   "proctitle": {
     "build": {
@@ -2528,11 +2227,10 @@
       "type": "git",
       "url": "https://github.com/m6w6/ext-raphf"
     },
-    "disabled": true,
     "require": {
       "min": "7.0.0"
     },
-    "summary": ""
+    "summary": "Resource and persistent handles factory"
   },
   "rar": {
     "build": {
@@ -2670,6 +2368,7 @@
         ]
       },
       "flag": "--with-rrd",
+      "path": "trunk",
       "type": "svn",
       "url": "http://svn.php.net/repository/pecl/rrd/"
     },
@@ -2848,6 +2547,17 @@
     },
     "summary": ""
   },
+  "simdjson_php": {
+    "build": {
+      "flag": "--enable-simdjson",
+      "type": "git",
+      "url": "https://github.com/crazyxman/simdjson_php"
+    },
+    "require": {
+      "min": "7.0.0"
+    },
+    "summary": "simdjson_php bindings for the simdjson project"
+  },
   "skywalking": {
     "build": {
       "deps": {
@@ -2962,7 +2672,6 @@
       "type": "git",
       "url": "https://github.com/Microsoft/msphpsql"
     },
-    "disabled": true,
     "require": {
       "min": "7.2.0"
     },
@@ -3075,6 +2784,7 @@
         ]
       },
       "flag": "--with-svn",
+      "path": "trunk",
       "type": "svn",
       "url": "http://svn.php.net/repository/pecl/svn"
     },
@@ -3238,6 +2948,7 @@
   "timezonedb": {
     "build": {
       "flag": "--enable-timezonedb",
+      "path": "trunk",
       "type": "svn",
       "url": "http://svn.php.net/repository/pecl/timezonedb"
     },
@@ -3285,6 +2996,7 @@
   "trader": {
     "build": {
       "flag": "--enable-trader",
+      "path": "trunk",
       "type": "svn",
       "url": "http://svn.php.net/repository/pecl/trader"
     },
@@ -3731,113 +3443,49 @@
     },
     "summary": ""
   },
-  "xmms": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "xmp": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "xrange": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "xslcache": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
   "xxtea": {
     "build": {
-      "flag": "",
+      "flag": "--enable-xxtea",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/xxtea/xxtea-pecl"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "5.0.0"
     },
-    "summary": ""
+    "summary": "XXTEA encryption algorithm extension for PHP"
   },
   "yac": {
     "build": {
-      "flag": "",
+      "flag": "--enable-yac",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/laruence/yac"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
-    "summary": ""
+    "summary": "lockless user data cache"
   },
   "yaconf": {
     "build": {
-      "flag": "",
+      "flag": "--enable-yaconf",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/laruence/yaconf"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
-    "summary": ""
+    "summary": "PHP Persistent Configurations Container"
   },
   "yaf": {
     "build": {
-      "flag": "",
+      "flag": "--enable-yaf",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/laruence/yaf"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
-    "summary": ""
-  },
-  "yami": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
+    "summary": "PHP Framework in PHP extension"
   },
   "yaml": {
     "build": {
@@ -3853,7 +3501,6 @@
       "type": "git",
       "url": "https://github.com/php/pecl-file_formats-yaml"
     },
-    "disabled": true,
     "require": {
       "min": "7.1.0"
     },
@@ -3861,15 +3508,14 @@
   },
   "yar": {
     "build": {
-      "flag": "",
+      "flag": "--enable-yar",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/laruence/yar"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
-    "summary": ""
+    "summary": "Light, concurrent RPC framework"
   },
   "yaz": {
     "build": {
@@ -3887,53 +3533,17 @@
     },
     "summary": "Z39.50/SRU client"
   },
-  "yp": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
-  "zendoptimizerplus": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
   "zephir_parser": {
     "build": {
-      "flag": "",
+      "flag": "--enable-zephir-parser",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/phalcon/php-zephir-parser"
     },
-    "disabled": true,
+    "pecl": false,
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
-  },
-  "zeroconf": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
+    "summary": "Zephir Parser delivered as a C extension for PHP"
   },
   "zip": {
     "build": {
@@ -3953,18 +3563,6 @@
       "min": "5.4.0"
     },
     "summary": "A zip management extension"
-  },
-  "zlib_filter": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
   },
   "zmq": {
     "build": {
