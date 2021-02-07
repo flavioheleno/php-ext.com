@@ -451,18 +451,6 @@
     },
     "summary": "Load environment variables into PHP from a global configuration file"
   },
-  "esmtp": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": "ESMTP client extenion"
-  },
   "ev": {
     "build": {
       "flag": "--enable-ev",
@@ -879,18 +867,6 @@
     },
     "summary": "IRC Client"
   },
-  "isis": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": "PHP extension for reading CDS/ISIS databases."
-  },
   "jsmin": {
     "build": {
       "flag": "",
@@ -964,18 +940,6 @@
       "min": "5.3.0"
     },
     "summary": "PHP Judy implements sparse dynamic arrays (aka Judy Arrays)"
-  },
-  "kadm5": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": "Remote access to Kerberos Administration Servers"
   },
   "krb5": {
     "build": {
@@ -1532,18 +1496,6 @@
     },
     "summary": "fopen wrapper for the gopher protocol"
   },
-  "netools": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": "Networking tools"
-  },
   "newt": {
     "build": {
       "flag": "",
@@ -1649,18 +1601,6 @@
       "min": "4.0.0"
     },
     "summary": "Operator overloading for Objects"
-  },
-  "panda": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": "Panda PDF library"
   },
   "paradox": {
     "build": {
@@ -1860,18 +1800,6 @@
     },
     "summary": "PostgreSQL driver for PDO"
   },
-  "pdo_sqlanywhere": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "5.2.3"
-    },
-    "summary": "SAP SQL Anywhere driver for PDO"
-  },
   "pdo_sqlsrv": {
     "build": {
       "deps": {
@@ -1977,11 +1905,10 @@
   },
   "php_trie": {
     "build": {
-      "flag": "",
+      "flag": "--enable-php_trie",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/ace411/php-trie-ext"
     },
-    "disabled": true,
     "require": {
       "max": "7.4.99",
       "min": "7.3.0"
@@ -2597,18 +2524,6 @@
     },
     "summary": "JavaScript engine for PHP"
   },
-  "spplus": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": "SPPLUS Paiement System"
-  },
   "spread": {
     "build": {
       "flag": "",
@@ -2830,18 +2745,6 @@
     },
     "summary": "TCC Extension"
   },
-  "tclink": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": "Enables credit card processing via the TrustCommerce payment gateway"
-  },
   "tcpwrap": {
     "build": {
       "flag": "",
@@ -2928,18 +2831,6 @@
       "min": "5.2.0"
     },
     "summary": "Timezone Database to be used with PHP's date and time functions"
-  },
-  "tk": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": "Extension for Tk (X-windows interface toolkit)"
   },
   "tokyo_tyrant": {
     "build": {
@@ -3169,18 +3060,6 @@
     },
     "summary": "Provides functionality to dump the internal representation of PHP scripts"
   },
-  "vpopmail": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": "Provides functions to interact with vpopmail, a Qmail addon"
-  },
   "wasm": {
     "build": {
       "flag": "",
@@ -3258,19 +3137,6 @@
       "min": "7.1.0"
     },
     "summary": "Set of standard Windows API functions."
-  },
-  "winbinder": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "max": "5.1.4",
-      "min": "4.3.10"
-    },
-    "summary": "A Native Windows Binding for PHP"
   },
   "wincache": {
     "build": {
