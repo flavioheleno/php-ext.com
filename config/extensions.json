@@ -169,7 +169,7 @@
     "require": {
       "min": "5.2.0"
     },
-    "summary": "binpack for PHP"
+    "summary": "binpack for PHP."
   },
   "bitset": {
     "build": {
@@ -220,7 +220,7 @@
     "require": {
       "min": "5.3.0"
     },
-    "summary": "Summary PHP Bindings for Chromium Compact Language Detector"
+    "summary": "PHP Bindings for Chromium Compact Language Detector"
   },
   "cmark": {
     "build": {
@@ -299,7 +299,7 @@
     "require": {
       "min": "5.3.0"
     },
-    "summary": "This is the official PHP Extension to connect to CUBRID Database"
+    "summary": "This is the official PHP Extension to connect to CUBRID Database."
   },
   "datadog_trace": {
     "build": {
@@ -408,7 +408,7 @@
     "require": {
       "min": "5.2.0"
     },
-    "summary": "A Druid driver for PHP with PECL extension"
+    "summary": "A Druid driver for PHP with PECL extension."
   },
   "ds": {
     "build": {
@@ -458,7 +458,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "ESMTP client extenion"
   },
   "ev": {
     "build": {
@@ -509,6 +509,7 @@
       "type": "git",
       "url": "https://github.com/amphp/ext-fiber"
     },
+    "pecl": false,
     "require": {
       "min": "7.3.0",
       "zts": true
@@ -601,7 +602,7 @@
     "require": {
       "min": "7.0.1"
     },
-    "summary": "Provides a wrapper to the GraphicsMagick library"
+    "summary": "Provides a wrapper to the GraphicsMagick library."
   },
   "gnupg": {
     "build": {
@@ -639,7 +640,7 @@
     "require": {
       "min": "7.0.0"
     },
-    "summary": "A high performance, open source, general RPC framework that puts mobile and HTTP/2 first"
+    "summary": "A high performance, open source, general RPC framework that puts mobile and HTTP/2 first."
   },
   "handlebars": {
     "build": {
@@ -669,7 +670,7 @@
     "require": {
       "min": "5.4.0"
     },
-    "summary": "Summary A PHP extension wrapper for the C hdrhistogram API"
+    "summary": "A PHP extension wrapper for the C hdrhistogram API"
   },
   "hprose": {
     "build": {
@@ -680,7 +681,7 @@
     "require": {
       "min": "5.2.0"
     },
-    "summary": "Hprose for PHP"
+    "summary": "Hprose for PHP."
   },
   "hrtime": {
     "build": {
@@ -714,7 +715,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Extension for IBM DB2 Universal Database, IBM Cloudscape, and Apache Derby"
   },
   "ice": {
     "build": {
@@ -726,7 +727,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Simple and fast PHP framework"
   },
   "id3": {
     "build": {
@@ -738,7 +739,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Functions to read and write ID3 tags in MP3 files."
   },
   "idn": {
     "build": {
@@ -750,7 +751,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "GNU Libidn"
   },
   "igbinary": {
     "build": {
@@ -782,19 +783,7 @@
     "require": {
       "min": "5.4.0"
     },
-    "summary": "Provides a wrapper to the ImageMagick library"
-  },
-  "imlib2": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
+    "summary": "Provides a wrapper to the ImageMagick library."
   },
   "ims": {
     "build": {
@@ -806,19 +795,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
-  },
-  "inclued": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
+    "summary": "Communication with IBM Z/OS through IMS Connect"
   },
   "ingres": {
     "build": {
@@ -830,7 +807,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Extension for the Ingres/Vectorwise Database Systems."
   },
   "inotify": {
     "build": {
@@ -854,7 +831,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Intercept function/method calls"
   },
   "ip2location": {
     "build": {
@@ -866,7 +843,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Get geo location information of an IP address"
   },
   "ip2proxy": {
     "build": {
@@ -889,7 +866,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "IRC Client"
   },
   "isis": {
     "build": {
@@ -901,7 +878,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PHP extension for reading CDS/ISIS databases."
   },
   "jsmin": {
     "build": {
@@ -913,7 +890,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PHP extension for minifying JavaScript"
   },
   "json": {
     "build": {
@@ -925,7 +902,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "JavaScript Object Notation"
   },
   "json_post": {
     "build": {
@@ -937,7 +914,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "JSON POST handler"
   },
   "jsonc": {
     "build": {
@@ -949,7 +926,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "JavaScript Object Notation"
   },
   "jsond": {
     "build": {
@@ -961,7 +938,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "JavaScript Object Notation"
   },
   "jsonnet": {
     "build": {
@@ -973,7 +950,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "The Google Jsonnet for PHP."
   },
   "judy": {
     "build": {
@@ -985,7 +962,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PHP Judy implements sparse dynamic arrays (aka Judy Arrays)"
   },
   "kadm5": {
     "build": {
@@ -997,7 +974,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Remote access to Kerberos Administration Servers"
   },
   "krb5": {
     "build": {
@@ -1009,7 +986,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Features:"
   },
   "ktaglib": {
     "build": {
@@ -1021,7 +998,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Library to edit audio properties and tags on MPEG and OGG files"
   },
   "lapack": {
     "build": {
@@ -1033,7 +1010,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "LAPACK Library"
   },
   "lchash": {
     "build": {
@@ -1045,19 +1022,23 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "LibC Hash Interface"
   },
   "leveldb": {
     "build": {
-      "flag": "",
+      "deps": {
+        "buster": [
+          "libleveldb-dev"
+        ]
+      },
+      "flag": "--with-leveldb",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/reeze/php-leveldb"
     },
-    "disabled": true,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
-    "summary": ""
+    "summary": "LevelDB PHP bindings"
   },
   "libevent": {
     "build": {
@@ -1069,7 +1050,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Libevent - event notification"
   },
   "libsodium": {
     "build": {
@@ -1119,7 +1100,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Lua interpreter with limits and safe environment"
   },
   "lz4": {
     "build": {
@@ -1150,7 +1131,7 @@
     "require": {
       "min": "4.0.0"
     },
-    "summary": "LZF compression"
+    "summary": "LZF compression."
   },
   "mailparse": {
     "build": {
@@ -1173,7 +1154,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Processes the Markdown language with the bundled discount library."
   },
   "maxdb": {
     "build": {
@@ -1185,7 +1166,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "An extension to access MaxDB databases"
   },
   "maxminddb": {
     "build": {
@@ -1206,7 +1187,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": "PHP Reader for the MaxMind DB Database Format"
+    "summary": "Reader for the MaxMind DB file format"
   },
   "mcrypt": {
     "build": {
@@ -1237,7 +1218,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Applies mcrypt symmetric encryption using stream filters"
   },
   "mcve": {
     "build": {
@@ -1249,7 +1230,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "libmonetra/libmcve interface"
   },
   "mdbtools": {
     "build": {
@@ -1261,7 +1242,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "MDB data file access library"
   },
   "memcache": {
     "build": {
@@ -1340,7 +1321,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "In-memory session extension"
   },
   "memtrack": {
     "build": {
@@ -1352,7 +1333,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PHP extension to watch (unusually high) memory consumption in PHP scripts"
   },
   "meta": {
     "build": {
@@ -1364,7 +1345,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Build ASTs and CSTs from PHP source code"
   },
   "mnogosearch": {
     "build": {
@@ -1376,7 +1357,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "mnoGoSearch extension module for PHP"
   },
   "molten": {
     "build": {
@@ -1415,7 +1396,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Extension for libmosquitto"
   },
   "mqseries": {
     "build": {
@@ -1427,7 +1408,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "mqseries client library"
   },
   "msgpack": {
     "build": {
@@ -1459,18 +1440,6 @@
     },
     "summary": "Mustache templating language"
   },
-  "mysql": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
-  },
   "mysql_xdevapi": {
     "build": {
       "flag": "",
@@ -1481,7 +1450,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "MySQL X DevAPI for PHP"
   },
   "mysqlnd_azure": {
     "build": {
@@ -1504,7 +1473,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "A PHP extension for transparently translating SQL into requests for the MySQL InnoDB Memcached Daemon Plugin"
   },
   "mysqlnd_qc": {
     "build": {
@@ -1516,7 +1485,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "A query cache plugin for mysqlnd"
   },
   "mysqlnd_uh": {
     "build": {
@@ -1528,19 +1497,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
-  },
-  "namazu": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
+    "summary": "MySQLnd Userland Handler"
   },
   "ncurses": {
     "build": {
@@ -1552,7 +1509,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Terminal screen handling and optimization package"
   },
   "net_gopher": {
     "build": {
@@ -1564,7 +1521,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "fopen wrapper for the gopher protocol"
   },
   "netools": {
     "build": {
@@ -1576,7 +1533,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Networking tools"
   },
   "newt": {
     "build": {
@@ -1588,7 +1545,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Extension for Red Hat Newt window library"
   },
   "nsq": {
     "build": {
@@ -1600,7 +1557,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PHP extension for NSQ client"
   },
   "oauth": {
     "build": {
@@ -1631,7 +1588,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Oracle Calendar connectivity"
   },
   "odbtp": {
     "build": {
@@ -1643,19 +1600,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
-  },
-  "oggvorbis": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
+    "summary": "ODBTP client functions"
   },
   "openal": {
     "build": {
@@ -1667,7 +1612,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "OpenAL Bindings"
   },
   "opencensus": {
     "build": {
@@ -1679,19 +1624,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
-  },
-  "opendirectory": {
-    "build": {
-      "flag": "",
-      "type": "git",
-      "url": ""
-    },
-    "disabled": true,
-    "require": {
-      "min": "7.1.0"
-    },
-    "summary": ""
+    "summary": "A stats collection and distributed tracing framework"
   },
   "opengl": {
     "build": {
@@ -1703,7 +1636,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "OpenGL (3D graphics library) for PHP"
   },
   "operator": {
     "build": {
@@ -1715,7 +1648,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Operator overloading for Objects"
   },
   "panda": {
     "build": {
@@ -1727,7 +1660,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Panda PDF library"
   },
   "paradox": {
     "build": {
@@ -1739,7 +1672,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "An extension to read and write Paradox files"
   },
   "parallel": {
     "build": {
@@ -1750,7 +1683,8 @@
     "require": {
       "min": "7.2.0",
       "zts": true
-    }
+    },
+    "summary": "Parallel concurrency API"
   },
   "params": {
     "build": {
@@ -1762,7 +1696,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Parameter Parsing Utility"
   },
   "parle": {
     "build": {
@@ -1774,7 +1708,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Parsing and lexing"
   },
   "parse_tree": {
     "build": {
@@ -1786,7 +1720,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Generates a parse tree for a PHP source file in XML format."
   },
   "parsekit": {
     "build": {
@@ -1798,7 +1732,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PHP Opcode Analyser"
   },
   "pcov": {
     "build": {
@@ -1821,7 +1755,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PHP Code Service"
   },
   "pcsc": {
     "build": {
@@ -1833,19 +1767,26 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "An extension for PHP using the winscard PC/SC API"
   },
   "pdlib": {
     "build": {
-      "flag": "",
+      "deps": {
+        "buster": [
+          "libx11-dev",
+          "libopenblas-dev",
+          "liblapack-dev"
+        ]
+      },
+      "flag": "--with-pdlib",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/goodspb/pdlib"
     },
-    "disabled": true,
+    "pecl": false,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
-    "summary": ""
+    "summary": "PHP extension for Dlib"
   },
   "pdo_4d": {
     "build": {
@@ -1857,7 +1798,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PDO driver for 4D-SQL database"
   },
   "pdo_firebird": {
     "build": {
@@ -1869,7 +1810,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Firebird/InterBase 6 driver for PDO"
   },
   "pdo_ibm": {
     "build": {
@@ -1897,7 +1838,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "ODBC v3 Interface driver for PDO"
   },
   "pdo_pgsql": {
     "build": {
@@ -1909,7 +1850,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PostgreSQL driver for PDO"
   },
   "pdo_sqlanywhere": {
     "build": {
@@ -1921,7 +1862,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "SAP SQL Anywhere driver for PDO"
   },
   "pdo_sqlsrv": {
     "build": {
@@ -1951,7 +1892,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Userspace driver for PDO"
   },
   "pecl_gen": {
     "build": {
@@ -1963,7 +1904,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Tool to generate PECL extensions from an XML description"
   },
   "pecl_http": {
     "build": {
@@ -1986,7 +1927,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Perforce API Extension"
   },
   "phalcon": {
     "build": {
@@ -1998,7 +1939,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Phalcon is a full stack PHP framework offering low resource consumption and high performance."
   },
   "phdfs": {
     "build": {
@@ -2010,7 +1951,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PHP client library to communicate with the hadoop hdfs"
   },
   "phk": {
     "build": {
@@ -2022,7 +1963,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "An optional accelerator for Automap and PHK"
   },
   "php-signal-handler": {
     "build": {
@@ -2030,6 +1971,7 @@
       "type": "git",
       "url": "https://github.com/rstgroup/php-signal-handler"
     },
+    "pecl": false,
     "require": {
       "min": "5.3.0"
     },
@@ -2045,19 +1987,27 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PHP Trie extension"
   },
   "phpiredis": {
     "build": {
-      "flag": "",
+      "deps": {
+        "alpine": [
+          "hiredis-dev --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main/"
+        ],
+        "buster": [
+          "libhiredis-dev"
+        ]
+      },
+      "flag": "--enable-phpiredis",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/nrk/phpiredis"
     },
-    "disabled": true,
+    "pecl": false,
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PHP extension for Redis based on Hiredis"
   },
   "pledge": {
     "build": {
@@ -2069,7 +2019,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "OpenBSD's pledge / unveil support"
   },
   "pop3": {
     "build": {
@@ -2081,7 +2031,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "POP3 Client Library"
   },
   "pq": {
     "build": {
@@ -2112,7 +2062,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Allows setting the current process name on Linux and BSD"
   },
   "propro": {
     "build": {
@@ -2124,7 +2074,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Property proxy"
   },
   "protobuf": {
     "build": {
@@ -2136,7 +2086,7 @@
     "require": {
       "min": "7.0.0"
     },
-    "summary": ""
+    "summary": "Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data."
   },
   "protocolbuffers": {
     "build": {
@@ -2148,7 +2098,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Protocol Buffers are a way of encoding structured data in an efficient yet extensible format. Google uses Protocol Buffers for almost all of its internal RPC protocols and file formats."
   },
   "ps": {
     "build": {
@@ -2160,7 +2110,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "An extension to create PostScript files"
   },
   "psr": {
     "build": {
@@ -2183,7 +2133,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Accelerator designed mainly for graphic work"
   },
   "qqwry": {
     "build": {
@@ -2195,7 +2145,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Get IP location from QQWry file"
   },
   "quickhash": {
     "build": {
@@ -2207,7 +2157,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Provides a set of specific strongly-typed classes for sets and hashing"
   },
   "radius": {
     "build": {
@@ -2219,7 +2169,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Radius client library"
   },
   "raphf": {
     "build": {
@@ -2272,19 +2222,19 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Extension for RE2"
   },
   "realpath_turbo": {
     "build": {
-      "flag": "",
+      "flag": "--enable-realpath_turbo",
       "type": "git",
-      "url": ""
+      "url": "https://github.com/Whissi/realpath_turbo"
     },
-    "disabled": true,
+    "pecl": false,
     "require": {
-      "min": "7.1.0"
+      "min": "7.0.0"
     },
-    "summary": ""
+    "summary": "Use realpath cache despite open_basedir restriction"
   },
   "redis": {
     "build": {
@@ -2307,7 +2257,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Soft and Weak references support in PHP"
   },
   "request": {
     "build": {
@@ -2319,7 +2269,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Provides server-side request and response objects."
   },
   "riak": {
     "build": {
@@ -2331,7 +2281,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Riak database PHP extension"
   },
   "rpminfo": {
     "build": {
@@ -2343,7 +2293,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "RPM information"
   },
   "rpmreader": {
     "build": {
@@ -2355,7 +2305,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "RPM file meta information reader"
   },
   "rrd": {
     "build": {
@@ -2387,7 +2337,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "RSVG Extension"
   },
   "rsync": {
     "build": {
@@ -2399,7 +2349,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Wrapper for librsync library"
   },
   "runkit7": {
     "build": {
@@ -2411,7 +2361,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Runkit7 : For all those things you.... probably shouldn't have been doing anyway.... but surely do!"
   },
   "sam": {
     "build": {
@@ -2423,7 +2373,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "SAM - Simple Asynchronous Messaging for PHP"
   },
   "sandbox": {
     "build": {
@@ -2435,7 +2385,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Isolated environment"
   },
   "sasl": {
     "build": {
@@ -2447,7 +2397,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Cyrus SASL Extension"
   },
   "scoutapm": {
     "build": {
@@ -2478,7 +2428,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Scrypt hashing function"
   },
   "sdl": {
     "build": {
@@ -2509,7 +2459,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "An Yandex ClickHouse client driven extension for PHP."
   },
   "seaslog": {
     "build": {
@@ -2521,7 +2471,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "An effective,fast,stable log extension for PHP."
   },
   "selinux": {
     "build": {
@@ -2533,7 +2483,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "SELinux binding for PHP script language"
   },
   "shape": {
     "build": {
@@ -2545,7 +2495,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "libshape wrapper"
   },
   "simdjson_php": {
     "build": {
@@ -2553,6 +2503,7 @@
       "type": "git",
       "url": "https://github.com/crazyxman/simdjson_php"
     },
+    "pecl": false,
     "require": {
       "min": "7.0.0"
     },
@@ -2579,7 +2530,7 @@
     "require": {
       "min": "7.0.0"
     },
-    "summary": "The PHP instrument agent for Apache SkyWalking"
+    "summary": "The PHP instrument agent for Apache SkyWalking."
   },
   "smbclient": {
     "build": {
@@ -2610,7 +2561,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "The Apache Solr PHP extension is an extremely fast, light-weight, feature-rich library that allows PHP applications to communicate easily and efficiently with Apache Solr server instances using an object-oriented API."
   },
   "sphinx": {
     "build": {
@@ -2622,7 +2573,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Client extension for Sphinx - opensource SQL full-text search engine"
   },
   "spidermonkey": {
     "build": {
@@ -2634,7 +2585,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "JavaScript engine for PHP"
   },
   "spplus": {
     "build": {
@@ -2646,7 +2597,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "SPPLUS Paiement System"
   },
   "spread": {
     "build": {
@@ -2658,7 +2609,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "A php interface to the Spread toolkit API"
   },
   "sqlsrv": {
     "build": {
@@ -2687,7 +2638,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Fuzzy hashing makes it easy to identify similar or almost identical text by simply comparing two hashes against each other."
   },
   "ssh2": {
     "build": {
@@ -2718,7 +2669,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Investigate your code's behavior in production"
   },
   "statgrab": {
     "build": {
@@ -2730,7 +2681,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "libstatgab bindings"
   },
   "stem": {
     "build": {
@@ -2742,7 +2693,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "a PHP extension that provides word stemming"
   },
   "stomp": {
     "build": {
@@ -2791,7 +2742,7 @@
     "require": {
       "min": "7.0.0"
     },
-    "summary": "PHP Bindings for the Subversion Revision control system"
+    "summary": "PHP Bindings for the Subversion Revision control system."
   },
   "swoole": {
     "build": {
@@ -2802,7 +2753,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": "Event-driven asynchronous and concurrent networking engine with high performance for PHP"
+    "summary": "Event-driven asynchronous and concurrent networking engine with high performance for PHP."
   },
   "swoole_serialize": {
     "build": {
@@ -2825,7 +2776,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "YAML-1.0 parser and emitter"
   },
   "sync": {
     "build": {
@@ -2837,7 +2788,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Named and unnamed synchronization objects"
   },
   "taint": {
     "build": {
@@ -2860,7 +2811,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "TCC Extension"
   },
   "tclink": {
     "build": {
@@ -2872,7 +2823,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Enables credit card processing via the TrustCommerce payment gateway"
   },
   "tcpwrap": {
     "build": {
@@ -2884,7 +2835,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "tcpwrappers binding."
   },
   "tdb": {
     "build": {
@@ -2896,7 +2847,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Trivial DB bindings"
   },
   "termbox": {
     "build": {
@@ -2908,7 +2859,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "a termbox wrapper for PHP"
   },
   "textcat": {
     "build": {
@@ -2920,7 +2871,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Simple class to extract language of texts"
   },
   "tidy": {
     "build": {
@@ -2932,7 +2883,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Tidy HTML Repairing and Parsing"
   },
   "timecop": {
     "build": {
@@ -2943,7 +2894,7 @@
     "require": {
       "min": "5.3.1"
     },
-    "summary": "A PHP extension providing 'time travel' capabilities"
+    "summary": "A PHP extension providing \"time travel\" capabilities."
   },
   "timezonedb": {
     "build": {
@@ -2967,7 +2918,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Extension for Tk (X-windows interface toolkit)"
   },
   "tokyo_tyrant": {
     "build": {
@@ -2979,7 +2930,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Provides a wrapper to the Tokyo Tyrant client library."
   },
   "trace": {
     "build": {
@@ -3003,7 +2954,7 @@
     "require": {
       "min": "5.3.0"
     },
-    "summary": "Technical Analysis for traders"
+    "summary": "Technical Analysis for traders."
   },
   "translit": {
     "build": {
@@ -3015,7 +2966,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Transliterates non-latin character sets to latin"
   },
   "txforward": {
     "build": {
@@ -3027,7 +2978,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Reverse Proxy (web accelerator) PHP compatibility layer"
   },
   "udis86": {
     "build": {
@@ -3039,7 +2990,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PHP bindings for udis86 library"
   },
   "ui": {
     "build": {
@@ -3051,7 +3002,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "UI API"
   },
   "uopz": {
     "build": {
@@ -3063,7 +3014,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "User Operations for Zend"
   },
   "uploadprogress": {
     "build": {
@@ -3074,7 +3025,7 @@
     "require": {
       "min": "5.2.0"
     },
-    "summary": "An extension to track progress of a file upload"
+    "summary": "An extension to track progress of a file upload."
   },
   "uuid": {
     "build": {
@@ -3156,7 +3107,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Valkyrie validation extension"
   },
   "varnish": {
     "build": {
@@ -3168,7 +3119,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Varnish Cache bindings"
   },
   "vips": {
     "build": {
@@ -3180,7 +3131,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "PHP extension for interfacing with libvips"
   },
   "vld": {
     "build": {
@@ -3203,7 +3154,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Provides functions to interact with vpopmail, a Qmail addon"
   },
   "wasm": {
     "build": {
@@ -3215,7 +3166,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Run WebAssembly binaries in PHP"
   },
   "wbxml": {
     "build": {
@@ -3227,7 +3178,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "WBXML to XML conversion"
   },
   "win32ps": {
     "build": {
@@ -3239,7 +3190,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Win32 process and memory stats"
   },
   "win32ps_dll": {
     "build": {
@@ -3251,7 +3202,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Win32 process and memory stats"
   },
   "win32service": {
     "build": {
@@ -3263,7 +3214,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "A Windows specific extension to allow PHP to interact with Windows Services."
   },
   "win32std": {
     "build": {
@@ -3275,7 +3226,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Access to some Win32 usefull API."
   },
   "winbinder": {
     "build": {
@@ -3287,7 +3238,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "A Native Windows Binding for PHP"
   },
   "wincache": {
     "build": {
@@ -3299,7 +3250,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Windows Cache Extension for PHP"
   },
   "wxwidgets": {
     "build": {
@@ -3311,7 +3262,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Cross-platform widget toolkit."
   },
   "xattr": {
     "build": {
@@ -3323,7 +3274,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Extended attributes."
   },
   "xcommerce": {
     "build": {
@@ -3335,7 +3286,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "X.commerce bindings and helper methods"
   },
   "xdebug": {
     "build": {
@@ -3357,7 +3308,7 @@
     "require": {
       "min": "7.0.0"
     },
-    "summary": "File differences/patches"
+    "summary": "File differences/patches."
   },
   "xhprof": {
     "build": {
@@ -3381,7 +3332,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Efficient and fast xlsx file extension."
   },
   "xmldiff": {
     "build": {
@@ -3393,7 +3344,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "XML diff and merge"
   },
   "xmlreader": {
     "build": {
@@ -3405,7 +3356,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Provides fast, non-cached, forward-only access to XML data under PHP 5."
   },
   "xmlrpc": {
     "build": {
@@ -3417,7 +3368,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Functions to write XML-RPC servers and clients"
   },
   "xmlrpci": {
     "build": {
@@ -3429,7 +3380,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Improved XML-RPC"
   },
   "xmlwriter": {
     "build": {
@@ -3441,7 +3392,7 @@
     "require": {
       "min": "7.1.0"
     },
-    "summary": ""
+    "summary": "Provides fast, non-cached, forward-only means to write XML data."
   },
   "xxtea": {
     "build": {
@@ -3452,7 +3403,7 @@
     "require": {
       "min": "5.0.0"
     },
-    "summary": "XXTEA encryption algorithm extension for PHP"
+    "summary": "XXTEA encryption algorithm extension for PHP."
   },
   "yac": {
     "build": {
