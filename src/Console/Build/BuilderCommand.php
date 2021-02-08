@@ -14,14 +14,29 @@ use Docker\Docker;
 use Exception;
 use Illuminate\Database\Capsule\Manager;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Command\SignalableCommandInterface;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
-final class BuilderCommand extends Command {
+final class BuilderCommand extends Command implements SignalableCommandInterface {
   protected static $defaultName = 'build:builder';
+
+  // Signal handler flag to quit ASAP
+  private bool $interrupted = false;
+
+  /**
+   * @return int[]
+   */
+  public function getSubscribedSignals(): array {
+      return [SIGINT, SIGTERM];
+  }
+
+  public function handleSignal(int $signal): void {
+    $this->interrupted = true;
+  }
 
   /**
    * Command configuration.
@@ -137,7 +152,7 @@ final class BuilderCommand extends Command {
               )
             );
 
-            if ($workLoop) {
+            if ($this->interrupted === false && $workLoop) {
               sleep($sleepSecs);
 
               continue;
@@ -506,7 +521,17 @@ final class BuilderCommand extends Command {
             $job->save();
           }
         }
-      } while ($workLoop && $workLimit !== 0);
+      } while ($this->interrupted === false && $workLoop && $workLimit !== 0);
+
+      if ($this->interrupted) {
+        $io->newLine();
+        $io->text(
+          sprintf(
+            '[%s] Interrupted by signal!',
+            date('H:i:s')
+          )
+        );
+      }
     } catch (Exception $exception) {
       if (isset($io) === true) {
         $io->error(
