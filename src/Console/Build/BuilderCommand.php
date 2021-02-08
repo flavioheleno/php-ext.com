@@ -235,7 +235,7 @@ final class BuilderCommand extends Command implements SignalableCommandInterface
             continue;
           }
 
-          if ($extension->isZtsRequired() && substr($job->payload['php'], -4) === '-zts') {
+          if ($extension->isZtsRequired() && substr($job->payload['php'], -4) !== '-zts') {
             $message = 'This extension requires a thread-safe version of PHP.';
             $io->text(
               sprintf(
@@ -286,7 +286,7 @@ final class BuilderCommand extends Command implements SignalableCommandInterface
           if (
             $skipMaxCheck === false &&
             $extension->getMaxRequiredPHP() !== '' &&
-            version_compare($phpVersion, $extension->getMaxRequiredPHP(), '<')
+            version_compare($phpVersion, $extension->getMaxRequiredPHP(), '>')
           ) {
             $message = sprintf('This extension requires PHP %s or older.', $extension->getMaxRequiredPHP());
             $io->text(
