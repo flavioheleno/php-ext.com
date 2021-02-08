@@ -20,6 +20,16 @@ final class TagGenerator {
   private Config $config;
 
   public static function fromString(Config $config, string $tag): self {
+    // accept "*" as a tag (translates to "*:*@*-*")
+    if ($tag === self::ANY) {
+      return new self($config, self::ANY, self::ANY, self::ANY, self::ANY);
+    }
+
+    // translate tags beginning with "*@" to "*:*@"
+    $tag = preg_replace('/^\*@/', '*:*@', $tag);
+    // translate tags ending with "@*" to "@*-*"
+    $tag = preg_replace('/@\*$/', '@*-*', $tag);
+
     if (preg_match(self::REGEX, $tag, $matches) !== 1) {
       throw new InvalidArgumentException('Tag does not match required format!');
     }

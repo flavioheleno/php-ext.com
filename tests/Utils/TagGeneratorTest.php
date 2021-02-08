@@ -110,6 +110,25 @@ final class TagGeneratorTest extends TestCase {
         ]
       ],
       [
+        // tags for all php/os combination, with fixed extension/version
+        'ahocorasick:pecl@*-*',
+        ['ahocorasick', 'pecl', '*', '*'],
+        [
+          'ahocorasick:pecl@7.3.25-alpine',
+          'ahocorasick:pecl@7.3.25-buster',
+          'ahocorasick:pecl@7.3.25-zts-alpine',
+          'ahocorasick:pecl@7.3.25-zts-buster',
+          'ahocorasick:pecl@7.4.13-alpine',
+          'ahocorasick:pecl@7.4.13-buster',
+          'ahocorasick:pecl@7.4.13-zts-alpine',
+          'ahocorasick:pecl@7.4.13-zts-buster',
+          'ahocorasick:pecl@8.0.0-alpine',
+          'ahocorasick:pecl@8.0.0-buster',
+          'ahocorasick:pecl@8.0.0-zts-alpine',
+          'ahocorasick:pecl@8.0.0-zts-buster'
+        ]
+      ],
+      [
         // tags for all extension/version/php/os combinations
         '*:*@*-*',
         ['*', '*', '*', '*'],
@@ -162,6 +181,91 @@ final class TagGeneratorTest extends TestCase {
           'amqp:pecl@8.0.0-buster',
           'amqp:pecl@8.0.0-zts-alpine',
           'amqp:pecl@8.0.0-zts-buster'
+        ]
+      ],
+      [
+        // tag translation (full)
+        '*',
+        ['*', '*', '*', '*'],
+        [
+          'ahocorasick:dev@7.3.25-alpine',
+          'ahocorasick:dev@7.3.25-buster',
+          'ahocorasick:dev@7.3.25-zts-alpine',
+          'ahocorasick:dev@7.3.25-zts-buster',
+          'ahocorasick:dev@7.4.13-alpine',
+          'ahocorasick:dev@7.4.13-buster',
+          'ahocorasick:dev@7.4.13-zts-alpine',
+          'ahocorasick:dev@7.4.13-zts-buster',
+          'ahocorasick:dev@8.0.0-alpine',
+          'ahocorasick:dev@8.0.0-buster',
+          'ahocorasick:dev@8.0.0-zts-alpine',
+          'ahocorasick:dev@8.0.0-zts-buster',
+          'ahocorasick:pecl@7.3.25-alpine',
+          'ahocorasick:pecl@7.3.25-buster',
+          'ahocorasick:pecl@7.3.25-zts-alpine',
+          'ahocorasick:pecl@7.3.25-zts-buster',
+          'ahocorasick:pecl@7.4.13-alpine',
+          'ahocorasick:pecl@7.4.13-buster',
+          'ahocorasick:pecl@7.4.13-zts-alpine',
+          'ahocorasick:pecl@7.4.13-zts-buster',
+          'ahocorasick:pecl@8.0.0-alpine',
+          'ahocorasick:pecl@8.0.0-buster',
+          'ahocorasick:pecl@8.0.0-zts-alpine',
+          'ahocorasick:pecl@8.0.0-zts-buster',
+          'amqp:dev@7.3.25-alpine',
+          'amqp:dev@7.3.25-buster',
+          'amqp:dev@7.3.25-zts-alpine',
+          'amqp:dev@7.3.25-zts-buster',
+          'amqp:dev@7.4.13-alpine',
+          'amqp:dev@7.4.13-buster',
+          'amqp:dev@7.4.13-zts-alpine',
+          'amqp:dev@7.4.13-zts-buster',
+          'amqp:dev@8.0.0-alpine',
+          'amqp:dev@8.0.0-buster',
+          'amqp:dev@8.0.0-zts-alpine',
+          'amqp:dev@8.0.0-zts-buster',
+          'amqp:pecl@7.3.25-alpine',
+          'amqp:pecl@7.3.25-buster',
+          'amqp:pecl@7.3.25-zts-alpine',
+          'amqp:pecl@7.3.25-zts-buster',
+          'amqp:pecl@7.4.13-alpine',
+          'amqp:pecl@7.4.13-buster',
+          'amqp:pecl@7.4.13-zts-alpine',
+          'amqp:pecl@7.4.13-zts-buster',
+          'amqp:pecl@8.0.0-alpine',
+          'amqp:pecl@8.0.0-buster',
+          'amqp:pecl@8.0.0-zts-alpine',
+          'amqp:pecl@8.0.0-zts-buster'
+        ]
+      ],
+      [
+        // tag translation (extension/version)
+        '*@7.3.25-buster',
+        ['*', '*', '7.3.25', 'buster'],
+        [
+          'ahocorasick:dev@7.3.25-buster',
+          'ahocorasick:pecl@7.3.25-buster',
+          'amqp:dev@7.3.25-buster',
+          'amqp:pecl@7.3.25-buster'
+        ]
+      ],
+      [
+        // tag translation (php/os)
+        'ahocorasick:pecl@*',
+        ['ahocorasick', 'pecl', '*', '*'],
+        [
+          'ahocorasick:pecl@7.3.25-alpine',
+          'ahocorasick:pecl@7.3.25-buster',
+          'ahocorasick:pecl@7.3.25-zts-alpine',
+          'ahocorasick:pecl@7.3.25-zts-buster',
+          'ahocorasick:pecl@7.4.13-alpine',
+          'ahocorasick:pecl@7.4.13-buster',
+          'ahocorasick:pecl@7.4.13-zts-alpine',
+          'ahocorasick:pecl@7.4.13-zts-buster',
+          'ahocorasick:pecl@8.0.0-alpine',
+          'ahocorasick:pecl@8.0.0-buster',
+          'ahocorasick:pecl@8.0.0-zts-alpine',
+          'ahocorasick:pecl@8.0.0-zts-buster'
         ]
       ]
     ];
