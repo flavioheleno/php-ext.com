@@ -39,6 +39,24 @@ final class BuilderCommand extends Command {
         60
       )
       ->addOption(
+        'skipMinCheck',
+        null,
+        InputOption::VALUE_NONE,
+        'Skip minimum required PHP version check'
+      )
+      ->addOption(
+        'skipMaxCheck',
+        null,
+        InputOption::VALUE_NONE,
+        'Skip maximum required PHP version check'
+      )
+      ->addOption(
+        'skipVersionCheck',
+        null,
+        InputOption::VALUE_NONE,
+        'Skip required PHP version checks (same as passing --skipMinCheck --skipMaxCheck)'
+      )
+      ->addOption(
         'limit',
         'l',
         InputOption::VALUE_REQUIRED,
@@ -76,6 +94,9 @@ final class BuilderCommand extends Command {
       $workLimit = (int)$input->getOption('limit');
       $workLoop  = (bool)$input->getOption('live');
       $sleepSecs = (int)$input->getOption('sleep');
+
+      $skipMinCheck = (bool)$input->getOption('skipMinCheck') || (bool)$input->getOption('skipVersionCheck');
+      $skipMaxCheck = (bool)$input->getOption('skipMaxCheck') || (bool)$input->getOption('skipVersionCheck');
 
       if ($output->isDebug()) {
         $io->text('<options=bold>Configuration:</>');
@@ -199,7 +220,7 @@ final class BuilderCommand extends Command {
             continue;
           }
 
-          if ($extension->isZtsRequired() && str_ends_with($job->payload['php'], '-zts') === false) {
+          if ($extension->isZtsRequired() && substr($job->payload['php'], -4) === '-zts') {
             $message = 'This extension requires a thread-safe version of PHP.';
             $io->text(
               sprintf(
@@ -220,7 +241,13 @@ final class BuilderCommand extends Command {
             continue;
           }
 
-          if ($extension->getMinRequiredPHP() !== '' && version_compare(str_replace('-zts', '', $job->payload['php']), $extension->getMinRequiredPHP(), '<')) {
+          $phpVersion = str_replace('-zts', '', $job->payload['php']);
+
+          if (
+            $skipMinCheck === false &&
+            $extension->getMinRequiredPHP() !== '' &&
+            version_compare($phpVersion, $extension->getMinRequiredPHP(), '<')
+          ) {
             $message = sprintf('This extension requires PHP %s or later.', $extension->getMinRequiredPHP());
             $io->text(
               sprintf(
@@ -242,8 +269,9 @@ final class BuilderCommand extends Command {
           }
 
           if (
+            $skipMaxCheck === false &&
             $extension->getMaxRequiredPHP() !== '' &&
-            version_compare(str_replace('-zts', '', $job->payload['php']), $extension->getMaxRequiredPHP(), '<')
+            version_compare($phpVersion, $extension->getMaxRequiredPHP(), '<')
           ) {
             $message = sprintf('This extension requires PHP %s or older.', $extension->getMaxRequiredPHP());
             $io->text(
@@ -351,7 +379,7 @@ final class BuilderCommand extends Command {
           );
           $io->text(
             sprintf(
-              '[%s]  > Waiting for stream to be done',
+              '[%s]  > Waiting for build to be done',
               date('H:i:s')
             )
           );
