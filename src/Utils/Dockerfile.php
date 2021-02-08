@@ -58,7 +58,7 @@ final class Dockerfile {
     return [
       $this->preMake($extension),
       [
-        sprintf('pecl install %s', $extension->getName()),
+        sprintf('pecl install --force %s', $extension->getName()),
         sprintf('pecl run-tests %s', $extension->getName())
       ]
     ];
