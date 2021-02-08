@@ -154,7 +154,7 @@
       "flag": "--enable-bbcode",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/bbcode"
+      "url": "https://svn.php.net/repository/pecl/bbcode"
     },
     "require": {
       "min": "5.2.0"
@@ -188,7 +188,7 @@
       "flag": "--enable-bloomy",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/bloomy"
+      "url": "https://svn.php.net/repository/pecl/bloomy"
     },
     "require": {
       "max": "6.0.0",
@@ -328,7 +328,7 @@
       "flag": "--enable-dbase",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/dbase"
+      "url": "https://svn.php.net/repository/pecl/dbase"
     },
     "require": {
       "min": "7.0.0"
@@ -389,8 +389,9 @@
   "doublemetaphone": {
     "build": {
       "flag": "--enable-doublemetaphone",
+      "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/doublemetaphone/"
+      "url": "https://svn.php.net/repository/pecl/doublemetaphone/"
     },
     "require": {
       "min": "4.3.0"
@@ -550,7 +551,7 @@
       "flag": "--enable-gender",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/gender"
+      "url": "https://svn.php.net/repository/pecl/gender"
     },
     "require": {
       "min": "5.3.0"
@@ -562,7 +563,7 @@
       "flag": "--with-geoip",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/geoip"
+      "url": "https://svn.php.net/repository/pecl/geoip"
     },
     "require": {
       "min": "4.3.0"
@@ -589,8 +590,9 @@
         ]
       },
       "flag": "--with-gmagick",
+      "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/gmagick"
+      "url": "https://svn.php.net/repository/pecl/gmagick"
     },
     "require": {
       "min": "7.0.1"
@@ -679,8 +681,9 @@
   "hrtime": {
     "build": {
       "flag": "--enable-hrtime",
+      "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/hrtime/"
+      "url": "https://svn.php.net/repository/pecl/hrtime/"
     },
     "require": {
       "min": "5.3"
@@ -728,7 +731,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/id3/"
+      "url": "https://svn.php.net/repository/pecl/id3/"
     },
     "disabled": true,
     "require": {
@@ -741,7 +744,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/idn"
+      "url": "https://svn.php.net/repository/pecl/idn"
     },
     "disabled": true,
     "require": {
@@ -786,7 +789,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/ims"
+      "url": "https://svn.php.net/repository/pecl/ims"
     },
     "disabled": true,
     "require": {
@@ -799,7 +802,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/ingres"
+      "url": "https://svn.php.net/repository/pecl/ingres"
     },
     "disabled": true,
     "require": {
@@ -823,7 +826,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/intercept"
+      "url": "https://svn.php.net/repository/pecl/intercept"
     },
     "disabled": true,
     "require": {
@@ -933,7 +936,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/judy/"
+      "url": "https://svn.php.net/repository/pecl/judy/"
     },
     "disabled": true,
     "require": {
@@ -946,7 +949,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "https://svn.php.net/viewvc/pecl/krb5"
+      "url": "https://svn.php.net/repository/pecl/krb5"
     },
     "disabled": true,
     "require": {
@@ -959,7 +962,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/ktaglib"
+      "url": "https://svn.php.net/repository/pecl/ktaglib"
     },
     "disabled": true,
     "require": {
@@ -984,7 +987,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/lchash"
+      "url": "https://svn.php.net/repository/pecl/lchash"
     },
     "disabled": true,
     "require": {
@@ -1131,7 +1134,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/maxdb"
+      "url": "https://svn.php.net/repository/pecl/maxdb"
     },
     "disabled": true,
     "require": {
@@ -1185,7 +1188,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/mcrypt_filter"
+      "url": "https://svn.php.net/repository/pecl/mcrypt_filter"
     },
     "disabled": true,
     "require": {
@@ -1199,7 +1202,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/mcve"
+      "url": "https://svn.php.net/repository/pecl/mcve"
     },
     "disabled": true,
     "require": {
@@ -1212,7 +1215,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/mdbtools"
+      "url": "https://svn.php.net/repository/pecl/mdbtools"
     },
     "disabled": true,
     "require": {
@@ -1292,7 +1295,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/memsession/trunk"
+      "url": "https://svn.php.net/repository/pecl/memsession/trunk"
     },
     "disabled": true,
     "require": {
@@ -1330,7 +1333,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/mnogosearch"
+      "url": "https://svn.php.net/repository/pecl/mnogosearch"
     },
     "disabled": true,
     "require": {
@@ -1461,7 +1464,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/mysqlnd_qc"
+      "url": "https://svn.php.net/repository/pecl/mysqlnd_qc"
     },
     "disabled": true,
     "require": {
@@ -1474,7 +1477,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/ncurses"
+      "url": "https://svn.php.net/repository/pecl/ncurses"
     },
     "disabled": true,
     "require": {
@@ -1487,7 +1490,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/Net_Gopher"
+      "url": "https://svn.php.net/repository/pecl/Net_Gopher"
     },
     "disabled": true,
     "require": {
@@ -1501,7 +1504,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/newt"
+      "url": "https://svn.php.net/repository/pecl/newt"
     },
     "disabled": true,
     "require": {
@@ -1546,7 +1549,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/ocal"
+      "url": "https://svn.php.net/repository/pecl/ocal"
     },
     "disabled": true,
     "require": {
@@ -1607,7 +1610,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/paradox"
+      "url": "https://svn.php.net/repository/pecl/paradox"
     },
     "disabled": true,
     "require": {
@@ -1632,7 +1635,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/params"
+      "url": "https://svn.php.net/repository/pecl/params"
     },
     "disabled": true,
     "require": {
@@ -1657,7 +1660,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/parse_tree"
+      "url": "https://svn.php.net/repository/pecl/parse_tree"
     },
     "disabled": true,
     "require": {
@@ -1705,7 +1708,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/pcsc"
+      "url": "https://svn.php.net/repository/pecl/pcsc"
     },
     "disabled": true,
     "require": {
@@ -1737,7 +1740,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/pdo_4d"
+      "url": "https://svn.php.net/repository/pecl/pdo_4d"
     },
     "disabled": true,
     "require": {
@@ -1750,7 +1753,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/pdo_firebird"
+      "url": "https://svn.php.net/repository/pecl/pdo_firebird"
     },
     "disabled": true,
     "require": {
@@ -1779,7 +1782,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/pdo_odbc"
+      "url": "https://svn.php.net/repository/pecl/pdo_odbc"
     },
     "disabled": true,
     "require": {
@@ -1792,7 +1795,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/pdo_pgsql"
+      "url": "https://svn.php.net/repository/pecl/pdo_pgsql"
     },
     "disabled": true,
     "require": {
@@ -1835,7 +1838,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/pear/PECL_Gen"
+      "url": "https://svn.php.net/pear/PECL_Gen"
     },
     "disabled": true,
     "require": {
@@ -1952,7 +1955,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/pop3"
+      "url": "https://svn.php.net/repository/pecl/pop3"
     },
     "disabled": true,
     "require": {
@@ -2032,7 +2035,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/ps"
+      "url": "https://svn.php.net/repository/pecl/ps"
     },
     "disabled": true,
     "require": {
@@ -2250,7 +2253,7 @@
       "flag": "--with-rrd",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/rrd"
+      "url": "https://svn.php.net/repository/pecl/rrd"
     },
     "require": {
       "min": "7.0.0"
@@ -2262,7 +2265,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/rsvg"
+      "url": "https://svn.php.net/repository/pecl/rsvg"
     },
     "disabled": true,
     "require": {
@@ -2275,7 +2278,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/rsync"
+      "url": "https://svn.php.net/repository/pecl/rsync"
     },
     "disabled": true,
     "require": {
@@ -2300,7 +2303,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/sam"
+      "url": "https://svn.php.net/repository/pecl/sam"
     },
     "disabled": true,
     "require": {
@@ -2325,7 +2328,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/sasl"
+      "url": "https://svn.php.net/repository/pecl/sasl"
     },
     "disabled": true,
     "require": {
@@ -2425,7 +2428,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/shp"
+      "url": "https://svn.php.net/repository/pecl/shp"
     },
     "disabled": true,
     "require": {
@@ -2529,7 +2532,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/spread"
+      "url": "https://svn.php.net/repository/pecl/spread"
     },
     "disabled": true,
     "require": {
@@ -2603,7 +2606,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/statgrab"
+      "url": "https://svn.php.net/repository/pecl/statgrab"
     },
     "disabled": true,
     "require": {
@@ -2616,7 +2619,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/stem"
+      "url": "https://svn.php.net/repository/pecl/stem"
     },
     "disabled": true,
     "require": {
@@ -2666,7 +2669,7 @@
       "flag": "--with-svn",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/svn"
+      "url": "https://svn.php.net/repository/pecl/svn"
     },
     "require": {
       "max": "8.0.0",
@@ -2737,7 +2740,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/tcc"
+      "url": "https://svn.php.net/repository/pecl/tcc"
     },
     "disabled": true,
     "require": {
@@ -2787,7 +2790,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/textcat"
+      "url": "https://svn.php.net/repository/pecl/textcat"
     },
     "disabled": true,
     "require": {
@@ -2801,7 +2804,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/tidy"
+      "url": "https://svn.php.net/repository/pecl/tidy"
     },
     "disabled": true,
     "require": {
@@ -2825,7 +2828,7 @@
       "flag": "--enable-timezonedb",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/timezonedb"
+      "url": "https://svn.php.net/repository/pecl/timezonedb"
     },
     "require": {
       "min": "5.2.0"
@@ -2861,7 +2864,7 @@
       "flag": "--enable-trader",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/trader"
+      "url": "https://svn.php.net/repository/pecl/trader"
     },
     "require": {
       "min": "5.3"
@@ -2885,7 +2888,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/txforward"
+      "url": "https://svn.php.net/repository/pecl/txforward"
     },
     "disabled": true,
     "require": {
@@ -3016,7 +3019,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/valkyrie"
+      "url": "https://svn.php.net/repository/pecl/valkyrie"
     },
     "disabled": true,
     "require": {
@@ -3029,7 +3032,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/varnish"
+      "url": "https://svn.php.net/repository/pecl/varnish"
     },
     "disabled": true,
     "require": {
@@ -3077,7 +3080,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/wbxml"
+      "url": "https://svn.php.net/repository/pecl/wbxml"
     },
     "disabled": true,
     "require": {
@@ -3090,7 +3093,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/win32ps"
+      "url": "https://svn.php.net/repository/pecl/win32ps"
     },
     "disabled": true,
     "require": {
@@ -3104,7 +3107,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/win32ps"
+      "url": "https://svn.php.net/repository/pecl/win32ps"
     },
     "disabled": true,
     "require": {
@@ -3130,7 +3133,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/win32std"
+      "url": "https://svn.php.net/repository/pecl/win32std"
     },
     "disabled": true,
     "require": {
@@ -3238,7 +3241,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/xmldiff"
+      "url": "https://svn.php.net/repository/pecl/xmldiff"
     },
     "disabled": true,
     "require": {
@@ -3263,7 +3266,7 @@
       "flag": "",
       "path": "trunk",
       "type": "svn",
-      "url": "http://svn.php.net/repository/pecl/xmlrpci"
+      "url": "https://svn.php.net/repository/pecl/xmlrpci"
     },
     "disabled": true,
     "require": {
