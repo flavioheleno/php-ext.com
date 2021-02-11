@@ -23,7 +23,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      
+
     - name: Setup PHP with PECL extension
       uses: shivammathur/setup-php@v2
       with:
@@ -49,5 +49,5 @@ jobs:
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install ${{ matrix.composer_flags }} --prefer-dist --no-progress --optimize-autoloader --no-interaction
 
-    - name: Run test suite
-      run: composer run-script test
+    - name: Run PHPUnit test suite
+      run: composer run-script phpunit

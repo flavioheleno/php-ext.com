@@ -24,6 +24,7 @@
   },
   "require": {
     "php": ">=7.4",
+    "ext-pcntl": "*",
     "beluga-php/docker-php": "dev-master",
     "bentools/cartesian-product": "^1.3",
     "illuminate/database": "^8.18",
@@ -41,12 +42,25 @@
     "vimeo/psalm": "^4.3"
   },
   "scripts": {
-    "taint": "vendor/bin/psalm --taint-analysis",
-    "check": "vendor/bin/phpstan analyse --level=8 --autoload-file=vendor/autoload.php src/ tests/",
-    "lint": [
-      "vendor/bin/parallel-lint --exclude vendor .",
-      "vendor/bin/phpcs --standard=ruleset.xml src/ tests/"
-    ],
-    "test": "vendor/bin/phpunit ./tests/ --coverage-html=./report/coverage/ --whitelist=./src/ --testdox-html=./report/testdox.html --disallow-test-output --process-isolation"
+    "lint": "vendor/bin/parallel-lint --exclude vendor .",
+    "phpcs": "vendor/bin/phpcs --standard=ruleset.xml src/ tests/",
+    "phpstan": "vendor/bin/phpstan analyse --level=max --autoload-file=vendor/autoload.php bin/ public/ src/",
+    "phpunit": "vendor/bin/phpunit ./tests/ --coverage-html=./report/coverage/ --whitelist=./src/ --testdox-html=./report/testdox.html --disallow-test-output --process-isolation",
+    "psalm": "vendor/bin/psalm --taint-analysis",
+    "test": [
+      "@lint",
+      "@phpunit",
+      "@phpstan",
+      "@psalm",
+      "@phpcs"
+    ]
+  },
+  "scripts-descriptions": {
+    "lint": "Runs complete codebase lint testing",
+    "phpcs": "Runs coding style checking",
+    "phpstan": "Runs complete codebase static analysis",
+    "phpunit": "Runs unit and functional testing",
+    "psalm": "Runs complete codebase taint analysis",
+    "test": "Runs all tests"
   }
 }
