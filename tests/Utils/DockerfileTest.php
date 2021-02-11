@@ -98,7 +98,7 @@ final class DockerfileTest extends TestCase {
           'rm -rf /var/lib/apt/lists/*'
         ],
         [
-          'pecl install amqp',
+          'pecl install --force amqp',
           'pecl run-tests amqp'
         ]
       ],
