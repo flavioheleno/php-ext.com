@@ -484,6 +484,17 @@
     },
     "summary": "Provides interface to libevent library"
   },
+  "excimer": {
+    "build": {
+      "flag": "--enable-excimer",
+      "type": "git",
+      "url": "https://github.com/wikimedia/php-excimer"
+    },
+    "require": {
+      "min": "7.1.0"
+    },
+    "summary": "Interrupting timer and low-overhead sampling profiler"
+  },
   "expect": {
     "build": {
       "flag": "--with-expect",
