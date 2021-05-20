@@ -550,7 +550,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v8.42.0",
+            "version": "v8.42.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -604,7 +604,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v8.42.0",
+            "version": "v8.42.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -655,7 +655,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v8.42.0",
+            "version": "v8.42.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -703,16 +703,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v8.42.0",
+            "version": "v8.42.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "40861d878522426fb5acd15c0bdb0fd5249ff9e0"
+                "reference": "d5bea2ae823dc66f08ea56e09b1bbf7d8b5086c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/40861d878522426fb5acd15c0bdb0fd5249ff9e0",
-                "reference": "40861d878522426fb5acd15c0bdb0fd5249ff9e0",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/d5bea2ae823dc66f08ea56e09b1bbf7d8b5086c9",
+                "reference": "d5bea2ae823dc66f08ea56e09b1bbf7d8b5086c9",
                 "shasum": ""
             },
             "require": {
@@ -767,11 +767,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-05-18T12:49:19+00:00"
+            "time": "2021-05-19T13:01:47+00:00"
         },
         {
             "name": "illuminate/macroable",
-            "version": "v8.42.0",
+            "version": "v8.42.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -817,7 +817,7 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v8.42.0",
+            "version": "v8.42.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -3541,16 +3541,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v5.2.8",
+            "version": "v5.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "445caa74a5986f1cc9dd91a2975ef68fa7cb2068"
+                "reference": "61af68dba333e2d376a325a29c2a3f2a605b4876"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/445caa74a5986f1cc9dd91a2975ef68fa7cb2068",
-                "reference": "445caa74a5986f1cc9dd91a2975ef68fa7cb2068",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/61af68dba333e2d376a325a29c2a3f2a605b4876",
+                "reference": "61af68dba333e2d376a325a29c2a3f2a605b4876",
                 "shasum": ""
             },
             "require": {
@@ -3614,7 +3614,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v5.2.8"
+                "source": "https://github.com/symfony/translation/tree/v5.2.9"
             },
             "funding": [
                 {
@@ -3630,7 +3630,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-07T13:41:16+00:00"
+            "time": "2021-05-16T13:07:46+00:00"
         },
         {
             "name": "symfony/translation-contracts",
