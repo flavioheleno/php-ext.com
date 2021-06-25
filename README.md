@@ -1,4 +1,4 @@
-# php-ext.com
+# php-ext.com [![Maintainability](https://api.codeclimate.com/v1/badges/ac1a1e5472d124b28f57/maintainability)](https://codeclimate.com/github/flavioheleno/php-ext.com/maintainability)
 
 [php-ext.com](https://php-ext.com) is a PHP Extension Compatibility Monitoring portal.
 
