@@ -1,24 +1,29 @@
-name: PHPUnit
+name: "Continuous Integration"
 
 on:
   push:
-    branches: [ main ]
+    paths-ignore:
+      - 'doc/**'
   pull_request:
-    branches: [ main ]
+    paths-ignore:
+      - 'doc/**'
 
 jobs:
-  test:
-    name: PHP ${{ matrix.php_version }}
+  tests:
+    name: PHP ${{ matrix.php-version }}
+
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental }}
+
     strategy:
       fail-fast: false
       matrix:
-        php_version: ['7.4', '8.0', '8.1']
-        composer_flags: ['--ignore-platform-reqs', '']
+        php-version:
+          - "7.4"
+          - "8.0"
         experimental: [false]
         include:
-          - php_version: '8.1'
+          - php-version: "8.1"
             experimental: true
 
     steps:
@@ -27,7 +32,7 @@ jobs:
     - name: Setup PHP with PECL extension
       uses: shivammathur/setup-php@2.12.0
       with:
-        php-version: ${{ matrix.php_version }}
+        php-version: ${{ matrix.php-version }}
         tools: composer:v2
         coverage: pcov
 
@@ -42,12 +47,21 @@ jobs:
       uses: actions/cache@v2.1.6
       with:
         path: ${{ steps.composer-cache.outputs.dir }}
-        key: ${{ runner.os }}-php-${{ matrix.php_version }}-${{ hashFiles('**/composer.lock') }}
-        restore-keys: ${{ runner.os }}-php-${{ matrix.php_version }}-
+        key: ${{ runner.os }}-php-${{ matrix.php-version }}-${{ hashFiles('**/composer.lock') }}
+        restore-keys: ${{ runner.os }}-php-${{ matrix.php-version }}-
 
     - name: Install dependencies
       if: steps.composer-cache.outputs.cache-hit != 'true'
-      run: composer install ${{ matrix.composer_flags }} --prefer-dist --no-progress --optimize-autoloader --no-interaction
+      run: composer install --prefer-dist --no-progress --optimize-autoloader --no-interaction
 
     - name: Run PHPUnit test suite
-      run: composer run-script phpunit
+      run: composer run-script test-ci
+
+    - name: Publish code coverage
+      uses: paambaati/codeclimate-action@v2.7.5
+      env:
+        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+      with:
+        coverageCommand: composer run-script test-coverage
+        coverageLocations: |
+          ${{github.workspace}}/clover.xml:clover
