@@ -1,0 +1,46 @@
+name: "Static Analysis"
+
+on:
+  push:
+    paths-ignore:
+      - 'doc/**'
+  pull_request:
+    paths-ignore:
+      - 'doc/**'
+
+jobs:
+  phpstan:
+    name: PHPStan
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2.3.4
+
+    - name: Setup PHP with PECL extension
+      uses: shivammathur/setup-php@2.12.0
+      with:
+        php-version: 8.0
+        tools: composer:v2
+        coverage: none
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate
+
+    - name: Get composer cache directory
+      id: composer-cache
+      run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+    - name: Cache Composer packages
+      uses: actions/cache@v2.1.6
+      with:
+        path: ${{ steps.composer-cache.outputs.dir }}
+        key: phpstan-linux-php-8.0-${{ hashFiles('**/composer.lock') }}
+        restore-keys: phpstan-linux-php-8.0-
+
+    - name: Install dependencies
+      if: steps.composer-cache.outputs.cache-hit != 'true'
+      run: composer update --prefer-stable --ignore-platform-req=php --no-progress --no-interaction
+
+    - name: Run PHPStan
+      run: composer run-script phpstan -- --no-progress
