@@ -9,8 +9,8 @@ on:
       - 'doc/**'
 
 jobs:
-  tests:
-    name: PHP ${{ matrix.php-version }}
+  phpunit:
+    name: PHP ${{ matrix.php-version }} (${{ matrix.dependency-version }})
 
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental }}
@@ -21,9 +21,14 @@ jobs:
         php-version:
           - "7.4"
           - "8.0"
+        dependency-version: [prefer-lowest, prefer-stable]
         experimental: [false]
         include:
           - php-version: "8.1"
+            dependency-version: "prefer-lowest"
+            experimental: true
+          - php-version: "8.1"
+            dependency-version: "prefer-lowest"
             experimental: true
 
     steps:
@@ -50,9 +55,13 @@ jobs:
         key: ${{ runner.os }}-php-${{ matrix.php-version }}-${{ hashFiles('**/composer.lock') }}
         restore-keys: ${{ runner.os }}-php-${{ matrix.php-version }}-
 
-    - name: Install dependencies
-      if: steps.composer-cache.outputs.cache-hit != 'true'
-      run: composer install --prefer-dist --no-progress --optimize-autoloader --no-interaction
+    - name: Install dependencies (PHP 7)
+      if: steps.composer-cache.outputs.cache-hit != 'true' && matrix.php-version < 8
+      run: composer update --${{ matrix.dependency-version }} --no-progress --no-interaction
+
+    - name: Install dependencies (PHP 8)
+      if: steps.composer-cache.outputs.cache-hit != 'true' && matrix.php-version >= 8
+      run: composer update --${{ matrix.dependency-version }} --ignore-platform-req=php --no-progress --no-interaction
 
     - name: Run PHPUnit test suite
       run: composer run-script test-ci
