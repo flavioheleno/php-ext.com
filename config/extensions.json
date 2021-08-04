@@ -2231,7 +2231,7 @@
     "build": {
       "flag": "",
       "type": "git",
-      "url": "https://git.remirepo.net/cgit/tools/php-rpminfo"
+      "url": "https://git.remirepo.net/git/tools/php-rpminfo"
     },
     "disabled": true,
     "require": {
