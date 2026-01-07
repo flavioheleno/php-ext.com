@@ -17,7 +17,7 @@ import { useNavigate } from 'react-router-dom';
 export function MatrixPage() {
   const navigate = useNavigate();
   const { snapshot, loading, error } = useDatasetContext();
-  const { filters, setFilters, resetFilters } = useFilters();
+  const { filters, setFilters, resetFilters, hasActiveFilters } = useFilters();
   const [selectedCell, setSelectedCell] = useState<{ extension: string; phpVersion: string } | null>(null);
 
   const extensions = snapshot?.extensions || [];
@@ -101,6 +101,7 @@ export function MatrixPage() {
         platforms={platforms}
         platformVersions={platformVersions}
         arches={arches}
+        hasActiveFilters={hasActiveFilters()}
       />
 
       <div className="matrix-container">

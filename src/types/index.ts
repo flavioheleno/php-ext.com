@@ -36,6 +36,18 @@ export interface FilterState {
   platformVersion: string;
   arch: string;
   search: string;
+  show: 'all' | 'failing' | 'regressions';
+  sort: 'name' | 'readiness' | 'failures';
+}
+
+export type ShowFilter = 'all' | 'failing' | 'regressions';
+export type SortOption = 'name' | 'readiness' | 'failures';
+
+export interface FilterOptions {
+  channels: string[];
+  platforms: string[];
+  platformVersions: string[];
+  arches: string[];
 }
 
 export interface MatrixCell {

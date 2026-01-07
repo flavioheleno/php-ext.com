@@ -1,10 +1,21 @@
 import { Link } from 'react-router-dom';
 import { useDatasetContext } from '../context/DatasetContext';
-import { getUniqueValues, getUniquePHPVersions } from '../utils/data';
+import { useFilters } from '../hooks/useFilters';
+import { getUniqueValues, getUniquePHPVersions, filterExtensions } from '../utils/data';
+import { buildFilteredURL } from '../utils/url';
 import { SchemaWarning } from '../components/SchemaWarning';
+import { FilterSummary } from '../components/FilterSummary';
+import { useMemo } from 'react';
 
 export function HomePage() {
   const { snapshot, loading, error } = useDatasetContext();
+  const { filters } = useFilters();
+
+  const extensions = snapshot?.extensions || [];
+  const filteredExtensions = useMemo(
+    () => filterExtensions(extensions, filters),
+    [extensions, filters]
+  );
 
   if (loading) {
     return (
@@ -28,11 +39,12 @@ export function HomePage() {
     );
   }
 
-  const extensions = snapshot?.extensions || [];
   const channels = getUniqueValues(extensions, 'channel');
   const platforms = getUniqueValues(extensions, 'platform');
   const arches = getUniqueValues(extensions, 'arch');
   const phpVersions = getUniquePHPVersions(extensions);
+
+  const matrixUrl = `/matrix${buildFilteredURL(filters)}`;
 
   return (
     <div className="page-container">
@@ -43,15 +55,25 @@ export function HomePage() {
         <p className="hero-subtitle">
           Comprehensive view of PHP extension availability across platforms, channels, and architectures
         </p>
-        <Link to="/matrix" className="cta-button">
+        <Link to={matrixUrl} className="cta-button">
           View Matrix →
         </Link>
       </div>
 
+      <FilterSummary 
+        filters={filters} 
+        extensionCount={filteredExtensions.length}
+        totalCount={extensions.length}
+      />
+
       <div className="stats-grid">
         <div className="stat-card">
           <div className="stat-number">{extensions.length}</div>
-          <div className="stat-label">Extensions</div>
+          <div className="stat-label">Total Extensions</div>
+        </div>
+        <div className="stat-card">
+          <div className="stat-number">{filteredExtensions.length}</div>
+          <div className="stat-label">Matching Filters</div>
         </div>
         <div className="stat-card">
           <div className="stat-number">{channels.length}</div>
@@ -82,7 +104,7 @@ export function HomePage() {
         <div className="feature-list">
           <div className="feature-item">
             <strong>🔍 Advanced Filters</strong>
-            <p>Filter by channel, platform, platform version, and architecture</p>
+            <p>Filter by channel, platform, platform version, architecture, and more</p>
           </div>
           <div className="feature-item">
             <strong>🔎 Search</strong>

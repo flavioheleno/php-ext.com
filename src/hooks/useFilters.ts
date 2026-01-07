@@ -8,6 +8,8 @@ const DEFAULT_FILTERS: FilterState = {
   platformVersion: '',
   arch: '',
   search: '',
+  show: 'all',
+  sort: 'name',
 };
 
 export function useFilters() {
@@ -20,12 +22,33 @@ export function useFilters() {
   }, [filters]);
 
   const setFilters = useCallback((updates: Partial<FilterState>) => {
-    setFiltersState(prev => ({ ...prev, ...updates }));
+    setFiltersState(prev => {
+      const newFilters = { ...prev, ...updates };
+      
+      // Clear platform_version if platform changes
+      if (updates.platform !== undefined && updates.platform !== prev.platform) {
+        newFilters.platformVersion = '';
+      }
+      
+      return newFilters;
+    });
   }, []);
 
   const resetFilters = useCallback(() => {
     setFiltersState(DEFAULT_FILTERS);
   }, []);
 
-  return { filters, setFilters, resetFilters };
+  const hasActiveFilters = useCallback(() => {
+    return (
+      filters.channel !== '' ||
+      filters.platform !== '' ||
+      filters.platformVersion !== '' ||
+      filters.arch !== '' ||
+      filters.search !== '' ||
+      filters.show !== 'all' ||
+      filters.sort !== 'name'
+    );
+  }, [filters]);
+
+  return { filters, setFilters, resetFilters, hasActiveFilters };
 }
