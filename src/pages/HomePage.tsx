@@ -44,7 +44,7 @@ export function HomePage() {
   const arches = getUniqueValues(extensions, 'arch');
   const phpVersions = getUniquePHPVersions(extensions);
 
-  const matrixUrl = `/matrix${buildFilteredURL(filters)}`;
+  const matrixUrl = buildFilteredURL('/matrix', filters);
 
   return (
     <div className="page-container">

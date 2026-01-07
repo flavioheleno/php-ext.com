@@ -43,7 +43,7 @@ export function setFiltersToURL(filters: FilterState): void {
   setQueryParams(params);
 }
 
-export function buildFilteredURL(filters: FilterState): string {
+export function buildFilteredURL(path: string, filters: FilterState): string {
   const params = new URLSearchParams();
   
   if (filters.channel) params.set('channel', filters.channel);
@@ -55,5 +55,5 @@ export function buildFilteredURL(filters: FilterState): string {
   if (filters.sort && filters.sort !== 'name') params.set('sort', filters.sort);
   
   const paramStr = params.toString();
-  return paramStr ? `?${paramStr}` : '';
+  return `${path}${paramStr ? `?${paramStr}` : ''}`;
 }
