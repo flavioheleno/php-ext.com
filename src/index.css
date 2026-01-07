@@ -177,6 +177,92 @@ body {
   background: var(--primary-dark);
 }
 
+/* Dataset Status */
+.dataset-status {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.dataset-status h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--gray-900);
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.status-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray-500);
+}
+
+.status-value {
+  font-size: 0.875rem;
+  color: var(--gray-900);
+  font-weight: 500;
+}
+
+.status-value code {
+  background: var(--gray-100);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+.publisher-link,
+.commit-link {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.publisher-link:hover,
+.commit-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Overall Stats */
+.overall-stats {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.overall-stats h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--gray-900);
+}
+
+.filter-indicator {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--primary);
+  font-style: italic;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -192,6 +278,19 @@ body {
   text-align: center;
 }
 
+.stat-card-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+}
+
+.stat-card-primary .stat-number {
+  color: white;
+}
+
+.stat-card-primary .stat-label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
@@ -203,6 +302,158 @@ body {
   color: var(--gray-600);
   font-size: 0.875rem;
   font-weight: 500;
+}
+
+/* Top Failing Extensions */
+.top-failing {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.top-failing h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--gray-900);
+}
+
+.section-subtitle {
+  color: var(--gray-600);
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.failing-extensions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.failing-extension-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-left: 4px solid var(--danger);
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.failing-extension-card:hover {
+  background: white;
+  box-shadow: var(--shadow);
+  transform: translateX(4px);
+}
+
+.failing-rank {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-400);
+  min-width: 40px;
+  text-align: center;
+}
+
+.failing-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.failing-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 0.25rem;
+}
+
+.failing-stats {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.failing-count {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.failing-separator {
+  color: var(--gray-400);
+}
+
+.failing-readiness {
+  color: var(--gray-600);
+}
+
+.failing-progress {
+  width: 100px;
+  height: 8px;
+  background: var(--gray-200);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.failing-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--danger) 0%, var(--success) 100%);
+  transition: width 0.3s;
+}
+
+.failing-arrow {
+  font-size: 1.5rem;
+  color: var(--gray-400);
+  transition: transform 0.2s;
+}
+
+.failing-extension-card:hover .failing-arrow {
+  transform: translateX(4px);
+  color: var(--primary);
+}
+
+/* No Failures Home */
+.no-failures-home {
+  background: white;
+  padding: 4rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.success-icon-large {
+  width: 96px;
+  height: 96px;
+  background: var(--success);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.no-failures-home h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--gray-900);
+}
+
+.no-failures-home p {
+  color: var(--gray-600);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .info-section {

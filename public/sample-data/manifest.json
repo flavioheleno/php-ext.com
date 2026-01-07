@@ -17,5 +17,10 @@
     "channels": ["stable", "dev"],
     "platforms": ["alpine", "debian"],
     "arches": ["amd64", "arm64"]
+  },
+  "generated_at": "2024-01-01T00:00:00Z",
+  "publisher": {
+    "repo": "php/extensions",
+    "commit": "abc123def456789012345678901234567890abcd"
   }
 }

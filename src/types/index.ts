@@ -50,6 +50,11 @@ export interface Manifest {
   latest: DatasetMetadata;
   datasets: DatasetMetadata[];
   axes?: ManifestAxes;
+  generated_at?: string;
+  publisher?: {
+    repo?: string;
+    commit?: string;
+  };
 }
 
 export interface Snapshot {
@@ -57,6 +62,11 @@ export interface Snapshot {
   timestamp: string;
   extensions?: Extension[];
   results?: BuildResult[];
+  generated_at?: string;
+  publisher?: {
+    repo?: string;
+    commit?: string;
+  };
 }
 
 export interface FilterState {
