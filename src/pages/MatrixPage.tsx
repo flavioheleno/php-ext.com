@@ -9,12 +9,13 @@ import { CellDrawer } from '../components/CellDrawer';
 import { SchemaWarning } from '../components/SchemaWarning';
 import { getUniqueValuesFromResults } from '../utils/data';
 import { useNavigate } from 'react-router-dom';
+import { MatrixCell } from '../types';
 
 export function MatrixPage() {
   const navigate = useNavigate();
   const { snapshot, manifest, loading, error } = useDatasetContext();
   const { filters, setFilters, resetFilters, hasActiveFilters } = useFilters();
-  const [selectedCell, setSelectedCell] = useState<{ extension: string; phpVersion: string } | null>(null);
+  const [selectedCell, setSelectedCell] = useState<{ extension: string; phpVersion: string; cell: MatrixCell | null } | null>(null);
 
   const matrixModel = useMatrixModel(snapshot, manifest, filters);
 
@@ -47,7 +48,11 @@ export function MatrixPage() {
     : [];
 
   const handleCellClick = (extensionName: string, phpVersion: string) => {
-    setSelectedCell({ extension: extensionName, phpVersion });
+    // Find the cell data from the matrix model
+    const row = matrixModel.rows.find(r => r.extension === extensionName);
+    const cell = row?.cells.find(c => c.phpVersion === phpVersion) || null;
+    
+    setSelectedCell({ extension: extensionName, phpVersion, cell });
   };
 
   const handleExtensionClick = (name: string) => {
@@ -130,8 +135,7 @@ export function MatrixPage() {
         <CellDrawer
           extensionName={selectedCell.extension}
           phpVersion={selectedCell.phpVersion}
-          extension={undefined}
-          filters={filters}
+          cell={selectedCell.cell}
           onClose={closeCellDrawer}
         />
       )}

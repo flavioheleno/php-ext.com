@@ -22,6 +22,7 @@ export interface BuildResult {
   arch: string;
   status: 'success' | 'failure' | 'skipped' | 'unknown';
   category?: string;
+  started_at?: string;
   finished_at?: string;
   run?: {
     url: string;
@@ -85,6 +86,8 @@ export interface MatrixCell {
   extensionVersion?: string;
   runUrl?: string;
   artifactUrl?: string;
+  startedAt?: string;
+  finishedAt?: string;
   available: boolean;
 }
 

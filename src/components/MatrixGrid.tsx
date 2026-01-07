@@ -1,6 +1,6 @@
 import { CSSProperties, memo } from 'react';
 import { FixedSizeList as List } from 'react-window';
-import { ExtensionRow } from '../types';
+import { ExtensionRow, MatrixCell } from '../types';
 
 interface MatrixGridProps {
   rows: ExtensionRow[];
@@ -20,6 +20,46 @@ interface RowProps {
   };
 }
 
+function getCellClassName(cell: MatrixCell): string {
+  const baseClass = 'cell';
+  switch (cell.status) {
+    case 'success':
+      return `${baseClass} cell-success`;
+    case 'failure':
+      return `${baseClass} cell-failure`;
+    case 'skipped':
+    case 'unknown':
+      return `${baseClass} cell-skipped`;
+    default:
+      return baseClass;
+  }
+}
+
+function getCellTooltip(extension: string, cell: MatrixCell): string {
+  const parts = [
+    `${extension} - PHP ${cell.phpVersion}`,
+    `Status: ${cell.status}`,
+  ];
+  
+  if (cell.category) {
+    parts.push(`Category: ${cell.category}`);
+  }
+  
+  if (cell.extensionVersion) {
+    parts.push(`Version: ${cell.extensionVersion}`);
+  }
+  
+  return parts.join('\n');
+}
+
+function getCellAriaLabel(extension: string, cell: MatrixCell): string {
+  const parts = [extension, `PHP ${cell.phpVersion}`, cell.status];
+  if (cell.extensionVersion) {
+    parts.push(`version ${cell.extensionVersion}`);
+  }
+  return parts.join(', ');
+}
+
 const Row = memo(({ index, style, data }: RowProps) => {
   const { rows, phpVersions, onExtensionClick, onCellClick } = data;
   const row = rows[index];
@@ -31,6 +71,13 @@ const Row = memo(({ index, style, data }: RowProps) => {
         onClick={() => onExtensionClick(row.extension)}
         role="button"
         tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            onExtensionClick(row.extension);
+          }
+        }}
+        aria-label={`View details for ${row.extension}`}
       >
         {row.extension}
       </div>
@@ -38,11 +85,18 @@ const Row = memo(({ index, style, data }: RowProps) => {
         {row.cells.map((cell, i) => (
           <div
             key={phpVersions[i]}
-            className={`cell ${cell.available ? 'available' : 'unavailable'}`}
+            className={getCellClassName(cell)}
             onClick={() => onCellClick(row.extension, cell.phpVersion)}
             role="button"
             tabIndex={0}
-            title={`${row.extension} - PHP ${cell.phpVersion}: ${cell.available ? 'Available' : 'Not Available'}`}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                onCellClick(row.extension, cell.phpVersion);
+              }
+            }}
+            title={getCellTooltip(row.extension, cell)}
+            aria-label={getCellAriaLabel(row.extension, cell)}
           />
         ))}
       </div>
@@ -67,7 +121,7 @@ export function MatrixGrid({ rows, phpVersions, onExtensionClick, onCellClick }:
         <div className="extension-name-header">Extension</div>
         <div className="cells">
           {phpVersions.map(version => (
-            <div key={version} className="cell-header">
+            <div key={version} className="cell-header" title={`PHP ${version}`}>
               PHP {version}
             </div>
           ))}

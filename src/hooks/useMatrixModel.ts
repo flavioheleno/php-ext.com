@@ -128,6 +128,8 @@ function buildMatrixModel(
         extensionVersion: bestResult.extension_version,
         runUrl: bestResult.run?.url,
         artifactUrl: bestResult.artifact?.url,
+        startedAt: bestResult.started_at,
+        finishedAt: bestResult.finished_at,
         available: true,
       };
     });
