@@ -28,21 +28,21 @@ const Row = memo(({ index, style, data }: RowProps) => {
     <div style={style} className="matrix-row">
       <div 
         className="extension-name"
-        onClick={() => onExtensionClick(row.name)}
+        onClick={() => onExtensionClick(row.extension)}
         role="button"
         tabIndex={0}
       >
-        {row.name}
+        {row.extension}
       </div>
       <div className="cells">
         {row.cells.map((cell, i) => (
           <div
             key={phpVersions[i]}
             className={`cell ${cell.available ? 'available' : 'unavailable'}`}
-            onClick={() => onCellClick(row.name, cell.phpVersion)}
+            onClick={() => onCellClick(row.extension, cell.phpVersion)}
             role="button"
             tabIndex={0}
-            title={`${row.name} - PHP ${cell.phpVersion}: ${cell.available ? 'Available' : 'Not Available'}`}
+            title={`${row.extension} - PHP ${cell.phpVersion}: ${cell.available ? 'Available' : 'Not Available'}`}
           />
         ))}
       </div>

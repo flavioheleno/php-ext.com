@@ -1,52 +1,50 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useDatasetContext } from '../context/DatasetContext';
 import { useFilters } from '../hooks/useFilters';
+import { useMatrixModel } from '../hooks/useMatrixModel';
+import { validateMatrixModel } from '../hooks/useMatrixModel';
 import { FilterBar } from '../components/FilterBar';
 import { MatrixGrid } from '../components/MatrixGrid';
 import { CellDrawer } from '../components/CellDrawer';
 import { SchemaWarning } from '../components/SchemaWarning';
-import {
-  getUniqueValues,
-  getUniquePHPVersions,
-  filterExtensions,
-  buildMatrixData,
-  getExtensionDetails,
-} from '../utils/data';
+import { getUniqueValuesFromResults } from '../utils/data';
 import { useNavigate } from 'react-router-dom';
 
 export function MatrixPage() {
   const navigate = useNavigate();
-  const { snapshot, loading, error } = useDatasetContext();
+  const { snapshot, manifest, loading, error } = useDatasetContext();
   const { filters, setFilters, resetFilters, hasActiveFilters } = useFilters();
   const [selectedCell, setSelectedCell] = useState<{ extension: string; phpVersion: string } | null>(null);
 
-  const extensions = snapshot?.extensions || [];
+  const matrixModel = useMatrixModel(snapshot, manifest, filters);
 
-  const { channels, platforms, platformVersions, arches, phpVersions } = useMemo(() => {
-    const filtered = filters.platform
-      ? extensions.filter(ext =>
-          ext.availability.some(a => a.platform === filters.platform)
-        )
-      : extensions;
+  // Validate matrix model in development
+  if (import.meta.env.DEV && matrixModel.rows.length > 0) {
+    validateMatrixModel(matrixModel);
+  }
 
-    return {
-      channels: getUniqueValues(extensions, 'channel'),
-      platforms: getUniqueValues(extensions, 'platform'),
-      platformVersions: getUniqueValues(filtered, 'platform_version'),
-      arches: getUniqueValues(extensions, 'arch'),
-      phpVersions: getUniquePHPVersions(extensions),
-    };
-  }, [extensions, filters.platform]);
+  const results = snapshot?.results || [];
 
-  const filteredExtensions = useMemo(
-    () => filterExtensions(extensions, filters),
-    [extensions, filters]
-  );
+  // Get filter options from results if available, otherwise from extensions
+  const channels = results.length > 0 
+    ? getUniqueValuesFromResults(results, 'channel')
+    : (manifest?.axes?.channels || []);
+  
+  const platforms = results.length > 0
+    ? getUniqueValuesFromResults(results, 'platform')
+    : (manifest?.axes?.platforms || []);
+  
+  const arches = results.length > 0
+    ? getUniqueValuesFromResults(results, 'arch')
+    : (manifest?.axes?.arches || []);
 
-  const matrixData = useMemo(
-    () => buildMatrixData(filteredExtensions, phpVersions, filters),
-    [filteredExtensions, phpVersions, filters]
-  );
+  // Get platform versions based on selected platform
+  const platformVersions = results.length > 0
+    ? getUniqueValuesFromResults(
+        results.filter(r => !filters.platform || r.platform === filters.platform),
+        'platform_version'
+      )
+    : [];
 
   const handleCellClick = (extensionName: string, phpVersion: string) => {
     setSelectedCell({ extension: extensionName, phpVersion });
@@ -89,7 +87,7 @@ export function MatrixPage() {
       <div className="page-header">
         <h1>Extension Matrix</h1>
         <p className="page-subtitle">
-          {filteredExtensions.length} of {extensions.length} extensions
+          {matrixModel.rows.length} extensions • {matrixModel.totals.averageReadiness.toFixed(1)}% average readiness
         </p>
       </div>
 
@@ -104,10 +102,25 @@ export function MatrixPage() {
         hasActiveFilters={hasActiveFilters()}
       />
 
+      <div className="matrix-stats">
+        <div className="matrix-stat">
+          <span className="stat-value">{matrixModel.totals.totalSuccesses}</span>
+          <span className="stat-label">Successes</span>
+        </div>
+        <div className="matrix-stat">
+          <span className="stat-value">{matrixModel.totals.totalFailures}</span>
+          <span className="stat-label">Failures</span>
+        </div>
+        <div className="matrix-stat">
+          <span className="stat-value">{matrixModel.totals.totalSkipped}</span>
+          <span className="stat-label">Skipped</span>
+        </div>
+      </div>
+
       <div className="matrix-container">
         <MatrixGrid
-          rows={matrixData}
-          phpVersions={phpVersions}
+          rows={matrixModel.rows}
+          phpVersions={matrixModel.columns}
           onExtensionClick={handleExtensionClick}
           onCellClick={handleCellClick}
         />
@@ -117,7 +130,7 @@ export function MatrixPage() {
         <CellDrawer
           extensionName={selectedCell.extension}
           phpVersion={selectedCell.phpVersion}
-          extension={getExtensionDetails(extensions, selectedCell.extension)}
+          extension={undefined}
           filters={filters}
           onClose={closeCellDrawer}
         />

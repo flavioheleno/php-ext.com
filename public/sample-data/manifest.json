@@ -11,5 +11,11 @@
       "url": "snapshots/latest.json",
       "timestamp": "2024-01-01T00:00:00Z"
     }
-  ]
+  ],
+  "axes": {
+    "php_versions": ["8.1", "8.2"],
+    "channels": ["stable", "dev"],
+    "platforms": ["alpine", "debian"],
+    "arches": ["amd64", "arm64"]
+  }
 }

@@ -316,6 +316,29 @@ body {
   padding: 1.5rem;
 }
 
+.matrix-stats {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--gray-50);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.matrix-stat {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
 .filter-bar {
   background: white;
   padding: 1.5rem;

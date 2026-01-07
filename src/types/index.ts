@@ -12,22 +12,50 @@ export interface Extension {
   availability: ExtensionAvailability[];
 }
 
+export interface BuildResult {
+  extension: string;
+  extension_version: string;
+  channel: string;
+  php_version: string;
+  platform: string;
+  platform_version: string;
+  arch: string;
+  status: 'success' | 'failure' | 'skipped' | 'unknown';
+  category?: string;
+  finished_at?: string;
+  run?: {
+    url: string;
+  };
+  artifact?: {
+    url: string;
+  };
+}
+
 export interface DatasetMetadata {
   id: string;
   url: string;
   timestamp: string;
 }
 
+export interface ManifestAxes {
+  php_versions: string[];
+  channels?: string[];
+  platforms?: string[];
+  arches?: string[];
+}
+
 export interface Manifest {
   schema_version: string;
   latest: DatasetMetadata;
   datasets: DatasetMetadata[];
+  axes?: ManifestAxes;
 }
 
 export interface Snapshot {
   schema_version: string;
   timestamp: string;
-  extensions: Extension[];
+  extensions?: Extension[];
+  results?: BuildResult[];
 }
 
 export interface FilterState {
@@ -52,12 +80,39 @@ export interface FilterOptions {
 
 export interface MatrixCell {
   phpVersion: string;
+  status: 'success' | 'failure' | 'skipped' | 'unknown';
+  category?: string;
+  extensionVersion?: string;
+  runUrl?: string;
+  artifactUrl?: string;
   available: boolean;
 }
 
+export interface ExtensionMetrics {
+  failures: number;
+  successes: number;
+  skipped: number;
+  total: number;
+  readiness: number;
+}
+
 export interface ExtensionRow {
-  name: string;
+  extension: string;
   cells: MatrixCell[];
+  metrics: ExtensionMetrics;
+}
+
+export interface MatrixModel {
+  columns: string[];
+  rows: ExtensionRow[];
+  totals: {
+    totalExtensions: number;
+    totalCells: number;
+    totalSuccesses: number;
+    totalFailures: number;
+    totalSkipped: number;
+    averageReadiness: number;
+  };
 }
 
 export enum LoadingStatus {

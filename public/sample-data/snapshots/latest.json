@@ -1,69 +1,152 @@
 {
   "schema_version": "1.0",
   "timestamp": "2024-01-01T00:00:00Z",
-  "extensions": [
+  "results": [
     {
-      "name": "gd",
-      "availability": [
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "alpine3.19",
-          "arch": "amd64",
-          "php_versions": ["8.1", "8.2"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "debian12",
-          "arch": "amd64",
-          "php_versions": ["8.1", "8.2"],
-          "available": true
-        }
-      ]
+      "extension": "gd",
+      "extension_version": "1.0.0",
+      "channel": "stable",
+      "php_version": "8.1",
+      "platform": "alpine",
+      "platform_version": "alpine3.19",
+      "arch": "amd64",
+      "status": "success",
+      "finished_at": "2024-01-01T10:00:00Z",
+      "run": {
+        "url": "https://example.com/runs/1"
+      },
+      "artifact": {
+        "url": "https://example.com/artifacts/gd-8.1.tar.gz"
+      }
     },
     {
-      "name": "pdo_mysql",
-      "availability": [
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "alpine3.19",
-          "arch": "amd64",
-          "php_versions": ["8.1", "8.2"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "debian12",
-          "arch": "amd64",
-          "php_versions": ["8.1", "8.2"],
-          "available": true
-        }
-      ]
+      "extension": "gd",
+      "extension_version": "1.0.0",
+      "channel": "stable",
+      "php_version": "8.2",
+      "platform": "alpine",
+      "platform_version": "alpine3.19",
+      "arch": "amd64",
+      "status": "success",
+      "finished_at": "2024-01-01T10:05:00Z",
+      "run": {
+        "url": "https://example.com/runs/2"
+      }
     },
     {
-      "name": "redis",
-      "availability": [
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "alpine3.19",
-          "arch": "amd64",
-          "php_versions": ["8.1", "8.2"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "debian12",
-          "arch": "amd64",
-          "php_versions": ["8.2"],
-          "available": true
-        }
-      ]
+      "extension": "gd",
+      "extension_version": "1.0.0",
+      "channel": "stable",
+      "php_version": "8.1",
+      "platform": "debian",
+      "platform_version": "debian12",
+      "arch": "amd64",
+      "status": "success",
+      "finished_at": "2024-01-01T10:10:00Z"
+    },
+    {
+      "extension": "gd",
+      "extension_version": "1.0.0",
+      "channel": "stable",
+      "php_version": "8.2",
+      "platform": "debian",
+      "platform_version": "debian12",
+      "arch": "amd64",
+      "status": "success",
+      "finished_at": "2024-01-01T10:15:00Z"
+    },
+    {
+      "extension": "pdo_mysql",
+      "extension_version": "2.1.0",
+      "channel": "stable",
+      "php_version": "8.1",
+      "platform": "alpine",
+      "platform_version": "alpine3.19",
+      "arch": "amd64",
+      "status": "success",
+      "finished_at": "2024-01-01T11:00:00Z"
+    },
+    {
+      "extension": "pdo_mysql",
+      "extension_version": "2.1.0",
+      "channel": "stable",
+      "php_version": "8.2",
+      "platform": "alpine",
+      "platform_version": "alpine3.19",
+      "arch": "amd64",
+      "status": "failure",
+      "category": "build_error",
+      "finished_at": "2024-01-01T11:05:00Z",
+      "run": {
+        "url": "https://example.com/runs/5"
+      }
+    },
+    {
+      "extension": "pdo_mysql",
+      "extension_version": "2.1.0",
+      "channel": "stable",
+      "php_version": "8.1",
+      "platform": "debian",
+      "platform_version": "debian12",
+      "arch": "amd64",
+      "status": "success",
+      "finished_at": "2024-01-01T11:10:00Z"
+    },
+    {
+      "extension": "pdo_mysql",
+      "extension_version": "2.1.0",
+      "channel": "stable",
+      "php_version": "8.2",
+      "platform": "debian",
+      "platform_version": "debian12",
+      "arch": "amd64",
+      "status": "success",
+      "finished_at": "2024-01-01T11:15:00Z"
+    },
+    {
+      "extension": "redis",
+      "extension_version": "5.3.7",
+      "channel": "stable",
+      "php_version": "8.1",
+      "platform": "alpine",
+      "platform_version": "alpine3.19",
+      "arch": "amd64",
+      "status": "success",
+      "finished_at": "2024-01-01T12:00:00Z"
+    },
+    {
+      "extension": "redis",
+      "extension_version": "5.3.7",
+      "channel": "stable",
+      "php_version": "8.2",
+      "platform": "alpine",
+      "platform_version": "alpine3.19",
+      "arch": "amd64",
+      "status": "skipped",
+      "category": "incompatible",
+      "finished_at": "2024-01-01T12:05:00Z"
+    },
+    {
+      "extension": "redis",
+      "extension_version": "5.3.7",
+      "channel": "stable",
+      "php_version": "8.1",
+      "platform": "debian",
+      "platform_version": "debian12",
+      "arch": "amd64",
+      "status": "success",
+      "finished_at": "2024-01-01T12:10:00Z"
+    },
+    {
+      "extension": "redis",
+      "extension_version": "5.3.7",
+      "channel": "stable",
+      "php_version": "8.2",
+      "platform": "debian",
+      "platform_version": "debian12",
+      "arch": "amd64",
+      "status": "success",
+      "finished_at": "2024-01-01T12:15:00Z"
     }
   ]
 }
