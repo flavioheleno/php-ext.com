@@ -1,7 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Manifest, Snapshot } from '../types';
 
-const DEFAULT_DATASET_URL = './sample-data/manifest.json';
+const DEFAULT_DATASET_BASE_URL = '/sample-data/';
+
+function getDatasetUrl(): string {
+  if (import.meta.env.VITE_DATASET_URL) {
+    return import.meta.env.VITE_DATASET_URL;
+  }
+  
+  const baseUrl = import.meta.env.VITE_DATASET_BASE_URL || DEFAULT_DATASET_BASE_URL;
+  return `${baseUrl}manifest.json`;
+}
 
 interface UseDatasetResult {
   snapshot: Snapshot | null;
@@ -17,7 +26,7 @@ export function useDataset(datasetUrl?: string): UseDatasetResult {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const url = datasetUrl || import.meta.env.VITE_DATASET_URL || DEFAULT_DATASET_URL;
+    const url = datasetUrl || getDatasetUrl();
     
     async function loadData() {
       try {

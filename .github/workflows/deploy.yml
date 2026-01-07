@@ -33,7 +33,9 @@ jobs:
       - name: Build
         run: bun run build
         env:
-          VITE_DATASET_URL: ${{ vars.DATASET_URL || './sample-data/manifest.json' }}
+          VITE_BASE_PATH: ${{ vars.VITE_BASE_PATH || '/' }}
+          VITE_DATASET_URL: ${{ vars.VITE_DATASET_URL || '' }}
+          VITE_DATASET_BASE_URL: ${{ vars.VITE_DATASET_BASE_URL || '/sample-data/' }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

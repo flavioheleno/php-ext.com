@@ -5,20 +5,30 @@ A production-grade static site for visualizing PHP extension availability across
 ## Features
 
 - 📊 **Matrix Grid View**: Comprehensive grid showing extension availability
+- 🏠 **Multi-page App**: Home page, matrix view, and extension detail pages
 - 🔍 **Advanced Filtering**: Filter by channel, platform, platform version, and architecture
 - 🔎 **Search**: Quick search across extensions
 - 📱 **Responsive Design**: Works on desktop and mobile
 - ⚡ **High Performance**: Virtualized rows for 200+ extensions
 - 🔗 **Shareable URLs**: Filters persist in URL query parameters
-- 📦 **Zero Backend**: Pure static site, hosted on GitHub Pages
+- 🚀 **GitHub Pages Ready**: Automatic deployment with configurable base path
+- 📦 **Zero Backend**: Pure static site
 
 ## Tech Stack
 
 - **React 18** with TypeScript
+- **React Router** for client-side routing
 - **Vite** for blazing fast builds
 - **react-window** for virtualization
 - **GitHub Pages** for hosting
 - **GitHub Actions** for CI/CD
+- **Bun** for package management
+
+## Routes
+
+- `/` - Home page with statistics and overview
+- `/matrix` - Matrix grid view with filters
+- `/ext/:name` - Extension detail page
 
 ## Getting Started
 
@@ -56,14 +66,50 @@ bun run preview
 
 ## Configuration
 
-The site loads dataset from a configurable URL. Set the dataset URL via:
+### Environment Variables
 
-1. **Environment variable** (build time):
-   ```bash
-   VITE_DATASET_URL=https://example.com/data bun run build
-   ```
+The site supports the following build-time environment variables:
 
-2. **Default**: Uses `./sample-data/manifest.json` for local development
+**VITE_BASE_PATH** (Required for GitHub Pages project sites)
+- Sets the base path for routing and assets
+- Default: `/`
+- Project site: `/repository-name/` (e.g., `/php-ext-com/`)
+- User/org site: `/`
+
+**VITE_DATASET_BASE_URL** (Optional)
+- Base URL for dataset files
+- Default: `/sample-data/`
+- Example: `https://api.example.com/data/` or `/data/`
+
+**VITE_DATASET_URL** (Optional - overrides VITE_DATASET_BASE_URL)
+- Full URL to manifest.json
+- Example: `https://api.example.com/manifest.json`
+
+### Local Development
+
+```bash
+# Use defaults
+bun run dev
+
+# With custom base path
+VITE_BASE_PATH=/php-ext-com/ bun run dev
+
+# With custom dataset
+VITE_DATASET_URL=https://api.example.com/manifest.json bun run dev
+```
+
+### GitHub Pages Deployment
+
+See **[GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md)** for complete setup instructions.
+
+Quick setup:
+1. Enable GitHub Pages (Settings → Pages → Source: GitHub Actions)
+2. Add repository variables in Settings → Secrets and variables → Actions:
+   - `VITE_BASE_PATH`: `/repository-name/` (e.g., `/php-ext-com/`)
+   - `VITE_DATASET_URL`: (optional) URL to your dataset
+3. Push to main branch
+
+Your site will be at: `https://username.github.io/repository-name/`
 
 ## Dataset Format
 
@@ -107,7 +153,9 @@ The site expects two JSON files:
 
 ## Deployment
 
-The site is automatically deployed to GitHub Pages via GitHub Actions when you push to the `main` branch.
+The site automatically deploys to GitHub Pages via GitHub Actions when you push to the `main` branch.
+
+**See [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md) for complete configuration instructions.**
 
 ### Manual Deployment
 
