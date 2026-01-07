@@ -1,0 +1,10 @@
+{
+  "latest": "snapshots/latest.json",
+  "snapshots": [
+    {
+      "id": "2024-01-01",
+      "url": "snapshots/latest.json",
+      "timestamp": "2024-01-01T00:00:00Z"
+    }
+  ]
+}

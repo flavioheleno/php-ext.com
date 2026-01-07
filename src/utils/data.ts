@@ -1,0 +1,87 @@
+import { Extension, ExtensionAvailability, FilterState, ExtensionRow, MatrixCell } from '../types';
+
+export function getUniqueValues(
+  extensions: Extension[],
+  field: keyof ExtensionAvailability
+): string[] {
+  const values = new Set<string>();
+  extensions.forEach(ext => {
+    ext.availability.forEach(avail => {
+      const value = avail[field];
+      if (typeof value === 'string') {
+        values.add(value);
+      }
+    });
+  });
+  return Array.from(values).sort();
+}
+
+export function getUniquePHPVersions(extensions: Extension[]): string[] {
+  const versions = new Set<string>();
+  extensions.forEach(ext => {
+    ext.availability.forEach(avail => {
+      avail.php_versions.forEach(v => versions.add(v));
+    });
+  });
+  return Array.from(versions).sort();
+}
+
+export function filterExtensions(
+  extensions: Extension[],
+  filters: FilterState
+): Extension[] {
+  return extensions.filter(ext => {
+    if (filters.search && !ext.name.toLowerCase().includes(filters.search.toLowerCase())) {
+      return false;
+    }
+    
+    if (!filters.channel && !filters.platform && !filters.platformVersion && !filters.arch) {
+      return true;
+    }
+
+    return ext.availability.some(avail => {
+      if (filters.channel && avail.channel !== filters.channel) return false;
+      if (filters.platform && avail.platform !== filters.platform) return false;
+      if (filters.platformVersion && avail.platform_version !== filters.platformVersion) return false;
+      if (filters.arch && avail.arch !== filters.arch) return false;
+      return true;
+    });
+  });
+}
+
+export function buildMatrixData(
+  extensions: Extension[],
+  phpVersions: string[],
+  filters: FilterState
+): ExtensionRow[] {
+  return extensions.map(ext => {
+    const cells: MatrixCell[] = phpVersions.map(phpVersion => {
+      const hasVersion = ext.availability.some(avail => {
+        const matchesFilters = 
+          (!filters.channel || avail.channel === filters.channel) &&
+          (!filters.platform || avail.platform === filters.platform) &&
+          (!filters.platformVersion || avail.platform_version === filters.platformVersion) &&
+          (!filters.arch || avail.arch === filters.arch);
+        
+        return matchesFilters && avail.available && avail.php_versions.includes(phpVersion);
+      });
+
+      return {
+        phpVersion,
+        available: hasVersion,
+      };
+    });
+
+    return {
+      name: ext.name,
+      cells,
+    };
+  });
+}
+
+export function getExtensionDetails(
+  extensions: Extension[],
+  name: string
+): Extension | undefined {
+  return extensions.find(ext => ext.name === name);
+}
