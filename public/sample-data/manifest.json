@@ -1,6 +1,11 @@
 {
-  "latest": "snapshots/latest.json",
-  "snapshots": [
+  "schema_version": "1.0",
+  "latest": {
+    "id": "2024-01-01",
+    "url": "snapshots/latest.json",
+    "timestamp": "2024-01-01T00:00:00Z"
+  },
+  "datasets": [
     {
       "id": "2024-01-01",
       "url": "snapshots/latest.json",

@@ -12,20 +12,22 @@ export interface Extension {
   availability: ExtensionAvailability[];
 }
 
-export interface Snapshot {
-  timestamp: string;
-  extensions: Extension[];
-}
-
-export interface SnapshotMetadata {
+export interface DatasetMetadata {
   id: string;
   url: string;
   timestamp: string;
 }
 
 export interface Manifest {
-  latest: string;
-  snapshots: SnapshotMetadata[];
+  schema_version: string;
+  latest: DatasetMetadata;
+  datasets: DatasetMetadata[];
+}
+
+export interface Snapshot {
+  schema_version: string;
+  timestamp: string;
+  extensions: Extension[];
 }
 
 export interface FilterState {
@@ -44,4 +46,32 @@ export interface MatrixCell {
 export interface ExtensionRow {
   name: string;
   cells: MatrixCell[];
+}
+
+export enum LoadingStatus {
+  IDLE = 'idle',
+  LOADING = 'loading',
+  SUCCESS = 'success',
+  ERROR = 'error',
+}
+
+export enum SchemaStatus {
+  VALID = 'valid',
+  MISMATCH = 'mismatch',
+  MISSING = 'missing',
+}
+
+export interface DatasetError {
+  type: 'network' | 'parse' | 'schema' | 'unknown';
+  message: string;
+  details?: unknown;
+}
+
+export interface DatasetContextValue {
+  manifest: Manifest | null;
+  snapshot: Snapshot | null;
+  loading: boolean;
+  error: DatasetError | null;
+  schemaStatus: SchemaStatus;
+  reload: () => Promise<void>;
 }

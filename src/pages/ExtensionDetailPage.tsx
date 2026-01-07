@@ -1,11 +1,12 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { useDataset } from '../hooks/useDataset';
+import { useDatasetContext } from '../context/DatasetContext';
 import { getExtensionDetails } from '../utils/data';
+import { SchemaWarning } from '../components/SchemaWarning';
 
 export function ExtensionDetailPage() {
   const { name } = useParams<{ name: string }>();
   const navigate = useNavigate();
-  const { snapshot, loading, error } = useDataset();
+  const { snapshot, loading, error } = useDatasetContext();
 
   if (loading) {
     return (
@@ -23,7 +24,7 @@ export function ExtensionDetailPage() {
       <div className="page-container">
         <div className="error">
           <h2>Error Loading Data</h2>
-          <p>{error}</p>
+          <p>{error.message}</p>
         </div>
       </div>
     );
@@ -59,6 +60,8 @@ export function ExtensionDetailPage() {
 
   return (
     <div className="page-container">
+      <SchemaWarning />
+      
       <div className="page-header">
         <button onClick={() => navigate(-1)} className="back-button">
           ← Back

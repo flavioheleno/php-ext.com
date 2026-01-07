@@ -1,4 +1,5 @@
 {
+  "schema_version": "1.0",
   "timestamp": "2024-01-01T00:00:00Z",
   "extensions": [
     {
@@ -8,24 +9,16 @@
           "channel": "stable",
           "platform": "linux",
           "platform_version": "alpine3.19",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
+          "arch": "amd64",
+          "php_versions": ["8.1", "8.2"],
           "available": true
         },
         {
           "channel": "stable",
           "platform": "linux",
           "platform_version": "debian12",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "alpine3.19",
-          "arch": "aarch64",
-          "php_versions": ["8.1", "8.2", "8.3"],
+          "arch": "amd64",
+          "php_versions": ["8.1", "8.2"],
           "available": true
         }
       ]
@@ -37,23 +30,15 @@
           "channel": "stable",
           "platform": "linux",
           "platform_version": "alpine3.19",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
+          "arch": "amd64",
+          "php_versions": ["8.1", "8.2"],
           "available": true
         },
         {
           "channel": "stable",
           "platform": "linux",
           "platform_version": "debian12",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "ubuntu22.04",
-          "arch": "x86_64",
+          "arch": "amd64",
           "php_versions": ["8.1", "8.2"],
           "available": true
         }
@@ -66,211 +51,16 @@
           "channel": "stable",
           "platform": "linux",
           "platform_version": "alpine3.19",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "debian12",
-          "arch": "x86_64",
-          "php_versions": ["8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "edge",
-          "platform": "linux",
-          "platform_version": "alpine3.19",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        }
-      ]
-    },
-    {
-      "name": "imagick",
-      "availability": [
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "debian12",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "ubuntu22.04",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2"],
-          "available": true
-        }
-      ]
-    },
-    {
-      "name": "opcache",
-      "availability": [
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "alpine3.19",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "debian12",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "ubuntu22.04",
-          "arch": "x86_64",
+          "arch": "amd64",
           "php_versions": ["8.1", "8.2"],
           "available": true
         },
         {
           "channel": "stable",
           "platform": "linux",
-          "platform_version": "alpine3.19",
-          "arch": "aarch64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        }
-      ]
-    },
-    {
-      "name": "zip",
-      "availability": [
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "alpine3.19",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
           "platform_version": "debian12",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        }
-      ]
-    },
-    {
-      "name": "xdebug",
-      "availability": [
-        {
-          "channel": "edge",
-          "platform": "linux",
-          "platform_version": "alpine3.19",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "edge",
-          "platform": "linux",
-          "platform_version": "debian12",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        }
-      ]
-    },
-    {
-      "name": "curl",
-      "availability": [
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "alpine3.19",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "debian12",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "ubuntu22.04",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2"],
-          "available": true
-        }
-      ]
-    },
-    {
-      "name": "mbstring",
-      "availability": [
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "alpine3.19",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "debian12",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "ubuntu22.04",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "alpine3.19",
-          "arch": "aarch64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        }
-      ]
-    },
-    {
-      "name": "intl",
-      "availability": [
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "alpine3.19",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
-          "available": true
-        },
-        {
-          "channel": "stable",
-          "platform": "linux",
-          "platform_version": "debian12",
-          "arch": "x86_64",
-          "php_versions": ["8.1", "8.2", "8.3"],
+          "arch": "amd64",
+          "php_versions": ["8.2"],
           "available": true
         }
       ]

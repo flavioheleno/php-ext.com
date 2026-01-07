@@ -279,6 +279,35 @@ body {
   box-shadow: var(--shadow);
 }
 
+/* Schema Warning */
+.schema-warning {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.warning-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.warning-content strong {
+  display: block;
+  color: var(--gray-900);
+  margin-bottom: 0.25rem;
+}
+
+.warning-content p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--gray-700);
+}
+
 /* Matrix Page */
 .matrix-container {
   background: white;

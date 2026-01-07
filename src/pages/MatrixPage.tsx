@@ -1,9 +1,10 @@
 import { useState, useMemo } from 'react';
-import { useDataset } from '../hooks/useDataset';
+import { useDatasetContext } from '../context/DatasetContext';
 import { useFilters } from '../hooks/useFilters';
 import { FilterBar } from '../components/FilterBar';
 import { MatrixGrid } from '../components/MatrixGrid';
 import { CellDrawer } from '../components/CellDrawer';
+import { SchemaWarning } from '../components/SchemaWarning';
 import {
   getUniqueValues,
   getUniquePHPVersions,
@@ -15,7 +16,7 @@ import { useNavigate } from 'react-router-dom';
 
 export function MatrixPage() {
   const navigate = useNavigate();
-  const { snapshot, loading, error } = useDataset();
+  const { snapshot, loading, error } = useDatasetContext();
   const { filters, setFilters, resetFilters } = useFilters();
   const [selectedCell, setSelectedCell] = useState<{ extension: string; phpVersion: string } | null>(null);
 
@@ -75,7 +76,7 @@ export function MatrixPage() {
       <div className="page-container">
         <div className="error">
           <h2>Error Loading Data</h2>
-          <p>{error}</p>
+          <p>{error.message}</p>
         </div>
       </div>
     );
@@ -83,6 +84,8 @@ export function MatrixPage() {
 
   return (
     <div className="page-container">
+      <SchemaWarning />
+      
       <div className="page-header">
         <h1>Extension Matrix</h1>
         <p className="page-subtitle">

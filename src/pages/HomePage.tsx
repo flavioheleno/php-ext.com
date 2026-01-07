@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
-import { useDataset } from '../hooks/useDataset';
+import { useDatasetContext } from '../context/DatasetContext';
 import { getUniqueValues, getUniquePHPVersions } from '../utils/data';
+import { SchemaWarning } from '../components/SchemaWarning';
 
 export function HomePage() {
-  const { snapshot, loading, error } = useDataset();
+  const { snapshot, loading, error } = useDatasetContext();
 
   if (loading) {
     return (
@@ -21,7 +22,7 @@ export function HomePage() {
       <div className="page-container">
         <div className="error">
           <h2>Error Loading Data</h2>
-          <p>{error}</p>
+          <p>{error.message}</p>
         </div>
       </div>
     );
@@ -35,6 +36,8 @@ export function HomePage() {
 
   return (
     <div className="page-container">
+      <SchemaWarning />
+      
       <div className="home-hero">
         <h1>PHP Extension Matrix</h1>
         <p className="hero-subtitle">
