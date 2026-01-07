@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { DatasetProvider } from './context/DatasetContext';
 import { Layout } from './components/Layout';
 import { HomePage } from './pages/HomePage';
@@ -8,7 +8,7 @@ import { ExtensionDetailPage } from './pages/ExtensionDetailPage';
 function App() {
   return (
     <DatasetProvider>
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <HashRouter>
         <Layout>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -16,7 +16,7 @@ function App() {
             <Route path="/ext/:name" element={<ExtensionDetailPage />} />
           </Routes>
         </Layout>
-      </BrowserRouter>
+      </HashRouter>
     </DatasetProvider>
   );
 }
